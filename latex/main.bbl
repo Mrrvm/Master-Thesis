@@ -1,6 +1,44 @@
 \begin{thebibliography}{1}
 
-\bibitem{nobody}
-{No one}, ``{Nothing}.''
+\bibitem{johnpage}
+J.~Van~Opstal.
+  \url{http://www.mbfys.ru.nl/~johnvo/OrientWeb/orient_1.html#Abstract}.
+\newblock {Accessed on October 9th, 2019}.
+
+\bibitem{tesemiguel}
+M.~{Lucas}, ``{Construction and Characterization of a Biomimetic Robotic Eye
+  Model with Three Degrees of Rotational Freedom : A Testbed for Neural Control
+  of Eye Movements},'' no.~October, 2017.
+
+\bibitem{donders}
+J.~Van~Opstal, ``{200 years Franciscus Cornelis Donders},'' {\em Strabismus},
+  vol.~26, no.~4, pp.~159--162, 2018.
+
+\bibitem{multiview}
+R.~Hartley and A.~Zisserman, ``{Multiview Geometry in Computer Vision},'' 2003.
+
+\bibitem{featsift}
+E.~Salahat and M.~Qasaimeh, ``{Recent advances in features extraction and
+  description algorithms: A comprehensive survey},'' {\em Proceedings of the
+  IEEE International Conference on Industrial Technology}, pp.~1059--1063,
+  2017.
+
+\bibitem{sift}
+D.~G. Lowe, ``{Distinctive Image Features from Scale-Invariant Keypoints},''
+  {\em International Journal of Computer Vision}, pp.~1--28, 2004.
+
+\bibitem{surf}
+H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
+  (SURF) Herbert},'' {\em Revue du Praticien - Medecine Generale}, no.~465
+  SUPPL., pp.~44--45.
+
+\bibitem{procrustes}
+D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,
+  no.~3, pp.~376--376, 2005.
+
+\bibitem{compsiftsurf}
+D.~Mistry and A.~Banerjee, ``{Comparison of Feature Detection and Matching
+  Approaches: SIFT and SURF},'' {\em GRD Journals- Global Research and
+  Development Journal for Engineering}, vol.~2, no.~March, pp.~7--13, 2017.
 
 \end{thebibliography}

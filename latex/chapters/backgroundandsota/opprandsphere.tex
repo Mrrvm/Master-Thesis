@@ -1,0 +1,49 @@
+%!TEX root = ../dissertation.tex
+
+\section{Orthogonal Procrustes Problem and Lack of Depth}
+\label{cha2:opprandsphere}
+
+After having established the camera model, it is now time to discuss some potential methods of determining image transformations, as needed for this project. 
+
+The first of these methods is called the Orthogonal Procrustes Problem. Procrustes, a son of Poseidon in Greek mythology, made his victims fit in a wonderful all-fitting bed, either by stretching their limbs, or by cutting them off. Ultimately, he was fitted into his own bed by Theseus. Similar to the analysis held here, there are 3 elements to Procrustes's problem: $M_1$, the bed, $M_2$, the unlucky adventurer, and T, the fitting treatment. The solution to the problem is a matrix, T, that minimizes
+
+\begin{equation}
+\label{sec2:eq:procrustes}
+\left \| M_1 - TM_2  \right \|^2 ,
+\end{equation}
+which transforms $M_2$ into $M_1$. 
+
+Concerning the project's goal, $M_1$ and $M_2$ are clouds of 3D points observed by the camera obtained when looking at the same scene from two different points of view after a rotation, defined as $R$. Then the function to minimize is
+\begin{equation}
+\label{sec2:eq:ptrace}
+\left \| M_1 - RM_2 \right \|^2 
+\end{equation}
+that through the Frobenius norm can be expanded as
+\begin{equation}
+\label{sec2:eq:ptrace}
+\left \| M_1 - RM_2 \right \|^2 = \operatorname { trace } ( M_1^T M_1 + M_2^T M_2) - 2 \operatorname { trace } (M_2^T M_1 R),
+\end{equation}
+This means that minimizing (\ref{sec2:eq:procrustes}) with respect to $R$ is equivalent to maximizing the second term of (\ref{sec2:eq:ptrace}). By applying singular value decomposition (SVD) to $M_2^T M_1$, the latter term can be further simplified into
+
+\begin{equation}
+\label{sec2:eq:svd}
+\operatorname { trace } (M_2^T M_1 R) = \operatorname { trace } ( U \Sigma V^T R) = \operatorname { trace } (\Sigma V^T R U) = \operatorname { trace } (\Sigma H )  = \sum _ { i = 1 } ^ { N } \sigma _ { i }h _ { i i } .
+\end{equation}
+The singular values of $\sigma _ { i }$ are all non-negative, and so the expression becomes maximum when $h _ { i i } = 1$ for $i=1,2,...,N$, since $H$, a product of orthogonal matrices, is an orthogonal matrix itself, thus having its maximal value when $H = I$. This results in $I = V^T R U$, and so $R=V U^T$.   
+
+\subsection{Translation}
+\label{sec2:trans}
+Often, $M_1$ and $M_2$ may be associated with different origins. Hence, it is customary to consider  better fits of the configurations by allowing shape-preserving translations of the origin.
+When translating $M_1$ and $M_2$ by $t_1$ and $t_2$, respectively, (\ref{sec2:eq:procrustes}) becomes
+\begin{equation}
+\label{sec2:eq:strans1}
+\left \|(M_1 - \mathbf{1} \mathbf{t_1}^T) - R(M_2 - \mathbf{1} \mathbf{t_2}^T)\right \|^2,
+\end{equation}
+which can also be written as
+\begin{equation}
+\label{sec2:eq:strans2}
+\left \| M_1  - RM_2 - \mathbf{1} \mathbf{t}^T\right \|^2,
+\end{equation}
+where $\mathbf{t}^T = \mathbf{t_1}^T R - \mathbf{t_2}^T$. The expression is minimized when $\mathbf{t}^T$ corresponds to the column-means of $M_1 R - M_2$, therefore a simple way of effecting this translation is to remove the column-means of $M_1$ and $M_2$, separately, before minimizing. This is called centering. The data then becomes expressed in terms of the mean deviations. \cite{procrustes}
+
+

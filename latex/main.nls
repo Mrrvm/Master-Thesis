@@ -1,0 +1,39 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\bf m$}]\begingroup Digital image point (in pixels)\nomeqref {0}
+		\nompageref{xv}
+  \item [{$u, v$}]\begingroup Digital image horizontal and vertical coordinates (in pixels)\nomeqref {0}
+		\nompageref{xv}
+  \item [{$\bf m'$}]\begingroup Image plane point (in meters)\nomeqref {0}
+		\nompageref{xv}
+  \item [{$x', y'$}]\begingroup Image plane horizontal and vertical coordinates (in meters)\nomeqref {0}
+		\nompageref{xv}
+  \item [{$\bf m_d'$}]\begingroup Image plane point (in meters) distorted\nomeqref {0}
+		\nompageref{xv}
+  \item [{$x_d', y_d'$}]\begingroup Image plane horizontal and vertical coordinates (in meters distorted)\nomeqref {0}
+		\nompageref{xv}
+  \item [{$\bf M$}]\begingroup 3D point in the real world (in meters)\nomeqref {0}
+		\nompageref{xv}
+  \item [{$X, Y, Z$}]\begingroup 3D point coordinates (in meters), Z is perpendicular to the image plane, X is horizontal and Y is vertical\nomeqref {0}
+		\nompageref{xv}
+  \item [{$K$}]\begingroup Intrinsics Matrix\nomeqref {0}
+		\nompageref{xv}
+  \item [{$P$}]\begingroup Projection Matrix\nomeqref {0}
+		\nompageref{xv}
+  \item [{$\lambda$}]\begingroup Depth\nomeqref {0}\nompageref{xv}
+  \item [{$f$}]\begingroup Focal Length\nomeqref {0}\nompageref{xv}
+  \item [{$s$}]\begingroup Skew\nomeqref {0}\nompageref{xv}
+  \item [{$c_x, c_y$}]\begingroup Camera's principal point offset\nomeqref {0}
+		\nompageref{xv}
+  \item [{$s_x, s_y$}]\begingroup Pixel scalings\nomeqref {0}
+		\nompageref{xv}
+
+ \nomgroup{C}
+
+  \item [{$R$}]\begingroup Rotation Matrix\nomeqref {0}\nompageref{xv}
+  \item [{$\bf t$}]\begingroup Translation vector\nomeqref {0}
+		\nompageref{xv}
+
+\end{thenomenclature}

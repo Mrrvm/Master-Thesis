@@ -1,0 +1,39 @@
+%!TEX root = ../dissertation.tex
+
+\section{Feature detection and matching}
+\label{cha2:features}
+
+As explained before on section \ref{cha1:problemdef}, it is necessary to gather corresponding features in consecutive images taken before and after a rotation, and to use an algorithm to estimate the orientation using those features. The latter, also referred to as keypoints or interest points, are spatial locations of an image that "stand out", allowing it to be identifiable. This points should be such that even after rotating, translating, shrinking or distorting the image, they can be found.
+
+It is absolutely necessary to have a solid detection and trust-worthy correspondence of image features (matching) when doing an "eye" movement to eventually estimate the its current orientation.
+
+Two main approaches exist to the problem of feature detection and matching. The first method finds features in one image and matches these features in the other image. The second method, which is more suitable for points in the near space, independently detects features in both images and subsequently matches them on the basis of local correspondences.
+
+It might not be appropriate to extract features from an image having high detail (i.e. high spatial bandwidth) on the finest stable scale possible, because when matching features with another image at a different (coarser) scale those details may no longer be detectable. Therefore, it's important to extract features at a variety of scales to ensure their invariance. 
+
+Besides scale, preserving rotation and orientation invariance is also a concern. One way to deal with this problem is to define a descriptor. This is a scaled and oriented patch around the chosen point with the local orientation and scale, from which the dominant orientation can be extracted to guarantee its invariance. \cite{multiview}
+
+There exist a number of algorithms that can do the job. However, none of these algorithms is optimal for all images, as each of them is optimized for particular computer vision applications, with performance depending heavily on the environmental properties (illumination, image quality, contrast, ...). A comprehensive survey on the state of the art of feature detection and description  \cite{featsift} (by Salahat E. and Qasaimeh M. in 2017), proposes that ideal features should have the following properties:
+\begin{itemize}
+	\item Distinctiveness: the gradient variations surrounding the point should be sufficiently large;
+	\item Locality: to avoid obstruction and deformation between the two images.
+	\item Quantity: enough features to describe the content;
+	\item Accuracy: features should be accurate enough to be detected independently of image scale, shape or pixel location;
+	\item Efficiency: be detected fast enough for real-time systems;
+	\item Repeatability: a high percentage of features should be detected in both images on the overlapping regions;
+	\item Invariance: deformative effects on the features, due to scaling, rotation or translation are minimized;
+	\item Robustness: features should be less sensitive to deformations due to noise, blur, compression, and so on.
+\end{itemize} 
+The review paper also presents an overview on the recent algorithms proposed on this matter, comparing them in terms of the metrics defined above. The analysis in that article suggests that MSER (Maximally stable extremal regions) and SIFT (\acrlong{sift}) algorithms enhance performance on computational complexity, accuracy and execution time. From the scale and rotation invariant algorithms, SURF (\acrlong{surf}), proved to be faster than \acrshort{sift}, although not as robust.
+
+MSER (by Matas J. in 2002)\footnote{J. Matas J., O. Chum, M. Urban and T. Pajdla, “Robust Wide Baseline Stereo from Maximally Stable Extremal Regions,” 2002.} are areas of uniform intensity outlined by contrasting backgrounds. They are constructed by trying multiple thresholds on the input image. The ones that remain unchanged in shape over the range of thresholds are the potential features to be selected as areas of interest. The centroids of these areas can subsequently be used to create a feature descriptor for the matching step.
+
+\acrshort{sift} (by Lowe, David G. in 2004) \cite{sift} algorithm detects image features using a Gaussian filter by generating increasingly blurred images, and subtracting each image to each other. This is done in several scales in order to provide scale invariance. Afterwards, a descriptor for each feature at a certain scale is created and includes information about the orientation and gradient magnitude around the point, which also grants rotation invariance.
+
+\acrshort{surf} (by Bay, Herbert in 1999) \cite{surf} uses an integral image, which is an intermediate representation of the original image where the value of a location is the sum of all pixels of a rectangular region formed around that location. This is called box filter and serves as an approximation to the \gls{gauss}, speeding up the process in relation to \acrshort{sift}.
+
+A more comprehensive explanation on both SIFT and SURF can be found at appendix \ref{appendix:cha1:sec1:sift} and \ref{appendix:cha1:sec1:surf}, respectively. Any of these 3 algorithms mentioned seems promising to use as feature detector in this work.
+
+\subsection{Matching step}
+Regarding the matching of feature descriptors, one of the most common search algorithms used is the Nearest Neighbor Search. FLANN (\acrlong{flann}) (by M. Muja in 2009) \footnote{M. Muja and D. Lowe, “Fast approximate nearest neighbors with automatic algorithm configuration,”, 2009.} provides a library for performing this kind of searches in high-dimensional spaces. It contains a collection of algorithms that the authors found to  work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset.
+

@@ -15,8 +15,18 @@
 \usepackage{graphicx, helvet, hyperref, setspace}
 \usepackage[portuguese,english]{babel}
 \usepackage[acronym, toc]{glossaries}
+\usepackage[intoc]{nomencl}
+
 \input{extra_stuff.tex}
 
+\makenomenclature
+\usepackage{etoolbox}
+\renewcommand\nomgroup[1]{%
+	\item[\bfseries
+	\ifstrequal{#1}{A}{Camera Model}{%
+		\ifstrequal{#1}{B}{Epipolar Geometry}{%
+			\ifstrequal{#1}{C}{Representation of the eye's orientation}{}}}%
+	]}
 % Built the glossary when the main file is built.
 \makeglossaries
 % Set main font to Arial
@@ -83,9 +93,18 @@
 	\listoffigures
 	\NewPage
 	
+	\input{nomenclature/nomenclature.tex}
+	\printnomenclature
+	\NewPage
+	
 	% List of acronyms
 	\printglossary[type=\acronymtype]
 	\NewPage
+	
+	% Glossary and Acronym List
+	\if\includeGlossary 1
+	\printglossary
+	\fi
 	
 	\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
 	
@@ -99,9 +118,5 @@
 	\appendix
 	\input{appendix/main.tex}
 	
-	% Glossary and Acronym List
-	\if\includeGlossary 1
-	\printglossary
-	\fi
 	
 \end{document}
