@@ -4,7 +4,7 @@
 \nomenclatureentry{A, 04$x', y'$@[{$x', y'$}]\begingroup Image plane horizontal and vertical coordinates (in meters)\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 05$\bf m_d'$@[{$\bf m_d'$}]\begingroup Image plane point (in meters) distorted\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 06$x_d', y_d'$@[{$x_d', y_d'$}]\begingroup Image plane horizontal and vertical coordinates (in meters distorted)\nomeqref {0}|nompageref}{xv}
-\nomenclatureentry{A, 07$\bf M$@[{$\bf M$}]\begingroup 3D point in the real world (in meters)\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{A, 07$\bf M$@[{$\bf M$}]\begingroup 3D point (in meters)\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 08$X, Y, Z$@[{$X, Y, Z$}]\begingroup 3D point coordinates (in meters), Z is perpendicular to the image plane, X is horizontal and Y is vertical\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 09$K$@[{$K$}]\begingroup Intrinsics Matrix\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 10$P$@[{$P$}]\begingroup Projection Matrix\nomeqref {0}|nompageref}{xv}
@@ -13,5 +13,7 @@
 \nomenclatureentry{A, 13$s$@[{$s$}]\begingroup Skew\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 14$c_x, c_y$@[{$c_x, c_y$}]\begingroup Camera's principal point offset\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{A, 15$s_x, s_y$@[{$s_x, s_y$}]\begingroup Pixel scalings\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{B, 01$E$@[{$E$}]\begingroup Essential Matrix\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{B, 02$F$@[{$F$}]\begingroup Fundamental Matrix\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{C, 01$R$@[{$R$}]\begingroup Rotation Matrix\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{C, 02$\bf t$@[{$\bf t$}]\begingroup Translation vector\nomeqref {0}|nompageref}{xv}

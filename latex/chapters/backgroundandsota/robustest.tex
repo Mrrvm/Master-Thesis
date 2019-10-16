@@ -2,3 +2,30 @@
 
 \section{Robust Estimation and Rejection of Image Sections}
 \label{cha2:robustest}
+\subsubsection{RANSAC}
+Given that OPPr is the simplest and fastest of the methods, giving a pretty good initial estimation, we can use it for RANSAC by doing,
+
+\begin{itemize}
+	\item Selection of a random sample (maybe inliers)
+	\item Fit of a model to that sample
+	\item Test the model for the rest of the points, the ones that fit are also inliers
+	\item If (maybe inliers + also inliers) are enough points the model is accepted
+	\item Try all this again for as many tries as desired, gather the best
+\end{itemize}
+
+\subsubsection{LMedS}
+Again we can use OPPr and try to figure the 3 euler angles out.
+
+\begin{itemize}
+	\item Selection of a random sample
+	\item Fit model to that sample
+	\item Do this for several samples
+	\item Choose the one with least median
+\end{itemize}
+
+RANSAC requires an error threshold to consider a point as inlier, but it is cheaper.
+
+If there is a large set of images of the same type of scenes to be processed, one can first apply LMedS to one pair of the images in order to find an appropriate threshold, and then apply RANSAC to the remaining images because it is cheaper.
+
+Points in the image that correspond to bigger depths suffer less translation effects. Hence, using RANSAC with OPPr will yield point sets that are located in bigger depths and thus determining the rotation through them may be easier given they are closer to a local minimum. This leaves just a translation adjustment to be done.
+

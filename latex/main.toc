@@ -16,31 +16,36 @@
 \contentsline {section}{\numberline {2.2}Feature detection and matching}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Matching step}{11}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Orthogonal Procrustes Problem and Lack of Depth}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Translation}{12}{subsection.2.3.1}
 \contentsline {section}{\numberline {2.4}Epipolar Geometry}{12}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Projective geometry concepts}{12}{subsection.2.4.1}
-\contentsline {subsubsection}{Homogenous representation of lines}{12}{section*.10}
+\contentsline {subsection}{\numberline {2.4.1}Projective geometry concepts}{13}{subsection.2.4.1}
+\contentsline {subsubsection}{Representation of lines in \gls {homo}}{13}{section*.10}
 \contentsline {subsubsection}{Point lying on a line}{13}{section*.11}
 \contentsline {subsubsection}{Line joining points}{13}{section*.12}
-\contentsline {subsubsection}{Cross product's skew symmetric representation}{13}{section*.13}
-\contentsline {subsection}{\numberline {2.4.2}Deducing the fundamental matrix}{13}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Relationship between the fundamental matrix and camera motion}{14}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Estimating the fundamental matrix}{14}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Factorization of the essential matrix}{15}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}Robust Estimation and Rejection of Image Sections}{17}{section.2.5}
-\contentsline {section}{\numberline {2.6}Representation of eye orientations in 3 dimensions}{17}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Rotation axis and angle}{18}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Rotation vector in head-fixed coordinates}{19}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Quaternions}{19}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Coordinate system}{19}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Donders' and Listing's laws}{20}{subsection.2.6.5}
-\contentsline {chapter}{\numberline {3}Methodology}{23}{chapter.3}
-\contentsline {chapter}{\numberline {4}Results}{25}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Contributions}{27}{section.5.1}
-\contentsline {section}{\numberline {5.2}Future Work}{27}{section.5.2}
-\contentsline {chapter}{Bibliography}{28}{section.5.2}
-\contentsline {chapter}{\numberline {A}Background and State of the Art}{31}{appendix.A}
-\contentsline {section}{\numberline {A.1}Feature Detectors}{31}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}\acrlong {sift}}{31}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}\acrlong {surf}}{33}{subsection.A.1.2}
+\contentsline {subsubsection}{Cross product's \gls {skews} representation}{14}{section*.13}
+\contentsline {subsection}{\numberline {2.4.2}Deducing the fundamental matrix algebraically}{14}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Deducing the fundamental matrix from camera motion}{14}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Estimating the fundamental matrix}{15}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Factorization of the essential matrix}{16}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Linear Solution or Norm-8 point}{18}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Minimization of the epipolar error}{18}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.8}Gradient-Based Technique}{18}{subsection.2.4.8}
+\contentsline {section}{\numberline {2.5}Robust Estimation and Rejection of Image Sections}{19}{section.2.5}
+\contentsline {subsubsection}{RANSAC}{19}{section*.14}
+\contentsline {subsubsection}{LMedS}{19}{section*.15}
+\contentsline {section}{\numberline {2.6}Representation of eye orientations in 3 dimensions}{19}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Rotation axis and angle}{20}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Rotation vector in head-fixed coordinates}{21}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Quaternions}{21}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Coordinate system}{21}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Donders' and Listing's laws}{22}{subsection.2.6.5}
+\contentsline {chapter}{\numberline {3}Methodology}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Minimization of the Back Projection Error (MBPE)}{25}{section.3.1}
+\contentsline {chapter}{\numberline {4}Results}{27}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contributions}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Future Work}{29}{section.5.2}
+\contentsline {chapter}{Bibliography}{30}{section.5.2}
+\contentsline {chapter}{\numberline {A}Background and State of the Art}{33}{appendix.A}
+\contentsline {section}{\numberline {A.1}Feature Detectors}{33}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}\acrlong {sift}}{33}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}\acrlong {surf}}{35}{subsection.A.1.2}

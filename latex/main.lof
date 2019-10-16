@@ -9,14 +9,14 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Pinhole Camera Model}}{8}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Epipolar geometry}}{13}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Four possible solutions retrieved from $E$}}{17}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Neuroscience vs Computer vision usual coordinate systems}}{19}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Listing\IeC {\textquoteright }s law, illustrated for 3500 eye orientations made by a head-restrained monkey}}{20}{figure.2.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Neuroscience vs Computer vision usual coordinate systems}}{21}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Listing\IeC {\textquoteright }s law, illustrated for 3500 eye orientations made by a head-restrained monkey}}{22}{figure.2.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Difference of Gaussians (DoG) by octave}}{32}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Search for the maxima and minima of the DoG}}{32}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces \acrshort {sift} feature descriptor}}{32}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparison between Gaussian second order derivatives and box filter}}{33}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces \acrshort {surf} feature descriptor}}{33}{figure.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Difference of Gaussians (DoG) by octave}}{34}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Search for the maxima and minima of the DoG}}{34}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \acrshort {sift} feature descriptor}}{34}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparison between Gaussian second order derivatives and box filter}}{35}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \acrshort {surf} feature descriptor}}{35}{figure.A.5}

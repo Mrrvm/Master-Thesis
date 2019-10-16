@@ -8,9 +8,13 @@
 		\setentrycounter[]{page}\glsnumberformat{xiii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{4\delimR 6}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{27}}}\glsgroupskip
+\glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{oppr}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{11\delimN 12}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossentry{rgb}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{5}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{12}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossentry{sift}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{viii}\delimN 

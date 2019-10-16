@@ -3,7 +3,7 @@
 \section{Epipolar Geometry}
 \label{cha2:epipolar}
 
-Epipolar geometry provides an alternative yet powerful tool to obtain image transformations. It describes the relation between two views of a single scene through a 3x3 singular, non-invertible, matrix called the \textbf{essential matrix}, \textbf{$E$}, if the camera matrix is known, or the \textbf{fundamental matrix}, \textbf{$F$}, otherwise. These matrices are singular because they express an underconstrained relationship between a point in one image and its possible location in the other image, which is not unique due to depth ambiguity. The essential matrix is the product of a rotation matrix and a skew-symmetric matrix, whose determinant is zero, as it will be shown below. If a point in the (3D) world, $M$, is projected as point $\mathbf{{m}_1}$ in the first view, and point $\mathbf{{m}_2}$ in the second, then those points satisfy the relation
+Epipolar geometry provides an alternative yet powerful tool to obtain image transformations using various different approaches. It describes the relation between two images, before and after a transformation, through a 3x3 singular, non-invertible, matrix called the \textbf{essential matrix}, \textbf{$E$}, if the camera matrix is known, or the \textbf{fundamental matrix}, \textbf{$F$}, otherwise. These matrices are singular because they express an under-constrained relationship between a point in one image and its possible location in the other image, which is not unique due to depth ambiguity. The essential matrix is the product of a rotation matrix and a \gls{skews}, whose determinant is zero, as it will be shown below. If a point in the real world, $M$, is projected as a point $\mathbf{{m}_1}$ in the first image, and point $\mathbf{{m}_2}$ in the second, then those points satisfy the epipolar relation
 
 \begin{equation}
 \label{sec2:eq:epipolar}
@@ -12,63 +12,59 @@ Epipolar geometry provides an alternative yet powerful tool to obtain image tran
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm]{images/epipolargeo.png}
-	\caption[Epipolar geometry]{Epipolar geometry. The two small planes correspond to the image planes of two different views by the camera, separated by a rotation $R$ and a translation $\bf t$, of the same scene, with centers of projection given by $c_1$ and $c_2$, respectively. $M$ is the fixed point gazed at in the real world. $\bf m_1$ and $\bf m_2$ are the projections of point $M$ into the respective image planes, whose rays are lying on the plane $L$. $\bf l_{e1}$ and $\bf l_{e2}$ are the epipolar lines, that also lie on the plane and $\bf e_1$ and $\bf e_2$ are the epipoles. The line defined by the centers is called the baseline.}
+	\includegraphics[width=11cm]{images/epipolargeo.png}
+	\caption[Epipolar geometry]{Epipolar geometry. The two small vertical planes correspond to the image planes after the rotation and translation of the camera, $R$ and $\bf t$, respectively. $c_1$ and $c_2$ are the centers of projection before and after the transformation. $M$ is the fixed point gazed at in the real world. $\bf m_1$ and $\bf m_2$ are the projections of point $M$ into the respective image planes, whose rays are lying on the plane $L$. $\bf l_{e1}$ and $\bf l_{e2}$ are the epipolar lines, that also lie on the plane and $\bf e_1$ and $\bf e_2$ are the epipoles.}
 	\label{sec2:fig:epipolargeo}
 \end{figure}
 
-
-In Figure \ref{sec2:fig:epipolargeo}, $c_1$ and $c_2$ are the centers of projection of the first and second views of the scene from one camera that has been displaced by $(R, \mathbf{t})$ (or by two cameras staring at the same scene). Given the point on the first view, $\bf m_1$, its correspondence to the second view is constrained to a line, which is called the epipolar line, $\bf l_{e2}$. This line is defined as the intersection of the plane $L$ and the second view's image plane. Furthermore, plane $L$ is delineated by the centers of projection of both views and $\bf m_1$. The epipoles, $\bf e_1$ and $\bf e_2$, are born from the intersection of the line $c_1 - c_2$ (baseline) with the epipolar lines, $\bf l_{e1}$ and $\bf l_{e2}$. 
+This relation can be easily deduced with projective geometry. In Figure \ref{sec2:fig:epipolargeo}, $c_1$ and $c_2$ are the centers of projection before and after the camera has been displaced by $(R, \mathbf{t})$. Given the point $\bf m_1$ on the first image, its correspondence, $\bf m_2$, in the second image is constrained to a line, the epipolar line, $\bf l_{e2}$. The latter is defined as the intersection of the plane $L$ and the second image plane. Furthermore, plane $L$ is delineated by the two centers of projection and $\bf m_1$. The epipoles, $\bf e_1$ and $\bf e_2$, are born from the intersection of the line $c_1 - c_2$ with the epipolar lines, $\bf l_{e1}$ and $\bf l_{e2}$. 
 
 \subsection{Projective geometry concepts}
 
-\subsubsection{Homogenous representation of lines}
+Now, before one may understand the upcoming deductions, it is important to first understand the following concepts.
+\subsubsection{Representation of lines in \gls{homo}}
 A line in a plane is represented by $a x + b y + c = 0$, which can also be defined by a vector $( a , b , c ) ^T$. For any non-zero constant, $k$, the vectors  $( a , b , c ) ^T$ and $k(a , b , c ) ^T$ represent the same line and are equivalent. An equivalence class of vectors is known as an homogenous vector. 
-
 \subsubsection{Point lying on a line}
-
-A point $\mathbf { m } = ( x , y ) ^ T$ lies on a line $\mathbf {\tilde{l}} = ( a , b , c ) ^ { T }$, if and only if $a x + b y + c = 0$, which can be written as $( x , y , 1 ) ( a , b , c ) ^T = \mathbf { \tilde{m} } ^T \mathbf {\tilde{l}} = \mathbf {\tilde{l}} ^T \mathbf { \tilde{m} } = 0$.
-
+A point $\mathbf { p } = ( p_1 , p_2 ) ^ T$ lies on a line $\mathbf {\tilde{l}} = ( a , b , c ) ^ { T }$, if and only if $a p_1 + b p_2 + c = 0$, which can be written as $( p_1 , p_2 , 1 ) ( a , b , c ) ^T = \mathbf { \tilde{p} } ^T \mathbf {\tilde{l}} = \mathbf {\tilde{l}} ^T \mathbf { \tilde{p} } = 0$.
 \subsubsection{Line joining points}
-A line passing through any two points $\mathbf{m}$ and $\mathbf{m'}$ can be defined by the cross-product of those points as $\mathbf{\tilde{l}} = \mathbf{\tilde{m}} \times \mathbf{\tilde{m}'}$.
-
-\subsubsection{Cross product's skew symmetric representation}
-The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{m}} \times \mathbf{\tilde{m}'}$, can be written as $\mathbf{\tilde{l}} = [\mathbf{\tilde{m}}]_{\times} \mathbf{\tilde{m}'}$, where $[\mathbf{\tilde{m}}]_{\times}$ is defined as
+A line passing through any two points $\mathbf{\tilde{p}}$ and $\mathbf{\tilde{q}}$ can be defined by the cross-product of those points as $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$.
+\subsubsection{Cross product's \gls{skews} representation}
+The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$, can be written as $\mathbf{\tilde{l}} = [\mathbf{\tilde{p}}]_{\times} \mathbf{\tilde{q}}$, where $[\mathbf{p}]_{\times}$ is defined as
 \begin{equation}
 \label{sec2:eq:crossp}
-\left[ \mathbf{\tilde{m}} \right]_ { \times } =  \left[ \begin{array} { c c c } { 0 } & { - m _ { 3 } } & { m _ { 2 } } \\ { m _ { 3 } } & { 0 } & { - m _ { 1 } } \\ { - m _ { 2 } } & { m _ { 1 } } & { 0 } \end{array} \right].
+\left[ \mathbf{p} \right]_ { \times } =  \left[ \begin{array} { c c c } { 0 } & { - p_ { 3 } } & { p_{ 2 } } \\ { p_{ 3 } } & { 0 } & { - p_{ 1 } } \\ { - p _ { 2 } } & { p_ { 1 } } & { 0 } \end{array} \right].
 \end{equation}
 
-\subsection{Deducing the fundamental matrix}
+\subsection{Deducing the fundamental matrix algebraically}
 
-With the above concepts, the following conclusions may be drawn:
+Having said this,
 \begin{enumerate}
-	\item There is an homographic mapping via $L$ plane from the points of the first to the second view, characterized by $\mathbf{\tilde{m}_2} = H_M \mathbf{\tilde{m}_1}$;
-	\item Because $\mathbf{m_2}$ lies on $\mathbf{\tilde{l}_2}$, then $\mathbf{ \tilde{m}_2 } ^T \mathbf{\tilde{l}_2} = 0$;
-	\item Since $\mathbf { e_2 }, \mathbf { m_2 } \in \mathbf{\tilde{l}_2}$, then $\mathbf{\tilde{l}_2} = [\mathbf{\tilde{e}_2}]_{\times} \mathbf{\tilde{m}_2}$.
+	\item there is an homographic mapping via $L$ plane from the points of the first to the second image, characterized by $\mathbf{\tilde{m}_2} = H_M \mathbf{\tilde{m}_1}$;
+	\item because $\mathbf{m_2}$ lies on $\mathbf{\tilde{l}_{e_2}}$, then $\mathbf{ \tilde{m}_2 } ^T \mathbf{\tilde{l}_{e_2}} = 0$;
+	\item and since $\mathbf { e_2 }, \mathbf { m_2 } \in \mathbf{\tilde{l}_{e_2}}$, then $\mathbf{\tilde{l}_{e_2}} = [\mathbf{\tilde{e}_2}]_{\times} \mathbf{\tilde{m}_2}$.
 \end{enumerate}
-From conclusions 1) and 3), 
+From 1) and 3), 
 \begin{equation}
 \label{ggg}
-\mathbf{\tilde{l}_2} = [\mathbf{\tilde{e}_2}]_{\times} H_M \mathbf{\tilde{m}_1} 
+\mathbf{\tilde{l}_{e_2}} = [\mathbf{\tilde{e}_2}]_{\times} H_M \mathbf{\tilde{m}_1} 
 \end{equation}
-can be deduced. Using conclusion 2) and (\ref{ggg}) 
+can be deduced and using conclusion 2) and (\ref{ggg}),
 \begin{equation}
 \label{sec2:eq:fundm}
-\mathbf{\tilde{m}_2}^T \mathbf{\tilde{l}_2} = 0 = \mathbf{\tilde{m}_2}^T [\mathbf{\tilde{e}_2}]_{\times} H_M \mathbf{\tilde{m}_1}  = \mathbf{\tilde{m}_2}^T F \mathbf{\tilde{m}_1} 
+\mathbf{\tilde{m}_2}^T \mathbf{\tilde{l}_{e_2}} = 0 = \mathbf{\tilde{m}_2}^T [\mathbf{\tilde{e}_2}]_{\times} H_M \mathbf{\tilde{m}_1}  = \mathbf{\tilde{m}_2}^T F \mathbf{\tilde{m}_1},
 \end{equation}
-$F$ is an homogeneous matrix of rank-2 (since $[\mathbf{\tilde{e}_2}]_{\times}$ is rank-2 and $H_M$ is rank-3) with 7 degrees of freedom, and $det(F) = 0$.
+where $F$, the fundamental matrix, is an homogeneous matrix of rank-2 (since $[\mathbf{\tilde{e}_2}]_{\times}$ is rank-2 and $H_M$ is rank-3) with 7 degrees of freedom, and $det(F) = 0$.
 
-\subsection{Relationship between the fundamental matrix and camera motion}
-Algebraically, having $M$ expressed in the first camera's reference frame, under the camera model studied above, (\ref{sec2:eq:eproj}) can be deduced.
-
-\begin{equation}
-\label{sec2:eq:eproj}
-\lambda_1 \mathbf{\tilde{m}_2} = K _1 [ I \ \mathbf{0} ] \tilde{M}, \
-\lambda_2 \mathbf{\tilde{m}_2} = K_2 [ R \ \mathbf{t} ] \tilde{M}
-\end{equation}
-In the case of only one camera in two different views: $K_1 = K_2$. For simplicity, the focal distance will be considered one meter, thus $K= I$ and the scale factors $\lambda_2$ and $\lambda_1$ will be dropped.
-Now by eliminating $\tilde{M}$, the previous equation becomes
+\subsection{Deducing the fundamental matrix from camera motion}
+Another way of obtaining this relation is through the camera motion.
+If the point in the real world is expressed in the eye's perspective before rotating, $M_1$, under the camera model studied in section \ref{cha2:features}, (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}) can be deduced.
+\begin{align}
+\label{sec2:eq:eproj1}
+\lambda_1 \mathbf{\tilde{m}_1} = K [ I \ \mathbf{0} ] \tilde{M_1}, \\
+\label{sec2:eq:eproj2}
+\lambda_2 \mathbf{\tilde{m}_2} = K [ R \ \mathbf{t} ] \tilde{M_1}
+\end{align}
+For now, for the sake of simplicity, the intrinsics matrix will considered the identity, $K= I$, and the scale factors $\lambda_2$ and $\lambda_1$ will be dropped. Hence, by eliminating $\tilde{M_1}$, the previous equations become
 \begin{equation}
 \label{sec2:eq:elimp}
 \mathbf{\tilde{m}_2} = R   \mathbf{\tilde{m}_1} + \mathbf{t},
@@ -88,19 +84,20 @@ the fundamental matrix, $F$, can be determined by
 \mathbf{\tilde{m_2}}^T F \mathbf{\tilde{m_1}} = 0.
 \end{aligned}
 \end{equation}
-If the intrinsic parameters are not the identity matrix, then 
+When the intrinsic parameters are not the identity matrix, then 
 \begin{equation}
 \begin{aligned}
 \label{hhh}
-\mathbf{\tilde{m_2}}^T K_2^{-T} E K_1^{-1} \mathbf{\tilde{m_1}} = 0 \\
-F = K_2^{-T}  E K_1^{-1},
+\mathbf{\tilde{m_2}}^T K^{-T} E K^{-1} \mathbf{\tilde{m_1}} = 0 \\
+\text{and finally }
+F = K^{-T}  E K^{-1},
 \end{aligned}
 \end{equation}
 where $E$ is the essential matrix.
 
 \subsection{Estimating the fundamental matrix}
 \label{einvonrev}
-In order to find the fundamental matrix, and consequently the transformation from one view to another, having a set of matched image points, $\mathbf{m_{i1}} = [u_{1} \ v_{1}]^T$ and $\mathbf{m_{2}} = [u_{i2}  \ v_{2}]^T$, the epipolar equation (\ref{sec2:eq:epipolar}) can be written as
+In such wise, the question now is how to determine $F$, and consequently the rotation, given two images with matching points. With the last-mentioned referred to as $\mathbf{m_{1}} = [u_{1} \ v_{1}]^T$ and $\mathbf{m_{2}} = [u_{2}  \ v_{2}]^T$, the epipolar equation (\ref{sec2:eq:epipolar}) can then be written as
 \begin{equation}
 \begin{aligned}
 \begin{bmatrix}
@@ -227,3 +224,59 @@ To summarize, the steps for obtaining the projective transformation from epipola
 	\item Retrieve the four possible solutions for $P = [R \ \mathbf{t}]$ by doing a SVD decomposition on $E$;
 	\item Choose the feasible solution.
 \end{enumerate}
+
+Normalizing input data and putting the centroid at the origin seems to improve the results.
+
+\subsection{Linear Solution or Norm-8 point}
+\begin{equation}
+\min_F \sum_i (\mathbf{\widetilde{m_i}}'^TF \mathbf{\widetilde{m_i}})^2
+\end{equation}
+\begin{equation}
+\min_f \left \| \mathbf{U_n} \mathbf{f} \right \|^2
+\end{equation}
+So that the solution for this is not  $\mathbf{f} = 0$ we apply a constraint, $\left \| \mathbf{f} | \right \| = 1$. Transforming it into an unconstrained minimization problem through Lagrange multipliers, we obtain 
+\begin{equation}
+\min_\mathbf{f} \mathcal{F}(\mathbf{f}, \lambda),
+\end{equation}
+where
+\begin{equation}
+\mathcal{F}(\mathbf{f}, \lambda) = \left \|\mathbf{U}_n\mathbf{f}\right \|^2 + \lambda(1-\left \|\mathbf{f}\right \|^2)
+\end{equation}
+and $\lambda$ is a Lagrange multiplier. Requiring the first derivative of $\mathcal{F}(\mathbf{f}, \lambda)$ with respect to $\mathbf{f}$ to be zero, we have
+\begin{equation}
+\mathbf{U}_n^T \mathbf{U}_n \mathbf{f} = \lambda \mathbf{f}
+\end{equation}
+To minimize $\mathcal{F}(\mathbf{f}, \lambda)$ the solution is the unit eigenvector of $\mathbf{U}_n^T \mathbf{U}_n$ associated with the smallest value of $\lambda_i$, $\lambda_9$.
+
+This still has a lot of noise because it doesn't impose rank-2 constraint. Hence, using the calculated $F$ matrix we can minimize the Frobenius norm of $F-\hat{F}$ by having $\hat{F} = U\hat{S}V^T$ with $\hat{S} = diag(\sigma_1, \sigma_2, 0)$.
+
+
+
+\subsection{Minimization of the epipolar error}
+
+	With the linear criterion the quantity we are minimizing is not physically meaningful. Physically meaningful quantity should be something measured in
+the image plane, because the available information (2D points) are extracted from images. One such quantity is the distance from a point $\mathbf{m}_i'$ to its corresponding epipolar line $\mathbf{l}_i' = F\mathbf{\widetilde{m}}_i = [l_1', l_2', l_3']^T$ given by
+\begin{equation}
+d(\mathbf{m'}_i, \mathbf{l'}_i) = \frac{\mathbf{\widetilde{m'}}_i^T\mathbf{l'}_i}{\sqrt{{l'}_1^2+{l'}_2^2}}.
+\end{equation}
+
+Hence, one possibility is,
+\begin{equation}
+\min_R \sum_i^N d^2(\mathbf{m}_i', F\mathbf{\widetilde{m}}_i) + d^2(\mathbf{m}_i, F^T\mathbf{\widetilde{m}}_i')
+\end{equation}
+which also forces the rank-2 constraint by doing $[\mathbf{t}]_{\times }R$. Normalizing the points and bringing their centroid to the center might yield better results. \textbf{(MEEN)}
+
+
+
+\subsection{Gradient-Based Technique}
+
+Minimizing $(\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance is not the same. The least-squares technique produces an optimal solution if each term has the same variance.
+So one possibility is 
+\begin{equation}
+\min_R \sum_i^N \frac{ (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2}{\sigma_i^2},
+\end{equation}
+where $\sigma_i$ is the variance given by 
+\begin{equation}
+\sigma_i^2 = \sigma [l_1^2 + l_2^2 + l_1^{2'} + l_2^{2'}].
+\end{equation}
+

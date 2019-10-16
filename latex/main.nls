@@ -14,7 +14,7 @@
 		\nompageref{xv}
   \item [{$x_d', y_d'$}]\begingroup Image plane horizontal and vertical coordinates (in meters distorted)\nomeqref {0}
 		\nompageref{xv}
-  \item [{$\bf M$}]\begingroup 3D point in the real world (in meters)\nomeqref {0}
+  \item [{$\bf M$}]\begingroup 3D point (in meters)\nomeqref {0}
 		\nompageref{xv}
   \item [{$X, Y, Z$}]\begingroup 3D point coordinates (in meters), Z is perpendicular to the image plane, X is horizontal and Y is vertical\nomeqref {0}
 		\nompageref{xv}
@@ -28,6 +28,12 @@
   \item [{$c_x, c_y$}]\begingroup Camera's principal point offset\nomeqref {0}
 		\nompageref{xv}
   \item [{$s_x, s_y$}]\begingroup Pixel scalings\nomeqref {0}
+		\nompageref{xv}
+
+ \nomgroup{B}
+
+  \item [{$E$}]\begingroup Essential Matrix\nomeqref {0}\nompageref{xv}
+  \item [{$F$}]\begingroup Fundamental Matrix\nomeqref {0}
 		\nompageref{xv}
 
  \nomgroup{C}

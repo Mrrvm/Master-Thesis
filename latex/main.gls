@@ -6,5 +6,12 @@
 		\setentrycounter[]{page}\glsnumberformat{31}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossentry{homo}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{9}}}%
+		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{9}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{13}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{svd}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{11}}}%
+\glossentry{skews}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{12}}}%
 \end{theglossary}\glossarypostamble

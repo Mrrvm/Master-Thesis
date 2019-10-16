@@ -2,4 +2,17 @@
 
 \chapter{Methodology}
 \label{methodology}
-Methods go here
+
+\section{Minimization of the Back Projection Error (MBPE)}
+\label{MBaPE}
+This method is a bundle adjustment of the previous one. It uses the rotation matrix obtained with OPPr and it tries to tune it to obtain a rotation and a translation dependent on the former, through 
+\begin{align*}
+	& \min_{R, Z_{e11}, ..., Z_{e1N}} \sum^N_{i=1} [(u_{e1i}-u_{1i})^2 + (u_{e2i}-u_{2i})^2 + (v_{e1i}-v_{1i})^2 + (v_{e2i}-v_{2i})^2]\\
+	& \text{with} \ Z_{e1init} = \frac{1}{\sqrt{u_{1i}^2 + v_{1i}^2 + 1}} \ \text{and} \ R_{init} = R_{oppr},
+\end{align*}
+where $u_{1i}$ and $v_{1i}$ are the image points of the Camera View 1, $u_{2i}$ and $v_{2i}$ are the image points of the Camera View 2, $u_{e1i}$, $v_{e1i}$, $u_{e2i}$ and $v_{e2i}$ are the corresponding image points estimations and $Z_{e1i}$ is the depth of the Camera View 1.\\
+The image point estimations are obtained the following way
+\begin{align*}
+	\mathbf{m_{e1}} = \frac{KR^T(Z_{e2}K^{-1}\mathbf{m_2}) - R^Tt)}{Z_{e1}}\\
+	\mathbf{m_{e2}} = \frac{KR(Z_{e1}K^{-1}\mathbf{m_1}) + t)}{Z_{e2}}.
+\end{align*} The depth is initialized by projecting the image points in a sphere.

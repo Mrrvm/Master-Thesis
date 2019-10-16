@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{johnpage}
 J.~Van~Opstal.
@@ -35,6 +35,11 @@ H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
 \bibitem{procrustes}
 D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,
   no.~3, pp.~376--376, 2005.
+
+\bibitem{detep}
+Z.~Z., ``{Determining the Epipolar Geometry and its Uncertainty: A Review},''
+  {\em International Journal of Computer Vision}, vol.~27, no.~2, pp.~161--195,
+  1998.
 
 \bibitem{compsiftsurf}
 D.~Mistry and A.~Banerjee, ``{Comparison of Feature Detection and Matching

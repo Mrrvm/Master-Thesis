@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  12 OCT 2019 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  16 OCT 2019 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,7 +933,7 @@ Package epstopdf Info: Source file: <images/ist_logo.eps>
 ted-to.pdf images/ist_logo.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
-<images/ist_logo-eps-converted-to.pdf, id=175, 500.87125pt x 193.72375pt>
+<images/ist_logo-eps-converted-to.pdf, id=195, 500.87125pt x 193.72375pt>
 File: images/ist_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use images/ist_logo-eps-converted-to.pdf>
 Package pdftex.def Info: images/ist_logo-eps-converted-to.pdf  used on input li
@@ -1039,33 +1039,33 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 18.
 [3]
-<images/prototype.pdf, id=415, 1248.58463pt x 936.37831pt>
+<images/prototype.pdf, id=454, 1248.58463pt x 936.37831pt>
 File: images/prototype.pdf Graphic file (type pdf)
 <use images/prototype.pdf>
 Package pdftex.def Info: images/prototype.pdf  used on input line 26.
 (pdftex.def)             Requested size: 284.52756pt x 213.37645pt.
-<images/drift1.png, id=418, 436.63126pt x 435.6275pt>
+<images/drift1.png, id=457, 436.63126pt x 435.6275pt>
 File: images/drift1.png Graphic file (type png)
 <use images/drift1.png>
 Package pdftex.def Info: images/drift1.png  used on input line 35.
 (pdftex.def)             Requested size: 136.57462pt x 136.25955pt.
-<images/drift2.png, id=420, 428.60126pt x 430.60875pt>
+<images/drift2.png, id=459, 428.60126pt x 430.60875pt>
 File: images/drift2.png Graphic file (type png)
 <use images/drift2.png>
 Package pdftex.def Info: images/drift2.png  used on input line 40.
 (pdftex.def)             Requested size: 136.57462pt x 137.21283pt.
-<images/lpmscu.jpg, id=421, 271.0125pt x 248.93pt>
+<images/lpmscu.jpg, id=460, 271.0125pt x 248.93pt>
 File: images/lpmscu.jpg Graphic file (type jpg)
 <use images/lpmscu.jpg>
 Package pdftex.def Info: images/lpmscu.jpg  used on input line 45.
 (pdftex.def)             Requested size: 136.57462pt x 125.44846pt.
  [4 <./images/prototype.pdf>]
-<images/baselinephoto.png, id=446, 293.095pt x 505.89pt>
+<images/baselinephoto.png, id=486, 293.095pt x 505.89pt>
 File: images/baselinephoto.png Graphic file (type png)
 <use images/baselinephoto.png>
 Package pdftex.def Info: images/baselinephoto.png  used on input line 63.
 (pdftex.def)             Requested size: 91.04742pt x 157.14848pt.
-<images/transf.pdf, id=447, 193.6836pt x 234.8775pt>
+<images/transf.pdf, id=487, 193.6836pt x 234.8775pt>
 File: images/transf.pdf Graphic file (type pdf)
 <use images/transf.pdf>
 Package pdftex.def Info: images/transf.pdf  used on input line 68.
@@ -1089,7 +1089,7 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (./chapters/backgroundandsota.tex
 Chapter 2.
 (./chapters/backgroundandsota/cameramodel.tex
-<images/cameraconcepts.pdf, id=485, 525.88469pt x 329.31029pt>
+<images/cameraconcepts.pdf, id=524, 525.88469pt x 329.31029pt>
 File: images/cameraconcepts.pdf Graphic file (type pdf)
 <use images/cameraconcepts.pdf>
 Package pdftex.def Info: images/cameraconcepts.pdf  used on input line 16.
@@ -1105,128 +1105,127 @@ sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
 >]) (./chapters/backgroundandsota/features.tex [9] [10]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 35.
 )
 (./chapters/backgroundandsota/opprandsphere.tex [11])
 (./chapters/backgroundandsota/epipolar.tex
-<images/epipolargeo.png, id=573, 495.8525pt x 322.20375pt>
+<images/epipolargeo.png, id=625, 495.8525pt x 322.20375pt>
 File: images/epipolargeo.png Graphic file (type png)
 <use images/epipolargeo.png>
 Package pdftex.def Info: images/epipolargeo.png  used on input line 15.
-(pdftex.def)             Requested size: 284.52756pt x 184.88715pt.
+(pdftex.def)             Requested size: 312.9803pt x 203.37291pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] [13 <./images/epipolargeo.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[12]
 
- [14]
-
-LaTeX Warning: Citation `detep' on page 15 undefined on input line 140.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 25.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 31.
+
+[13 <./images/epipolargeo.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 [15]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 157.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 154.
 
 
-LaTeX Warning: Citation `epipolar' on page 16 undefined on input line 157.
+LaTeX Warning: Citation `epipolar' on page 16 undefined on input line 154.
 
 
-LaTeX Warning: Citation `lecture' on page 16 undefined on input line 202.
-
-
-LaTeX Warning: Citation `epipolar' on page 16 undefined on input line 202.
-
-
-Underfull \vbox (badness 1478) has occurred while \output is active []
+Underfull \vbox (badness 1297) has occurred while \output is active []
 
  [16]
-<images/ep4sols.png, id=635, 1614.03pt x 1105.12875pt>
+
+LaTeX Warning: Citation `lecture' on page 17 undefined on input line 199.
+
+
+LaTeX Warning: Citation `epipolar' on page 17 undefined on input line 199.
+
+<images/ep4sols.png, id=692, 1614.03pt x 1105.12875pt>
 File: images/ep4sols.png Graphic file (type png)
 <use images/ep4sols.png>
-Package pdftex.def Info: images/ep4sols.png  used on input line 217.
+Package pdftex.def Info: images/ep4sols.png  used on input line 214.
 (pdftex.def)             Requested size: 284.52756pt x 194.81691pt.
 
+LaTeX Warning: Citation `epipolar' on page 17 undefined on input line 215.
+
+
+LaTeX Warning: Citation `epipolar' on page 17 undefined on input line 215.
+
 
 LaTeX Warning: Citation `epipolar' on page 17 undefined on input line 218.
 
+[17 <./images/ep4sols.png (PNG copy)>] [18])
+(./chapters/backgroundandsota/robustest.tex
 
-LaTeX Warning: Citation `epipolar' on page 17 undefined on input line 218.
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 5.
 
-
-LaTeX Warning: Citation `epipolar' on page 17 undefined on input line 221.
-
-) (./chapters/backgroundandsota/robustest.tex)
-(./chapters/backgroundandsota/represent.tex [17 <./images/ep4sols.png (PNG copy
-)>]
+) (./chapters/backgroundandsota/represent.tex [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+ [20]
 
-LaTeX Warning: Citation `eye' on page 19 undefined on input line 73.
+LaTeX Warning: Citation `eye' on page 21 undefined on input line 73.
 
-<images/coordsys.pdf, id=664, 372.43138pt x 177.7842pt>
+<images/coordsys.pdf, id=742, 372.43138pt x 177.7842pt>
 File: images/coordsys.pdf Graphic file (type pdf)
 <use images/coordsys.pdf>
 Package pdftex.def Info: images/coordsys.pdf  used on input line 80.
 (pdftex.def)             Requested size: 284.52756pt x 135.83083pt.
-[19 <./images/coordsys.pdf>]
-<images/ll.png, id=682, 1013.7875pt x 487.8225pt>
+[21 <./images/coordsys.pdf>]
+<images/ll.png, id=760, 1013.7875pt x 487.8225pt>
 File: images/ll.png Graphic file (type png)
 <use images/ll.png>
 Package pdftex.def Info: images/ll.png  used on input line 98.
 (pdftex.def)             Requested size: 369.88582pt x 177.98302pt.
- [20 <./images/ll.png>]
+ [22 <./images/ll.png>]
 
-LaTeX Warning: Citation `eye' on page 21 undefined on input line 123.
+LaTeX Warning: Citation `eye' on page 23 undefined on input line 123.
 
-)) [21]
+)) [23]
 \openout2 = `chapters/methodology.aux'.
 
- (./chapters/methodology.tex [22
+ (./chapters/methodology.tex [24
 
 
 
 ]
 Chapter 3.
-) [23]
+) [25]
 \openout2 = `chapters/results.aux'.
 
- (./chapters/results.tex [24
+ (./chapters/results.tex [26
 
 
 
 ]
 Chapter 4.
-) [25]
+) [27]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex [26
+ (./chapters/conclusion.tex [28
 
 
 
 ]
 Chapter 5.
-) [27]) (./main.bbl [28
+) [29]) (./main.bbl [30
 
 
-]
-Underfull \hbox (badness 1102) in paragraph at lines 4--7
-[]\OT1/phv/m/n/10 J. Van Op-stal. []$\OT1/cmtt/m/n/10 http : / / www . mbfys . 
-ru . nl / []johnvo / OrientWeb / orient _ 1 . html # Abstract$[]\OT1/phv/m/n/10
- .  Ac-
- []
-
-) (./appendix/main.tex [29]
+]) (./appendix/main.tex [31]
 \openout2 = `appendix/appendixa.aux'.
 
- (./appendix/appendixa.tex [30
+ (./appendix/appendixa.tex
+[32
 
 
 ]
@@ -1235,12 +1234,12 @@ Appendix A.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 8.
 
-<images/sift1.png, id=750, 1320.935pt x 918.43124pt>
+<images/sift1.png, id=828, 1320.935pt x 918.43124pt>
 File: images/sift1.png Graphic file (type png)
 <use images/sift1.png>
 Package pdftex.def Info: images/sift1.png  used on input line 19.
 (pdftex.def)             Requested size: 295.90588pt x 205.74121pt.
-<images/sift2.png, id=753, 450.68375pt x 394.47375pt>
+<images/sift2.png, id=831, 450.68375pt x 394.47375pt>
 File: images/sift2.png Graphic file (type png)
 <use images/sift2.png>
 Package pdftex.def Info: images/sift2.png  used on input line 26.
@@ -1255,8 +1254,8 @@ Underfull \hbox (badness 2460) in paragraph at lines 27--27
 \OT1/phv/m/n/10 max-ima and min-ima of the
  []
 
-[31]
-<images/sift3.png, id=760, 488.82625pt x 229.85875pt>
+[33]
+<images/sift3.png, id=838, 488.82625pt x 229.85875pt>
 File: images/sift3.png Graphic file (type png)
 <use images/sift3.png>
 Package pdftex.def Info: images/sift3.png  used on input line 50.
@@ -1269,13 +1268,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <./images/sift1.png> <./images/sift2.png> <./images/sift3.png (PNG copy)>]
-<images/surf.png, id=776, 1395.2125pt x 274.02374pt>
+ [34 <./images/sift1.png> <./images/sift2.png> <./images/sift3.png (PNG copy)>]
+<images/surf.png, id=854, 1395.2125pt x 274.02374pt>
 File: images/surf.png Graphic file (type png)
 <use images/surf.png>
 Package pdftex.def Info: images/surf.png  used on input line 73.
 (pdftex.def)             Requested size: 295.90588pt x 58.11533pt.
-<images/surf2.jpg, id=779, 345.54094pt x 207.77625pt>
+<images/surf2.jpg, id=857, 345.54094pt x 207.77625pt>
 File: images/surf2.jpg Graphic file (type jpg)
 <use images/surf2.jpg>
 Package pdftex.def Info: images/surf2.jpg  used on input line 80.
@@ -1285,7 +1284,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--81
 []$
  []
 
-[33 <./images/surf.png> <./images/surf2.jpg>]) [34])
+[35 <./images/surf.png> <./images/surf2.jpg>]) [36])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
  (./main.aux (./cover.aux)
@@ -1296,7 +1295,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5B326D2AAF453D5D5EE98C86CC9D9B6F;2937.
+(rerunfilecheck)             Checksum: 278605722555F664D9347069D922FF8E;3320.
 
 
 LaTeX Warning: There were undefined references.
@@ -1307,13 +1306,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 13911 strings out of 492982
- 225169 string characters out of 6134896
- 373272 words of memory out of 5000000
- 16862 multiletter control sequences out of 15000+600000
+ 14032 strings out of 492982
+ 226968 string characters out of 6134896
+ 375167 words of memory out of 5000000
+ 16960 multiletter control sequences out of 15000+600000
  34384 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,13n,37p,1996b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,13n,37p,1996b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1331,23 +1330,25 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/helvetic/uhvro8a.pfb>
-Output written on main.pdf (54 pages, 3748148 bytes).
+dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
+o8a.pfb>
+Output written on main.pdf (56 pages, 3775965 bytes).
 PDF statistics:
- 896 PDF objects out of 1000 (max. 8388607)
- 763 compressed objects within 8 object streams
- 205 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 987 PDF objects out of 1000 (max. 8388607)
+ 849 compressed objects within 9 object streams
+ 228 named destinations out of 1000 (max. 500000)
+ 470 words of extra memory for PDF output out of 10000 (max. 10000000)
 
