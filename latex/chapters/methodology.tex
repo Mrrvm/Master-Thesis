@@ -3,6 +3,14 @@
 \chapter{Methodology}
 \label{methodology}
 
+\section{Approach}
+
+\subsection{Feature detection and matching}
+
+\subsection{Filtering matches}
+
+\subsection{Baseline derivation}
+
 The transformation from the World to the Camera View 1 is
 \begin{equation}
 ^W_{C_1}T = \begin{bmatrix}
@@ -39,7 +47,12 @@ Thus, the translation is a function of the rotation and the baseline on the foll
 \mathbf{t}(R, \mathbf{b}) = R\mathbf{b}-\mathbf{b}.
 \end{equation}
 
-\section{Minimization of the Back Projection Error (MBPE)}
+
+\subsection{\acrlong{grat}}
+
+SAY THAT EPIPOLAR IS GOOD CUZ NO NEED TO DETERMINE Z, reference PAMI paper
+
+\subsection{\acrlong{mbpe}}
 \label{MBaPE}
 This method is a bundle adjustment of the previous one. It uses the rotation matrix obtained with OPPr and it tries to tune it to obtain a rotation and a translation dependent on the former, through 
 \begin{align*}
@@ -53,10 +66,8 @@ The image point estimations are obtained the following way
 	\mathbf{m_{e2}} = \frac{KR(Z_{e1}K^{-1}\mathbf{m_1}) + t)}{Z_{e2}}.
 \end{align*} The depth is initialized by projecting the image points in a sphere.
 
+\section{Implementation}
 
+\subsection{Simulator}
 
-
-
-
-
-SAY THAT EPIPOLAR IS GOOD CUZ NO NEED TO DETERMINE Z, reference PAMI paper
+\subsection{Real world}

@@ -160,7 +160,7 @@ Algorithm (ii) minimizes
 \end{equation}
 where $M_i$ with $i=1,...,n$ are the $n$ points in space, while $\mathbf{h}_1(\mathbf{f}, M_i)$ and $\mathbf{h}_2(\mathbf{f}, M_i)$ are the functions that project the points in space into the first and second image plane, respectively, given the fundamental matrix represented as a vector by $\mathbf{f}$.
 
-\subsection{\acrfull{grat}}
+\subsection{\acrlong{grat}}
 
 Minimizing $ \sum_i (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance of each $i$ term is not the same and the least-squares technique produces an optimal solution if each term has the same variance.
 So one possibility, given by algorithm (iii), is
@@ -189,7 +189,7 @@ E = SR = U \operatorname { diag } ( 1,1,0 ) \left( WU^T R \right) = U \operatorn
 \end{equation}
 proving the initial statement.
 
-Because the singular values have to be equal, the SVD of $E$ is not unique, in fact 
+Because the singular values have to be equal, the \acrshort{svdd} of $E$ is not unique, in fact 
 \begin{equation}
 \label{gf}
 E = U \operatorname { diag } ( 1,1,0 ) V ^ { T },
@@ -224,44 +224,44 @@ and
 \begin{equation}
 \operatorname { det } \left( U W ^ { T } V ^ { T } \right) = \operatorname { det } ( U ) \operatorname { det } \left( W ^ { T } \right) \operatorname { det } \left( V ^ { T } \right) = \operatorname { det } ( W ) \operatorname { det } \left( U V ^ { T } \right) = 1,
 \end{equation}
-which are enough conditions to prove it. Furthermore, $S$ is skew-symmetric because,
+which are enough conditions to prove it. Furthermore, $S$ is a \gls{skews} because,
 \begin{equation}
 - S^ { T } = \left( U Z U ^ { T } \right) ^ { T } = U Z ^ { T } U ^ { T } = - U Z U ^ { T } = S.
 \end{equation}
-The same applies to (\ref{ccha2}). \cite{lecture} A proof that these are the only solutions is given in Result 9.18 of R. Hartley and A. Zisserman \cite{epipolar}.
+The same applies to (\ref{ccha2}).\footnote{C. Olsson. \href{http://www.maths.lth.se/matematiklth/personal/calle/datorseende13/notes/forelas6.pdf}{http://www.maths.lth.se/matematiklth/personal/calle/datorseende13/notes/forelas6.pdf}. Lund Institue of Technology. Computer Vision 2013. Lecture 6.} A proof that these are the only solutions is given in Result 9.18 of R. Hartley and A. Zisserman \cite{multiview}.
 
 Now regarding the translation, since $S \mathbf{t} = [\mathbf{t}]_{\times}\mathbf{t} = 0$, it follows that $t = U (0, 0, 1)^T = u_3$, the last column of $U$, which can be explained by the following. Assuming $S \mathbf{t} = U Z U^T \mathbf{t} = 0$, $Z U^T \mathbf{t}$ should be equal to zero to satisfy the equation. Because $Z$ is an orthogonal matrix,
 \begin{equation}
 Z U^T \mathbf{t} = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] U^T \mathbf{t}  = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] \left[ \begin{array} { c } { 0 } \\ { 0} \\ s \end{array} \right] = 0,
 \end{equation}
 where $s$ is any non-zero constant, such as $1$. Therefore, $\mathbf{t} = U [0 \ 0 \ 1]^T = u_3$, as U is orthogonal as well.\\
-Finally, due to the lack of uniqueness of the SVD, there are 4 possible solutions for the camera matrix,
+Finally, due to the lack of uniqueness of the \acrshort{svdd}, there are 4 possible solutions for the camera matrix,
 \begin{equation}
 P = \left[UWV^T | + u_{ 3 } \right] \quad \text { or } \quad \left[ UWV^T | - u_ { 3 } \right] \quad \text { or } \quad \left[ UW^T V^T | + u_ { 3 } \right] \quad \text { or } \quad \left[ UW^T V^T |- u _ { 3 } \right],
 \end{equation}
 that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2:fig:ep4}. 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=10cm]{images/ep4sols.png}
-	\caption[Four possible solutions retrieved from $E$]{Four possible solutions retrieved from $E$. A and B are the first and second camera center positions when looking at the same scene. Between the right side, (a) and (c), and the left side, (b) and (d), figures, there is a translation direction inversion. Between top, (a) and (b), and bottom, (c) and (d), figures, there is a rotation of 180 degrees around the baseline. \cite{epipolar}}
-	\label{sec2:fig:ep4}
-\end{figure}
-The real world point is only in front of both cameras in one of the four solutions, thus, it is enough to use a single point to decide which of the different solutions produces the correct camera matrix. \cite{epipolar}
+The real world point is only in front of both cameras in one of the four solutions, thus it is enough to use a single point to decide which of the different solutions produces the correct camera matrix. \cite{multiview}
 
 To summarize, the steps for obtaining the projective transformation from epipolar geometry are:
+
 \begin{enumerate}
 	\item Determining the fundamental matrix, $F$, using one of the algorithms described on section \ref{einvonrev};
 	\item Obtain the essential matrix, $E$, from the intrinsic parameters (which is possible in this case);
-	\item Retrieve the four possible solutions for $P = [R \ \mathbf{t}]$ by doing a SVD decomposition on $E$;
+	\item Retrieve the four possible solutions for $P = [R \ | \ \mathbf{t}]$ by doing a \acrshort{svdd} decomposition on $E$;
 	\item Choose the feasible solution.
 \end{enumerate}
 
-Normalizing input data and putting the centroid at the origin seems to improve the results.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{images/ep4sols.png}
+	\caption[Four possible solutions retrieved from $E$]{Four possible solutions retrieved from the essential matrix $E$. The points A and B correspond to the centers of projection before and after rotating. Between the right side, (a) and (c), and the left side, (b) and (d), figures, there is a translation direction inversion. Between top, (a) and (b), and bottom, (c) and (d), figures, there is a rotation of 180 degrees around the baseline. \cite{multiview}}
+	\label{sec2:fig:ep4}
+\end{figure}
 
 \subsection{Pure rotation}
 
-If the eye's movement is not constrained by a translation component, the epipolar relation will not work. ....\\
+As a disadvantage of epipolar geometry, if the eye's movement is not constrained by a translation component, the epipolar relation will not work, since $[\mathbf{t}]_\times$ would be a $3x3$ matrix of zeros and, consequently, $E = [\mathbf{t}]_\times R$ would yield the same, making it unfeasible to retrieve the rotation.\\
 
-When doing feature detection and matching, wrongly matched pairs of points between the two images, or points with large location errors, could severely affect the precision of the estimation of $F$. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.\\
+When doing feature detection and matching, wrongly matched pairs of points between the two images, or points with large location errors, could severely affect the precision of the estimation of $F$. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.
 
