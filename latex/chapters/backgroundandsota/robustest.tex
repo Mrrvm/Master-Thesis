@@ -7,10 +7,10 @@ In computer vision, it is very common to estimate the parameters of a model from
 
 \subsubsection{\acrlong{ransac}}
 
-One technique of robust estimation, is \acrfull{ransac}, first introduced by Martin A. Fischler and Robert C. Bolles in 1981 \cite{ransac}, where a small set of inliers is used to find the model and test all the 
-other points against it. In this manner, it's possible to discover which points fit or not the model, and if they don’t consider them outliers. The final model is the one that has more inliers. 
+One technique of robust estimation, is \acrfull{ransac}, first introduced by Martin A. Fischler and Robert C. Bolles in 1981 \cite{ransac}, where a small set of inliers is used to find a model and test all the 
+other points against it. In this manner, it's possible to discover which points fit the model or not, and if they don’t consider them outliers. The final model is the one that has more inliers. 
 
-However, it is necessary to have a way of defining the said model. In the case of this work, the model could be obtained through \acrlong{oppr} applied to the point matches. More specifically, 3 point matches would be enough to estimate the rotation between images that applied to the remaining matches, could define which ones were outliers or inliers, leading to more matching accuracy.
+However, it is necessary to have a way of defining the said model. In the case of this work, the model could be obtained through \acrlong{oppr} applied to the point matches. More specifically, 3 point matches would be enough to estimate the rotation between images that, applied to the remaining matches, could define which ones are outliers or inliers, leading to more matching accuracy.
 
 Besides the accuracy, there is another interesting effect produced using this technique:
 
@@ -19,7 +19,7 @@ Besides the accuracy, there is another interesting effect produced using this te
 
 \item \acrshort{oppr} derives pure rotations as explained in section \ref{cha2:opprandsphere}. 
 \end{enumerate}
-Therefore by using \acrshort{ransac} and \acrshort{oppr} together, points matches closer to the camera, are naturally be eliminated. This corresponds to image sections that would be more affected by translation and might prove beneficial. \cite{mono} 
+Therefore by using \acrshort{ransac} and \acrshort{oppr} together, points matches closer to the camera, are naturally eliminated. This corresponds to image sections that would be more affected by translation and might prove beneficial. \cite{mono} 
 
 To summarize \acrshort{ransac} works as following:
 
@@ -28,6 +28,6 @@ To summarize \acrshort{ransac} works as following:
 	\item fit of a model to that sample;
 	\item test of the model for the rest of the points matches. The ones that fit are "also inliers";
 	\item if "maybe inliers" + "also inliers" are enough points for a model to be considered good, then this inlier point matches are potential outcome;
-	\item reprat all the steps for as many tries as desired in order to gather the biggest number of inliers.
+	\item repeat all the steps for as many tries as desired in order to gather the biggest number of inliers.
 \end{itemize}
 

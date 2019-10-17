@@ -32,6 +32,10 @@ H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
   (SURF) Herbert},'' {\em Revue du Praticien - Medecine Generale}, no.~465
   SUPPL., pp.~44--45.
 
+\bibitem{flann}
+M.~Muja and D.~Lowe, ``{Fast approximate nearest neighbors with automatic
+  algorithm configuration},'' 2009.
+
 \bibitem{procrustes}
 D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,
   no.~3, pp.~376--376, 2005.
@@ -41,13 +45,13 @@ Z.~Z., ``{Determining the Epipolar Geometry and its Uncertainty: A Review},''
   {\em International Journal of Computer Vision}, vol.~27, no.~2, pp.~161--195,
   1998.
 
-\bibitem{mono}
-D.~Burschka and E.~Mair
-
 \bibitem{ransac}
 M.~A. Fischler and R.~C. Bolles, ``{Random Sample Consensus: A Paradigm for
   Model Fitting with Applications to Image Analysis and Automated
   Cartography},'' vol.~24, no.~6, 1981.
+
+\bibitem{mono}
+D.~Burschka and E.~Mair
 
 \bibitem{compsiftsurf}
 D.~Mistry and A.~Banerjee, ``{Comparison of Feature Detection and Matching
