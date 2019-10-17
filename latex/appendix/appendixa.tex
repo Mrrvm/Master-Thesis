@@ -1,12 +1,9 @@
 %!TEX root = ../dissertation.tex
 
-\chapter{Background and State of the Art}
-\label{appendix:backgroundandsota}
-
-\section{Feature Detectors}
-\label{appendix:cha1:feat}
-\subsection{\acrlong{sift}}
-\label{appendix:cha1:sec1:sift}
+\chapter{Feature Detectors}
+\label{appendix:cha1}
+\section{\acrlong{sift}}
+\label{appendix:cha1:sift}
 The \acrshort{sift} algorithm consists of a local feature detector and local histogram-based descriptor. At first, \acrshort{sift} takes the original image, and generates progressively blurred images through a Gaussian filter as $L (u , v , \sigma ) = G ( u , v, \sigma ) * I ( u , v )$, where $(u, v)$ are the pixel coordinates, $L$ is the blurred image, $I$ is the original image, $G$ is the \gls{gauss}, and finally $\sigma$ is the amount of blur. Then, it re-sizes the original image to half its size, and generates the blurred images again, and repeats. Each new re-sizing of the previous image is scaled by an octave, and each octave can be blurred  several times. This process ensures the scale invariance of potential features.
 
 The set of blurred images obtained, then goes through the Difference of Gaussians (DoG) calculation, to find points of interest, or features, later on. To that end, the images from each octave (scale) are subtracted from each other pairwise, as illustrated in Figure \ref{sec2:fig:DoG}. Mathematically, what happens is obtaining $D ( u , v , \sigma ) = L ( u , v , k \sigma ) - L ( u , v , \sigma )$, where $k$ is a constant multiplicative (scaling) factor and $D$ is the difference.
@@ -54,8 +51,8 @@ This information is used to create a histogram of orientations. Peaks on the his
 For the descriptor of the feature, a 16$\times$16 window around the point of interest is set. For each $4\times4$ region, the orientations are put into an 8 bin histogram (each bin with a 45 degree range). This can be seen through Figure \ref{sec2:fig:sift3}. The length of each arrow corresponds to the sum of the gradient magnitudes near that direction within the region. Doing this for the 16 regions, there will be 128 values describing the feature.
 \cite{sift}
 
-\subsection{\acrlong{surf}}
-\label{appendix:cha1:sec1:surf}
+\section{\acrlong{surf}}
+\label{appendix:cha1:surf}
 \acrshort{surf} starts from an integral image, which is an intermediate representation of the
 original image. The entry of an integral image $I_{\Sigma}( \mathbf{x})$ at a location
 $\mathbf{x} = (u, v)$ represents the sum of all pixels in the input image $I$ of a rectangular region formed by the point $\mathbf{x}$ and the origin as 

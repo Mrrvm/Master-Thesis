@@ -22,27 +22,25 @@
 \BOOKMARK [2][-]{subsection.2.4.2}{Deducing the fundamental matrix algebraically}{section.2.4}% 22
 \BOOKMARK [2][-]{subsection.2.4.3}{Deducing the fundamental matrix from camera motion}{section.2.4}% 23
 \BOOKMARK [2][-]{subsection.2.4.4}{Estimating the fundamental matrix}{section.2.4}% 24
-\BOOKMARK [2][-]{subsection.2.4.5}{Factorization of the essential matrix}{section.2.4}% 25
-\BOOKMARK [2][-]{subsection.2.4.6}{Linear Solution or Norm-8 point}{section.2.4}% 26
-\BOOKMARK [2][-]{subsection.2.4.7}{Minimization of the epipolar error}{section.2.4}% 27
-\BOOKMARK [2][-]{subsection.2.4.8}{Gradient-Based Technique}{section.2.4}% 28
-\BOOKMARK [1][-]{section.2.5}{Robust Estimation and Rejection of Image Sections}{chapter.2}% 29
-\BOOKMARK [2][-]{section*.14}{RANSAC}{section.2.5}% 30
-\BOOKMARK [3][-]{section*.15}{LMedS}{section*.14}% 31
-\BOOKMARK [1][-]{section.2.6}{Representation of eye orientations in 3 dimensions}{chapter.2}% 32
-\BOOKMARK [2][-]{subsection.2.6.1}{Rotation axis and angle}{section.2.6}% 33
-\BOOKMARK [2][-]{subsection.2.6.2}{Rotation vector in head-fixed coordinates}{section.2.6}% 34
-\BOOKMARK [2][-]{subsection.2.6.3}{Quaternions}{section.2.6}% 35
-\BOOKMARK [2][-]{subsection.2.6.4}{Coordinate system}{section.2.6}% 36
-\BOOKMARK [2][-]{subsection.2.6.5}{Donders' and Listing's laws}{section.2.6}% 37
-\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 38
-\BOOKMARK [1][-]{section.3.1}{Minimization of the Back Projection Error \(MBPE\)}{chapter.3}% 39
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 40
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Contributions}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}% 43
-\BOOKMARK [0][-]{section.5.2}{Bibliography}{}% 44
-\BOOKMARK [0][-]{appendix.A}{Background and State of the Art}{}% 45
-\BOOKMARK [1][-]{section.A.1}{Feature Detectors}{appendix.A}% 46
-\BOOKMARK [2][-]{subsection.A.1.1}{sift}{section.A.1}% 47
-\BOOKMARK [2][-]{subsection.A.1.2}{surf}{section.A.1}% 48
+\BOOKMARK [2][-]{subsection.2.4.5}{grat}{section.2.4}% 25
+\BOOKMARK [2][-]{subsection.2.4.6}{Factorization of the essential matrix}{section.2.4}% 26
+\BOOKMARK [2][-]{subsection.2.4.7}{Pure rotation}{section.2.4}% 27
+\BOOKMARK [1][-]{section.2.5}{Robust Estimation and Rejection of Image Sections}{chapter.2}% 28
+\BOOKMARK [2][-]{section*.14}{RANSAC}{section.2.5}% 29
+\BOOKMARK [3][-]{section*.15}{LMedS}{section*.14}% 30
+\BOOKMARK [1][-]{section.2.6}{Representation of eye orientations in 3 dimensions}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.6.1}{Rotation axis and angle}{section.2.6}% 32
+\BOOKMARK [2][-]{subsection.2.6.2}{Rotation vector in head-fixed coordinates}{section.2.6}% 33
+\BOOKMARK [2][-]{subsection.2.6.3}{Quaternions}{section.2.6}% 34
+\BOOKMARK [2][-]{subsection.2.6.4}{Coordinate system}{section.2.6}% 35
+\BOOKMARK [2][-]{subsection.2.6.5}{Donders' and Listing's laws}{section.2.6}% 36
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 37
+\BOOKMARK [1][-]{section.3.1}{Minimization of the Back Projection Error \(MBPE\)}{chapter.3}% 38
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 39
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Contributions}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}% 42
+\BOOKMARK [0][-]{section.5.2}{Bibliography}{}% 43
+\BOOKMARK [0][-]{appendix.A}{Feature Detectors}{}% 44
+\BOOKMARK [1][-]{section.A.1}{sift}{appendix.A}% 45
+\BOOKMARK [1][-]{section.A.2}{surf}{appendix.A}% 46

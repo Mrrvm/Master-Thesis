@@ -3,6 +3,42 @@
 \chapter{Methodology}
 \label{methodology}
 
+The transformation from the World to the Camera View 1 is
+\begin{equation}
+^W_{C_1}T = \begin{bmatrix}
+I & -\mathbf{b}\\ 
+\mathbf{0} & 1
+\end{bmatrix}
+\end{equation} and the transformation from the World to the Camera View 2 is
+\begin{equation}
+^W_{C_2}T = \begin{bmatrix}
+R & -\mathbf{b}\\ 
+\mathbf{0} & 1
+\end{bmatrix}.
+\end{equation}\\
+
+Hence, the transformation from Camera View 1 to Camera View 2 is 
+\begin{equation}
+^{C_1}_{C_2}T = ^{W}_{C_2}T ^{C_1}_{W}T = ^{W}_{C_2}T ^{W}_{C_1}T^{-1} = 
+\begin{bmatrix}
+R & -\mathbf{b}\\ 
+\mathbf{0} & 1
+\end{bmatrix}
+\begin{bmatrix}
+I & \mathbf{b}\\ 
+\mathbf{0} & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+R & R\mathbf{b}-\mathbf{b}\\ 
+\mathbf{0} & 1
+\end{bmatrix}.
+\end{equation}
+Thus, the translation is a function of the rotation and the baseline on the following way 
+\begin{equation}
+\mathbf{t}(R, \mathbf{b}) = R\mathbf{b}-\mathbf{b}.
+\end{equation}
+
 \section{Minimization of the Back Projection Error (MBPE)}
 \label{MBaPE}
 This method is a bundle adjustment of the previous one. It uses the rotation matrix obtained with OPPr and it tries to tune it to obtain a rotation and a translation dependent on the former, through 
@@ -16,3 +52,11 @@ The image point estimations are obtained the following way
 	\mathbf{m_{e1}} = \frac{KR^T(Z_{e2}K^{-1}\mathbf{m_2}) - R^Tt)}{Z_{e1}}\\
 	\mathbf{m_{e2}} = \frac{KR(Z_{e1}K^{-1}\mathbf{m_1}) + t)}{Z_{e2}}.
 \end{align*} The depth is initialized by projecting the image points in a sphere.
+
+
+
+
+
+
+
+SAY THAT EPIPOLAR IS GOOD CUZ NO NEED TO DETERMINE Z, reference PAMI paper

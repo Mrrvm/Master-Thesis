@@ -7,7 +7,7 @@ Epipolar geometry provides an alternative yet powerful tool to obtain image tran
 
 \begin{equation}
 \label{sec2:eq:epipolar}
-\mathbf{\tilde{m}_2}^T F \mathbf{\tilde{m}_1} = 0.
+\mathbf{\tilde{m}_2}^T F \mathbf{\tilde{m}_1} = 0,
 \end{equation}
 
 \begin{figure}[h]
@@ -17,7 +17,7 @@ Epipolar geometry provides an alternative yet powerful tool to obtain image tran
 	\label{sec2:fig:epipolargeo}
 \end{figure}
 
-This relation can be easily deduced with projective geometry. In Figure \ref{sec2:fig:epipolargeo}, $c_1$ and $c_2$ are the centers of projection before and after the camera has been displaced by $(R, \mathbf{t})$. Given the point $\bf m_1$ on the first image, its correspondence, $\bf m_2$, in the second image is constrained to a line, the epipolar line, $\bf l_{e2}$. The latter is defined as the intersection of the plane $L$ and the second image plane. Furthermore, plane $L$ is delineated by the two centers of projection and $\bf m_1$. The epipoles, $\bf e_1$ and $\bf e_2$, are born from the intersection of the line $c_1 - c_2$ with the epipolar lines, $\bf l_{e1}$ and $\bf l_{e2}$. 
+which can be easily deduced with projective geometry. In Figure \ref{sec2:fig:epipolargeo}, $c_1$ and $c_2$ are the centers of projection before and after the camera has been displaced by $(R, \mathbf{t})$. Given the point $\bf m_1$ on the first image, its correspondence, $\bf m_2$, in the second image is constrained to a line, the epipolar line, $\bf l_{e2}$. The latter is defined as the intersection of the plane $L$ and the second image plane. Furthermore, plane $L$ is delineated by the two centers of projection and $\bf m_1$. The epipoles, $\bf e_1$ and $\bf e_2$, are born from the intersection of the line $c_1 - c_2$ with the epipolar lines, $\bf l_{e1}$ and $\bf l_{e2}$. 
 
 \subsection{Projective geometry concepts}
 
@@ -57,14 +57,14 @@ where $F$, the fundamental matrix, is an homogeneous matrix of rank-2 (since $[\
 
 \subsection{Deducing the fundamental matrix from camera motion}
 Another way of obtaining this relation is through the camera motion.
-If the point in the real world is expressed in the eye's perspective before rotating, $M_1$, under the camera model studied in section \ref{cha2:features}, (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}) can be deduced.
+If the point in the real world is expressed in the eye's perspective before rotating, $M_1$, under the camera model studied in section \ref{cha2:features}, (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}) are true.
 \begin{align}
 \label{sec2:eq:eproj1}
 \lambda_1 \mathbf{\tilde{m}_1} = K [ I \ \mathbf{0} ] \tilde{M_1}, \\
 \label{sec2:eq:eproj2}
 \lambda_2 \mathbf{\tilde{m}_2} = K [ R \ \mathbf{t} ] \tilde{M_1}
 \end{align}
-For now, for the sake of simplicity, the intrinsics matrix will considered the identity, $K= I$, and the scale factors $\lambda_2$ and $\lambda_1$ will be dropped. Hence, by eliminating $\tilde{M_1}$, the previous equations become
+For now, for the sake of simplicity, the intrinsics matrix will be considered the identity, $K= I$, and the scale factors $\lambda_1$ and $\lambda_2$ will be dropped. Hence, by eliminating $\tilde{M_1}$, the previous equations become
 \begin{equation}
 \label{sec2:eq:elimp}
 \mathbf{\tilde{m}_2} = R   \mathbf{\tilde{m}_1} + \mathbf{t},
@@ -74,9 +74,9 @@ and because the cross product of two vectors is orthogonal to them both,
 	\label{sec2:eq:fundm1}
 	\mathbf{\tilde{m}_2}^T \cdot ( \mathbf{\tilde{m}_2} \times \mathbf{t}) = 0 \\
 	\label{sec2:eq:fundm2}
-	( \mathbf{\tilde{m}_2}^T\cdot((R  \mathbf{\tilde{m}_1} + \mathbf{t}) \times \mathbf{t}) = 0,
+	\text{and } ( \mathbf{\tilde{m}_2}^T\cdot((R  \mathbf{\tilde{m}_1} + \mathbf{t}) \times \mathbf{t}) = 0.
 \end{align}
-the fundamental matrix, $F$, can be determined by 
+Therefore, the fundamental matrix, $F$, can be determined by 
 \begin{equation}
 \label{sec2:eq:fundm3}
 \begin{aligned}
@@ -131,27 +131,59 @@ For $n$ sets of points the expression becomes
 U f = 0,
 \end{equation}
 where $U = \left[ \mathbf{u_ { 1 }} , \cdots , \mathbf{u_ { n }} \right] ^ { T }$. 
-
 This linear homogeneous equation, and the rank-2 constraint over $F$, that restrains the matrix to 7 degrees of freedom (since $F$ is also defined up a scalar factor), will permit its unique identification. 
+Hence, the estimation of $F$ may be done using only 7 point matches, or by using 8 or more if enough data points are available. In the latter case, the solution produced is in general unique, and there are several techniques to obtain it. In Zhang 1996's review on the issue \cite{detep}, the conclusion was that linear techniques are usually sensitive to noise and not very stable, because they ignore the constraints of $F$ and the minimization criterion is not physically meaningful. However, the results could be improved by using normalized data points instead of pixel coordinates. 
 
-The estimation of $F$ may be done using only 7 point matches, or by using 8 or more if enough data points are available. In the latter case, the solution produced is in general unique, and there are several techniques to obtain it. In Zhang 1996's review on the issue \cite{detep}, the conclusion was that linear techniques are usually sensitive to noise and not very stable, because they ignore the constraints of $F$ and the minimization criterion is not physically meaningful. However, the results could be improved by using normalized data points instead of pixel coordinates. 
+Nevertheless, non-linear optimization techniques seem to yield better results to the estimation problem of $F$. Three nonlinear algorithms are mentioned in the review paper: (i) a minimization of the epipolar error, (ii) a minimization of the re-projection errors (iii) and a gradient-based technique. The second one is the most time-consuming, thus not recommended. From the other two most promising approaches, the first seems to give the worst results and the last algorithm has been proposed to give the best results in the least amount of computational time. 
 
-Nevertheless, non-linear optimization techniques seem to yield better results to the estimation problem of $F$. Three nonlinear algorithms are available: (i) the distances between points and their corresponding epipolar lines, (ii) the gradient-weighted epipolar errors, and (iii) the distances between points and the reprojections of their corresponding points reconstructed in space. The third one is the most time-consuming method, thus not recommended. The first seems to give the worst results out of the three. Therefore, the second algorithm has been proposed to give the best results in the least amount of computational time.
+Algorithm (i) minimizes the distances between points and their corresponding epipolar lines,
+\begin{equation}
+\label{cha2:sec3:eq:mee}
+	\min_{\mathbf{F}} \sum_{i}\left(
+	d^{2}(\widetilde{\mathbf{m}}_{2i}, \widetilde{\mathbf{l}}_{e_2i})
+	+
+	d^{2}(\widetilde{\mathbf{m}}_{1i}, \widetilde{\mathbf{l}}_{e_1i})\right),
+\end{equation}
+where $i=1,...,n$ with $n$ being all the point matches and for a generic point in the first image
+\begin{equation}
+\label{cha2:sec3:eq:meed}
+	d(\widetilde{\mathbf{m}}_1, \widetilde{\mathbf{l}}_{e_1}) = \frac{\widetilde{\mathbf{m}}_1^T \widetilde{\mathbf{l}}_{e_1}}{\sqrt{l_{e_{1_x}}^2+l_{e_{1_y}}^2}}.
+\end{equation}
+Algorithm (ii) minimizes 
+\begin{equation}
+\label{cha2:sec3:eq:al3}
+	\min_{\mathbf{F}}\sum_{i}
+	\left(
+	\left\|\widetilde{\mathbf{m}}_{1i}-\mathbf{h}_1(\mathbf{f}, M_i)\right\|^2
+	+
+	\left\|\widetilde{\mathbf{m}}_{2i}-\mathbf{h}_2(\mathbf{f}, M_i)\right\|^2\right),
+\end{equation}
+where $M_i$ with $i=1,...,n$ are the $n$ points in space, while $\mathbf{h}_1(\mathbf{f}, M_i)$ and $\mathbf{h}_2(\mathbf{f}, M_i)$ are the functions that project the points in space into the first and second image plane, respectively, given the fundamental matrix represented as a vector by $\mathbf{f}$.
 
-Note that outliers, such as a wrongly matched pairs of points between the two views of the scene, or points with large location errors, could severely affect the precision of the estimation of $F$. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, more robust techniques have been proposed that are less sensitive to outliers, the most popular being M-estimators, and the least-median-of-squares (LMedS). The LMedS method solves a nonlinear minimization problem yielding the smallest value for
-the median of squared residuals computed over the entire data set, and proves to be very robust both against false matches, and to erroneous locations, whereas M-estimators is less robust to false matches. LMedS must be solved by a search in the space of possible estimates generated from the data, which is too time-consuming. Thus, as a pragmatic approach is to only test a random sample of the data.\\
+\subsection{\acrfull{grat}}
+
+Minimizing $ \sum_i (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance of each $i$ term is not the same and the least-squares technique produces an optimal solution if each term has the same variance.
+So one possibility, given by algorithm (iii), is
+\begin{equation}
+\min_F \sum_i \frac{ (\mathbf{\widetilde{\mathbf{m}}_{2i}}^T F \widetilde{\mathbf{m}}_{1i})^2}{\sigma_i^2},
+\end{equation}
+where $i=1,...,n$ and $\sigma_i^2$ is the variance given by 
+\begin{equation}
+\sigma_i^2 = \sigma [l_{{e1i}_x}^2 + l_{{e1i}_y}^2 + l_{{e2i}_x}^2 + l_{{e2i}_y}^2].
+\end{equation}
+Because multiplying each term by a constant makes no difference, $\sigma$ can be dropped. $\sigma_i$ is what originates the name as it is the  epipolar relation gradient.
 
 \subsection{Factorization of the essential matrix}
 
 Once the fundamental matrix is obtained through one of those methods, assuming the intrinsic parameters are known, which is the case for this project, where the setup is only one camera, the essential matrix may be obtained by $E = K^{T}  F K$ as seen on (\ref{hhh}).
-From here, it's possible to retrieve the camera matrix, $P = [R \ | \ \mathbf{t}]$ from the first to the second view, since $E = [\mathbf{t}]_\times R$. 
+From here, it's possible to retrieve the camera matrix, $P = [R \ | \ \mathbf{t}]$, since $E = [\mathbf{t}]_\times R$. 
 
-A $3x3$ matrix is an essential matrix if and only if two of its singular values are equal, and the third is zero. This is easily proven by the decomposition of $E = SR$, where $S$ is a skew-symmetric matrix, as follows.
-Considering matrices 
+A $3x3$ matrix is an essential matrix if and only if two of its singular values are equal, and the third is zero. This is easily proven by the decomposition of $E = SR$, where $S$ is a \gls{skews}.
+Considering the matrices 
 \begin{equation}
 \mathrm { W } = \left[ \begin{array} { c c c } { 0 } & { - 1 } & { 0 } \\ { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \quad \text { and } \quad \mathrm { Z } = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right],
 \end{equation}
-where $W$ is orthogonal and $Z$ is skew-symmetric, $S$ may be written as\footnote{A proof of this is given in Result A4.1 of R. Hartley and A. Zisserman,Multiple View Geometry in Computer Vision \cite{epipolar}} $S = kUZU^T$, where $U$ is orthogonal and $Z = \operatorname{diag}(1,1,0)W$, up to sign. Thus, $S = U \operatorname { diag } ( 1,1,0 ) WU^T$, up to scale, and 
+where $W$ is orthogonal and $Z$ is a \gls{skews}, $S$ may be written as $S = kUZU^T$\footnote{A proof of this is given in Result A4.1 of R. Hartley and A. Zisserman,Multiple View Geometry in Computer Vision \cite{multiview}}, where $U$ is orthogonal and $Z = \operatorname{diag}(1,1,0)W$, up to sign. Thus, $S = U \operatorname { diag } ( 1,1,0 ) WU^T$, up to scale, and 
 \begin{equation}
 E = SR = U \operatorname { diag } ( 1,1,0 ) \left( WU^T R \right) = U \operatorname { diag } ( 1,1,0 ) V^T,
 \end{equation}
@@ -227,56 +259,9 @@ To summarize, the steps for obtaining the projective transformation from epipola
 
 Normalizing input data and putting the centroid at the origin seems to improve the results.
 
-\subsection{Linear Solution or Norm-8 point}
-\begin{equation}
-\min_F \sum_i (\mathbf{\widetilde{m_i}}'^TF \mathbf{\widetilde{m_i}})^2
-\end{equation}
-\begin{equation}
-\min_f \left \| \mathbf{U_n} \mathbf{f} \right \|^2
-\end{equation}
-So that the solution for this is not  $\mathbf{f} = 0$ we apply a constraint, $\left \| \mathbf{f} | \right \| = 1$. Transforming it into an unconstrained minimization problem through Lagrange multipliers, we obtain 
-\begin{equation}
-\min_\mathbf{f} \mathcal{F}(\mathbf{f}, \lambda),
-\end{equation}
-where
-\begin{equation}
-\mathcal{F}(\mathbf{f}, \lambda) = \left \|\mathbf{U}_n\mathbf{f}\right \|^2 + \lambda(1-\left \|\mathbf{f}\right \|^2)
-\end{equation}
-and $\lambda$ is a Lagrange multiplier. Requiring the first derivative of $\mathcal{F}(\mathbf{f}, \lambda)$ with respect to $\mathbf{f}$ to be zero, we have
-\begin{equation}
-\mathbf{U}_n^T \mathbf{U}_n \mathbf{f} = \lambda \mathbf{f}
-\end{equation}
-To minimize $\mathcal{F}(\mathbf{f}, \lambda)$ the solution is the unit eigenvector of $\mathbf{U}_n^T \mathbf{U}_n$ associated with the smallest value of $\lambda_i$, $\lambda_9$.
+\subsection{Pure rotation}
 
-This still has a lot of noise because it doesn't impose rank-2 constraint. Hence, using the calculated $F$ matrix we can minimize the Frobenius norm of $F-\hat{F}$ by having $\hat{F} = U\hat{S}V^T$ with $\hat{S} = diag(\sigma_1, \sigma_2, 0)$.
+If the eye's movement is not constrained by a translation component, the epipolar relation will not work. ....\\
 
-
-
-\subsection{Minimization of the epipolar error}
-
-	With the linear criterion the quantity we are minimizing is not physically meaningful. Physically meaningful quantity should be something measured in
-the image plane, because the available information (2D points) are extracted from images. One such quantity is the distance from a point $\mathbf{m}_i'$ to its corresponding epipolar line $\mathbf{l}_i' = F\mathbf{\widetilde{m}}_i = [l_1', l_2', l_3']^T$ given by
-\begin{equation}
-d(\mathbf{m'}_i, \mathbf{l'}_i) = \frac{\mathbf{\widetilde{m'}}_i^T\mathbf{l'}_i}{\sqrt{{l'}_1^2+{l'}_2^2}}.
-\end{equation}
-
-Hence, one possibility is,
-\begin{equation}
-\min_R \sum_i^N d^2(\mathbf{m}_i', F\mathbf{\widetilde{m}}_i) + d^2(\mathbf{m}_i, F^T\mathbf{\widetilde{m}}_i')
-\end{equation}
-which also forces the rank-2 constraint by doing $[\mathbf{t}]_{\times }R$. Normalizing the points and bringing their centroid to the center might yield better results. \textbf{(MEEN)}
-
-
-
-\subsection{Gradient-Based Technique}
-
-Minimizing $(\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance is not the same. The least-squares technique produces an optimal solution if each term has the same variance.
-So one possibility is 
-\begin{equation}
-\min_R \sum_i^N \frac{ (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2}{\sigma_i^2},
-\end{equation}
-where $\sigma_i$ is the variance given by 
-\begin{equation}
-\sigma_i^2 = \sigma [l_1^2 + l_2^2 + l_1^{2'} + l_2^{2'}].
-\end{equation}
+When doing feature detection and matching, wrongly matched pairs of points between the two images, or points with large location errors, could severely affect the precision of the estimation of $F$. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.\\
 
