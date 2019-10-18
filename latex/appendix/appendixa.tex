@@ -1,6 +1,7 @@
 %!TEX root = ../dissertation.tex
 
-\chapter{Feature Detectors}
+\chapter{Background}
+\section{Feature Detectors}
 \label{appendix:cha1}
 \section{\acrlong{sift}}
 \label{appendix:cha1:sift}
@@ -98,3 +99,42 @@ and is used to find the local change around a point. Points where the determinan
 To obtain rotation invariance, the sampling window is rotated towards the dominant orientation. The window size is 20$s$, where $s$ is the scale at which the point was detected, and is divided into a quadratic grid with 4$\times$4 square sub-regions. For each region, the Haar-wavelet responses are computed in the x and y directions. The descriptor is the sum of the x responses over its four quadrants, sum of the absolute values of the x responses and similarly for y, hence it may be defined as $\left( \sum d _ { x } , \sum d _ { y } , \sum _ { x } \left| d _ { x } \right| , \sum \left| d _ { y } \right| \right)$. Having 4 values per region and 16 regions, yields a total of 64 values to describe the feature. Figure \ref{sec2:fig:surff} helps at visualizing the process.
 
 The dominant orientation, here lightly and carelessly explained, is captured through the calculation of Haar-wavelet responses over a circular region around the point of interest with a radius of 6$s$. Those responses are then summed within a sliding orientation window covering an angle of $\frac{\pi}{3}$. \cite{surf} \cite{compsiftsurf}
+
+\section{Donder's and Listing's laws}
+The orientation of a freely rotating rigid body can be quantified by a horizontal angle, $\theta$, a vertical angle, $\phi$,  and a torsional angle, $\psi$ (around the z, y and x, axis, respectively) (see section \ref{cha2:represent}) when using the neuroscience coordinate system, relative to a starting position (the primary direction) for which all three angles are zero. Thus, 3 degrees of freedom.
+
+However, as referred before, Donders' law states that the orientation of the eye, when looking in a specific direction at infinity, is always the same; in other words, as described by Donders: 
+"with the head erect and looking at infinity, any gaze direction has a unique torsional angle, regardless the path followed by the eye to get there". Thus, the eye has 2 degrees of freedom for pointing.
+
+Moreover, the 3D orientations of the eye can be uniquely described by head-fixed Cartesian coordinate system of single-axis rotations (section \ref{killme}) that bring the eye from the primary position to the current orientation. Described in this way, Listing's law holds that the rotation axis corresponding to all possible eye orientations are confined to the yz-plane, called Listing's plane, in neuroscience. The primary position of the eye is an unique position 
+from which any other eye position can be reached through rotation around an axis lying in Listing's plane. This hypothetical rotation axis is defined by a vector 
+$ \mathbf{r}  = \left( r _ { x } , r _ { y } , r _ { z } \right)$, where $r _ { x }$, the torsional component perpendicular to the Listing's plane, is zero. 
+Figure \ref{sec2:fig:monkey} illustrates that this law is very precise, by showing 3500 different eye orientations made by a head-restrained monkey, where the left image is the frontal view on the rotation axis, representing the gazed points coordinates of the horizontal, $r_{ y }$, and vertical, $r_{ z }$, components of the axis, and the right-hand plot is a side view, representing the coordinates expressed by the  horizontal and torsional, $r_x$, components. A plane is clearly seen around $r_x = 0$ with little deviation ($\sigma _x \approx 0.6$ deg).
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm]{images/ll.png}
+	\caption[Listing’s law, illustrated for 3500 eye orientations made by a head-restrained monkey]{Listing’s law, illustrated for 3500 eye orientations made by a head-restrained monkey, freely looking around in the laboratory room. Eye fixations are represented by the head-fixed Cartesian components of the 3D rotation axes, expressed in half-radians, and calculated as $angle = 2 \cdot atan(component)$. \cite{donders}}
+	\label{sec2:fig:monkey}
+\end{figure}
+
+However, if the initial eye position is not the primary position, it should be noted that the dynamic angular velocity axis, $ \mathbf{\omega}$, that rotates the eye from one orientation in the Listing's plane to another, e.g. during a saccadic eye movement, is {\bf not} confined to the plane itself. It will typically have a torsional component, $\omega_x \neq 0$, as it depends on the initial eye position, $ \mathbf{r_1}  = (0, r_{1y}, r_{1z})$ and the saccade difference vector in Listing's Plane, $\mathbf{d_{12} }\equiv \mathbf{r_2} - \mathbf{r_1} = (0, d_{12y},d_{12z})$ that carries the eye to the final eye position, resulting in
+\begin{equation}
+\omega _x = r_{1y} \cdot d_{12z} - r_{1z} \cdot d_{12y}.
+\end{equation} 
+This expression can be reached, using the representation on section \ref{killme}, through the following:
+\begin{enumerate}
+	\item When rotating the eye, on the conditions that assure the existence of Listing's plane, from one position, $\bf r_1$, to another, $\bf r_2$, the resulting rotation axis will be $\bf r_{12} = r_1  \cdot r_2^{-1}$;
+	\item A rotation vector can be obtained by
+	\begin{equation}
+	\mathbf{r _ { 21 } } = \frac { \mathbf{r _ { 2 }} - \mathbf{r _ { 1 } }+ \mathbf{r _ { 1 }} \times \mathbf{r _ { 2 } }} { 1 + \mathbf{r _ { 1 }} \cdot \mathbf{r _ { 2 } }} \approx \mathbf{r _ { 2 }} - \mathbf{r _ { 1 }} + \mathbf{r _ { 1 }} \times \mathbf{r _ { 2 }} \equiv \mathbf{d _ { 12 }} + \mathbf{r _ { 1 } }\times \mathbf{d_{12 }} ,
+	\end{equation}
+	where $\mathbf{r _ { 1 }} \cdot \mathbf{r _ { 2 }} << 1$ for angles smaller then 30 degrees which is normally the case on eye rotations.
+	\item Expanding the previous equation to
+	\begin{equation}
+	\mathbf{r _ { 21 }} = 
+	\left( \begin{array} { c } { 0 } \\ \mathbf{{ d_{12y}}} \\ \mathbf{{d_{12z}}}\end{array}\right) +  \left( \begin{array} { c } { 0 } \\ \mathbf{{ r _ { 1 y } }} \\ \mathbf{{ r _ { 1 z }  }}\end{array}\right) 
+	\times \left( \begin{array} { c } { 0 } \\ \mathbf{{ d_{12y}}} \\ \mathbf{{ d_{12z} }}  \end{array} \right),
+	\end{equation}
+	$\bf r_{12x} = r_{1y} \cdot d_{12z} - r_{1z} \cdot d_{12y}$ is obtained and corresponds to the angular velocity component $\bf \omega_x$.
+\end{enumerate}
+\cite{donders} 

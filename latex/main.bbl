@@ -36,6 +36,14 @@ H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
 M.~Muja and D.~Lowe, ``{Fast approximate nearest neighbors with automatic
   algorithm configuration},'' 2009.
 
+\bibitem{rep}
+{J. van Opstal, A. Berthoz}, ``{Multisensory Control of Movement: Representaion
+  of the eye position in three dimensions},'' pp.~27--41, 1993.
+
+\bibitem{mathrot}
+T.~Haslwanter, ``{Mathematics of three-dimensional eye rotations},'' {\em
+  Vision Research}, vol.~35, no.~12, pp.~1727--1739, 1995.
+
 \bibitem{procrustes}
 D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,
   no.~3, pp.~376--376, 2005.

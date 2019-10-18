@@ -17,3 +17,5 @@
 \nomenclatureentry{B, 02$F$@[{$F$}]\begingroup Fundamental Matrix\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{C, 01$R$@[{$R$}]\begingroup Rotation Matrix\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{C, 02$\bf t$@[{$\bf t$}]\begingroup Translation vector\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 03$\bf r$@[{$\bf r$}]\begingroup Rotation vector\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 04$\bf q$@[{$\bf q$}]\begingroup Quaternion vector\nomeqref {0}|nompageref}{xv}

@@ -3,13 +3,13 @@
 \section{Camera Model}
 \label{cha2:cameramodel}
 
-To understand this work, it's important to first grasp the essential concepts on the pinhole camera model. Digital cameras are equipped with a sensor (mostly charge-coupled devices, CCD, and CMOS') that transforms light into discrete electrical signals. When taking a picture, some of the light reflecting on the object is directed towards the camera pinhole (tiny aperture on the camera), forming a 180º inverted image of the object on the sensor. All the light rays entering the camera converge into the pinhole and diverge on the other side (with a unique one-to-one correspondence). Therefore the pinhole is also named the \textbf{center of projection}, principal point, or focal point.
+For the comprehension of this work, it's important to first grasp the essential concepts on the pinhole camera model that follow. Digital cameras are equipped with a sensor (mostly charge-coupled devices, CCD, and CMOS') that transforms light into discrete electrical signals. When taking a picture, some of the light reflecting on the object is directed towards the camera pinhole (tiny aperture on the camera), forming a 180º inverted image of the object on the sensor. All the light rays entering the camera converge into the pinhole and diverge on the other side (with a unique one-to-one correspondence). Therefore the pinhole is also named the \textbf{center of projection}, principal point, or focal point.
 
 In cameras the aperture size and light-exposure time can be controlled. A smaller aperture produces a sharper image but needs a longer exposure time to collect enough light, whereas a larger pinhole allows more light to be captured, but at the expense of producing blurred images.
 
 The image of the object is projected onto the so-called \textbf{image plane}. When moving this plane closer to the pinhole (zoom out), the projected object gets smaller, and vice-versa. The distance between the plane and the aperture is the \textbf{focal length}, or focal distance. The view-angle of a camera depends on the focal distance, and on the sensor size. The image resolution depends solely on the number of pixels that fit on the sensor.
 
-A useful coordinate system, called the \textbf{camera reference system}, is centered at the pinhole, and has its z-axis perpendicular to the image plane. The line defined between the center of projection and the center of the image plane is called the \textbf{optical axis}.
+A useful coordinate system, called the \textbf{camera reference system}, is centered at the pinhole, and has its z-axis perpendicular to the image plane, as mentioned in section \ref{cha2:represent}. The line defined between the center of projection and the center of the image plane is called the \textbf{optical axis}.
 
 \begin{figure}[ht]
 	\centering
@@ -94,4 +94,4 @@ Having said this, in practice, the camera model contains several nonlinear effec
 { y' _d = y' \ \frac{ 1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{ 1 + k_4 r^2 + k_5 r^4 + k_6 r^6} +  ( p_1 ( r^2 + 2 y'^2 ) + 2 p_2 x' y')}
 \end{array},
 \end{equation}
-where $r^{2} = {x'}^{2} + {y'}^{2}$ and ${x'}_d$ and ${y'}_d$, are the distorted coordinates of the image point, which should then be converted into digital image coordinates as shown previously. 
+where $r^{2} = {x'}^{2} + {y'}^{2}$ and ${x'}_d$ and ${y'}_d$ are the distorted coordinates of the image point, which should then be converted into digital image coordinates as shown previously. 

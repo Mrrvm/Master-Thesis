@@ -21,49 +21,50 @@ Warning--empty journal in tesemiguel
 Warning--empty journal in multiview
 Warning--empty year in surf
 Warning--empty journal in flann
+Warning--empty journal in rep
 Warning--empty journal in ransac
 Warning--empty title in mono
 Warning--empty journal in mono
 Warning--empty year in mono
-You've used 13 entries,
+You've used 15 entries,
             1876 wiz_defined-function locations,
-            554 strings with 5348 characters,
-and the built_in function-call counts, 3016 in all, are:
-= -- 309
-> -- 89
+            567 strings with 5583 characters,
+and the built_in function-call counts, 3633 in all, are:
+= -- 380
+> -- 97
 < -- 0
-+ -- 36
-- -- 23
-* -- 200
-:= -- 430
-add.period$ -- 14
-call.type$ -- 13
-change.case$ -- 11
++ -- 40
+- -- 25
+* -- 238
+:= -- 507
+add.period$ -- 16
+call.type$ -- 15
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 160
-empty$ -- 301
-format.name$ -- 23
-if$ -- 730
+cite$ -- 24
+duplicate$ -- 194
+empty$ -- 361
+format.name$ -- 25
+if$ -- 885
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 12
-newline$ -- 43
-num.names$ -- 13
-pop$ -- 48
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 49
+num.names$ -- 15
+pop$ -- 54
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 99
+skip$ -- 127
 stack$ -- 0
-substring$ -- 198
-swap$ -- 55
+substring$ -- 262
+swap$ -- 72
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 8
-while$ -- 34
-width$ -- 15
-write$ -- 117
+warning$ -- 9
+while$ -- 42
+width$ -- 17
+write$ -- 136
 (There was 1 error message)

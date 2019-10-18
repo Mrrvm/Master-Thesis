@@ -29,11 +29,7 @@ A point $\mathbf { p } = ( p_1 , p_2 ) ^ T$ lies on a line $\mathbf {\tilde{l}} 
 \subsubsection{Line joining points}
 A line passing through any two points $\mathbf{\tilde{p}}$ and $\mathbf{\tilde{q}}$ can be defined by the cross-product of those points as $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$.
 \subsubsection{Cross product's \gls{skews} representation}
-The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$, can be written as $\mathbf{\tilde{l}} = [\mathbf{\tilde{p}}]_{\times} \mathbf{\tilde{q}}$, where $[\mathbf{p}]_{\times}$ is defined as
-\begin{equation}
-\label{sec2:eq:crossp}
-\left[ \mathbf{p} \right]_ { \times } =  \left[ \begin{array} { c c c } { 0 } & { - p_ { 3 } } & { p_{ 2 } } \\ { p_{ 3 } } & { 0 } & { - p_{ 1 } } \\ { - p _ { 2 } } & { p_ { 1 } } & { 0 } \end{array} \right].
-\end{equation}
+The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$, can be written as $\mathbf{\tilde{l}} = [\mathbf{\tilde{p}}]_{\times} \mathbf{\tilde{q}}$.
 
 \subsection{Deducing the fundamental matrix algebraically}
 
@@ -136,7 +132,7 @@ Hence, the estimation of $F$ may be done using only 7 point matches, or by using
 
 Nevertheless, non-linear optimization techniques seem to yield better results to the estimation problem of $F$. Three nonlinear algorithms are mentioned in the review paper: (i) a minimization of the epipolar error, (ii) a minimization of the re-projection errors (iii) and a gradient-based technique. The second one is the most time-consuming, thus not recommended. From the other two most promising approaches, the first seems to give the worst results and the last algorithm has been proposed to give the best results in the least amount of computational time. 
 
-Algorithm (i) minimizes the distances between points and their corresponding epipolar lines,
+Algorithm (i) estimates $F$ by minimizing the distances between points and their corresponding epipolar lines,
 \begin{equation}
 \label{cha2:sec3:eq:mee}
 	\min_{\mathbf{F}} \sum_{i}\left(
@@ -163,7 +159,7 @@ where $M_i$ with $i=1,...,n$ are the $n$ points in space, while $\mathbf{h}_1(\m
 \subsection{\acrlong{grat}}
 
 Minimizing $ \sum_i (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance of each $i$ term is not the same and the least-squares technique produces an optimal solution if each term has the same variance.
-So one possibility, given by algorithm (iii), is
+So one possibility to determine the fundamental matrix, given by algorithm (iii), is
 \begin{equation}
 \min_F \sum_i \frac{ (\mathbf{\widetilde{\mathbf{m}}_{2i}}^T F \widetilde{\mathbf{m}}_{1i})^2}{\sigma_i^2},
 \end{equation}

@@ -41,5 +41,9 @@
   \item [{$R$}]\begingroup Rotation Matrix\nomeqref {0}\nompageref{xv}
   \item [{$\bf t$}]\begingroup Translation vector\nomeqref {0}
 		\nompageref{xv}
+  \item [{$\bf r$}]\begingroup Rotation vector\nomeqref {0}
+		\nompageref{xv}
+  \item [{$\bf q$}]\begingroup Quaternion vector\nomeqref {0}
+		\nompageref{xv}
 
 \end{thenomenclature}

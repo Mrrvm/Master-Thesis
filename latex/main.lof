@@ -6,17 +6,14 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces \acrshort {imu} sensor's drift}}{5}{figure.1.2}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Camera's support baseline}}{5}{figure.1.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Pinhole Camera Model}}{8}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Epipolar geometry}}{13}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Four possible solutions retrieved from $E$}}{18}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Neuroscience vs Computer vision usual coordinate systems}}{21}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Listing\IeC {\textquoteright }s law, illustrated for 3500 eye orientations made by a head-restrained monkey}}{22}{figure.2.5}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Computer Vision vs Neuroscience coordinate systems}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Pinhole Camera Model}}{10}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Epipolar geometry}}{15}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Four possible solutions retrieved from $E$}}{20}{figure.2.4}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Difference of Gaussians (DoG) by octave}}{32}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Search for the maxima and minima of the DoG}}{32}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces \acrshort {sift} feature descriptor}}{32}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparison between Gaussian second order derivatives and box filter}}{33}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces \acrshort {surf} feature descriptor}}{33}{figure.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Difference of Gaussians (DoG) by octave}}{26}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Search for the maxima and minima of the DoG}}{26}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \acrshort {sift} feature descriptor}}{26}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparison between Gaussian second order derivatives and box filter}}{27}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \acrshort {surf} feature descriptor}}{27}{figure.A.5}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Listing\IeC {\textquoteright }s law, illustrated for 3500 eye orientations made by a head-restrained monkey}}{29}{figure.A.6}
