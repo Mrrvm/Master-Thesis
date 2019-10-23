@@ -4,16 +4,16 @@
 \BOOKMARK [0][-]{section*.6}{Acronyms}{}% 4
 \BOOKMARK [0][-]{section*.8}{Glossary}{}% 5
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
-\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.2}{Problem definition}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.3}{Objectives}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.4}{Outline}{chapter.1}% 10
-\BOOKMARK [0][-]{chapter.2}{Background and State of the Art}{}% 11
-\BOOKMARK [1][-]{section.2.1}{Representation of eye orientation in 3 dimensions}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.1.1}{Rotation matrices}{section.2.1}% 13
-\BOOKMARK [2][-]{subsection.2.1.2}{Rotation axis and angle}{section.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.1.3}{Rotation vector in head-fixed coordinates}{section.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.1.4}{Quaternions}{section.2.1}% 16
+\BOOKMARK [1][-]{section.1.1}{Context}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Problem definition}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.4}{Objectives}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.5}{Outline}{chapter.1}% 11
+\BOOKMARK [0][-]{chapter.2}{Background and State of the Art}{}% 12
+\BOOKMARK [1][-]{section.2.1}{Representation of eye orientation in 3 dimensions}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.1.1}{Rotation matrices}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.2}{Quaternions}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.3}{Rotation vector in head-fixed coordinates}{section.2.1}% 16
 \BOOKMARK [1][-]{section.2.2}{Camera Model}{chapter.2}% 17
 \BOOKMARK [1][-]{section.2.3}{Feature detection and matching}{chapter.2}% 18
 \BOOKMARK [2][-]{subsection.2.3.1}{Matching step}{section.2.3}% 19

@@ -7,7 +7,7 @@
 %
 % ------------------------------------------
 \documentclass[10pt,twoside,openright,a4paper]{report}
-\usepackage[utf8]{inpute	nc}
+\usepackage[utf8]{inputenc}
 
 % Set document margins to 1in in all sides
 \usepackage[margin=2.5cm]{geometry}
@@ -68,6 +68,9 @@
 	\NewPage
 	
 	\pagenumbering{roman}
+	
+	\input{declaration/declaration.tex}
+	\NewPage
 	
 	\if\includeAcknowledgments 1
 	\input{acknowledgments/acknowledgments.tex}

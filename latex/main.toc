@@ -7,33 +7,33 @@
 \contentsline {chapter}{Acronyms}{xvii}{section*.6}
 \contentsline {chapter}{Glossary}{1}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Problem definition}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Objectives}{6}{section.1.3}
-\contentsline {section}{\numberline {1.4}Outline}{6}{section.1.4}
+\contentsline {section}{\numberline {1.1}Context}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Problem definition}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Objectives}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Outline}{6}{section.1.5}
 \contentsline {chapter}{\numberline {2}Background and State of the Art}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Representation of eye orientation in 3 dimensions}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Rotation matrices}{8}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Rotation axis and angle}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Quaternions}{8}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Rotation vector in head-fixed coordinates}{9}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Quaternions}{9}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Camera Model}{9}{section.2.2}
 \contentsline {section}{\numberline {2.3}Feature detection and matching}{12}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Matching step}{13}{subsection.2.3.1}
 \contentsline {section}{\numberline {2.4}Orthogonal Procrustes Problem and Lack of Depth}{13}{section.2.4}
-\contentsline {section}{\numberline {2.5}Epipolar Geometry}{15}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Projective geometry concepts}{16}{subsection.2.5.1}
-\contentsline {subsubsection}{Representation of lines in \gls {homo}}{16}{section*.10}
+\contentsline {section}{\numberline {2.5}Epipolar Geometry}{14}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Projective geometry concepts}{15}{subsection.2.5.1}
+\contentsline {subsubsection}{Representation of lines in \gls {homo}}{15}{section*.10}
 \contentsline {subsubsection}{Point lying on a line}{16}{section*.11}
 \contentsline {subsubsection}{Line joining points}{16}{section*.12}
 \contentsline {subsubsection}{Cross product's \gls {skews} representation}{16}{section*.13}
 \contentsline {subsection}{\numberline {2.5.2}Deducing the fundamental matrix algebraically}{16}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Deducing the fundamental matrix from camera motion}{17}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.3}Deducing the fundamental matrix from camera motion}{16}{subsection.2.5.3}
 \contentsline {subsection}{\numberline {2.5.4}Estimating the fundamental matrix}{17}{subsection.2.5.4}
 \contentsline {subsection}{\numberline {2.5.5}\acrlong {grat}}{18}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {2.5.6}Factorization of the essential matrix}{19}{subsection.2.5.6}
-\contentsline {subsection}{\numberline {2.5.7}Pure rotation}{21}{subsection.2.5.7}
-\contentsline {section}{\numberline {2.6}Robust Estimation and Rejection of Image Sections}{21}{section.2.6}
+\contentsline {subsection}{\numberline {2.5.6}Factorization of the essential matrix}{18}{subsection.2.5.6}
+\contentsline {subsection}{\numberline {2.5.7}Pure rotation}{20}{subsection.2.5.7}
+\contentsline {section}{\numberline {2.6}Robust Estimation and Rejection of Image Sections}{20}{section.2.6}
 \contentsline {subsubsection}{\acrlong {ransac}}{21}{section*.14}
 \contentsline {chapter}{\numberline {3}Methodology}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Approach}{23}{section.3.1}
@@ -70,9 +70,9 @@
 \contentsline {section}{\numberline {A.2}\acrlong {sift}}{33}{section.A.2}
 \contentsline {section}{\numberline {A.3}\acrlong {surf}}{35}{section.A.3}
 \contentsline {section}{\numberline {A.4}Donder's and Listing's laws}{36}{section.A.4}
-\contentsline {chapter}{\numberline {B}Material specifications}{39}{appendix.B}
-\contentsline {section}{\numberline {B.1}Camera}{39}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Lens}{40}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Calibration}{40}{subsection.B.1.2}
-\contentsline {section}{\numberline {B.2}\acrlong {imu}}{40}{section.B.2}
-\contentsline {section}{\numberline {B.3}Chessboard}{40}{section.B.3}
+\contentsline {chapter}{\numberline {B}Material specifications}{37}{appendix.B}
+\contentsline {section}{\numberline {B.1}Camera}{37}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Lens}{38}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Calibration}{38}{subsection.B.1.2}
+\contentsline {section}{\numberline {B.2}\acrlong {imu}}{38}{section.B.2}
+\contentsline {section}{\numberline {B.3}Chessboard}{38}{section.B.3}

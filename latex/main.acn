@@ -39,7 +39,7 @@
 \glossaryentry{RGB?\glossentry{rgb}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{GRAT?\glossentry{grat}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{SVD?\glossentry{svdd}|setentrycounter[]{page}\glsnumberformat}{19}
-\glossaryentry{SVD?\glossentry{svdd}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{SVD?\glossentry{svdd}|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{SVD?\glossentry{svdd}|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{RANSAC?\glossentry{ransac}|setentrycounter[]{page}\glsnumberformat}{21}
 \glossaryentry{RANSAC?\glossentry{ransac}|setentrycounter[]{page}\glsnumberformat}{21}
@@ -74,8 +74,8 @@
 \glossaryentry{SIFT?\glossentry{sift}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{SURF?\glossentry{surf}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{SURF?\glossentry{surf}|setentrycounter[]{page}\glsnumberformat}{35}
-\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{IMU?\glossentry{imu}|setentrycounter[]{page}\glsnumberformat}{40}
-\glossaryentry{LPMS-CU?\glossentry{lpmscu}|setentrycounter[]{page}\glsnumberformat}{40}
-\glossaryentry{LPMS-CU?\glossentry{lpmscu}|setentrycounter[]{page}\glsnumberformat}{40}
+\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{37}
+\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{37}
+\glossaryentry{IMU?\glossentry{imu}|setentrycounter[]{page}\glsnumberformat}{38}
+\glossaryentry{LPMS-CU?\glossentry{lpmscu}|setentrycounter[]{page}\glsnumberformat}{38}
+\glossaryentry{LPMS-CU?\glossentry{lpmscu}|setentrycounter[]{page}\glsnumberformat}{38}

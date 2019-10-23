@@ -3,9 +3,9 @@
 \section{Camera Model}
 \label{cha2:cameramodel}
 
-For the comprehension of this work, it's important to first grasp the essential concepts on the pinhole camera model that follow. Digital cameras are equipped with a sensor (mostly charge-coupled devices, CCD, and CMOS') that transforms light into discrete electrical signals. When taking a picture, some of the light reflecting on the object is directed towards the camera pinhole (tiny aperture on the camera), forming a 180º inverted image of the object on the sensor. All the light rays entering the camera converge into the pinhole and diverge on the other side (with a unique one-to-one correspondence). Therefore the pinhole is also named the \textbf{center of projection}, principal point, or focal point.
+In this section, are introduced the essential concepts on the pinhole camera model that follow. Digital cameras are equipped with a sensor (mostly charge-coupled devices, CCD, and CMOS') that transforms light into discrete electrical signals. When taking a picture, some of the light reflecting on the object is directed towards the camera pinhole (tiny aperture on the camera), forming a 180º inverted image of the object on the sensor, as shows on Figure \ref{cha2:sec2:fig:camera_concepts}. All the light rays entering the camera converge into the pinhole and diverge on the other side (with a unique one-to-one correspondence). Therefore the pinhole is also named the \textbf{center of projection}, principal point, or focal point.
 
-In cameras the aperture size and light-exposure time can be controlled. A smaller aperture produces a sharper image but needs a longer exposure time to collect enough light, whereas a larger pinhole allows more light to be captured, but at the expense of producing blurred images.
+In cameras the aperture size and light-exposure time can be controlled. A smaller aperture produces a sharper image but needs a longer exposure time to collect enough light, whereas a larger aperture allows more light to be captured, but at the expense of producing blurred images.
 
 The image of the object is projected onto the so-called \textbf{image plane}. When moving this plane closer to the pinhole (zoom out), the projected object gets smaller, and vice-versa. The distance between the plane and the aperture is the \textbf{focal length}, or focal distance. The view-angle of a camera depends on the focal distance, and on the sensor size. The image resolution depends solely on the number of pixels that fit on the sensor.
 
@@ -14,7 +14,7 @@ A useful coordinate system, called the \textbf{camera reference system}, is cent
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{images/cameraconcepts.pdf}
-	\caption[Pinhole Camera Model]{Pinhole Camera Model. The girl defined by the generic set of points $M$ is projected onto the image plane (defined by the set of generic points $\bf m_{p}$) through the light rays passing through the camera's pinhole, called the center of projection. The focal length is the distance from the center of the image plane to the center of projection. The digital image's coordinate system $(u, v)$ defined by the camera is not centered on the image plane. The optical axis is the blue line.}
+	\caption[Pinhole Camera Model]{Pinhole Camera Model. The girl defined by the generic set of points $M$ is projected onto the image plane (defined by the set of generic points $\bf m_{p}$) through the light rays passing by the camera's pinhole, called the center of projection. The focal length is the distance from the center of the image plane to the center of projection. The digital image's coordinate system $(u, v)$ is defined on top right (CHECK THIS) corner of the image. The optical axis is the blue line.}
 	\label{cha2:sec2:fig:camera_concepts}
 \end{figure}
 
