@@ -5,6 +5,38 @@
 
 \section{Approach}
 
+Figure \ref{cha3:methodology:approach} summarizes the approach that this work will take to deal with determining the orientation of the camera. The coming paragraph gives a brief overview on each of the parts of the procedure, that will be further detailed afterwards.
+
+\begin{enumerate}
+	\item \textbf{Collect images}\\
+	 Using an uEye LE USB3 camera \footnote{See appendix \ref{appendix:cha2:camera} for camera specifications.}, two grayscale images are collected before and after a certain rotation.
+	 
+	 \item \textbf{Collect ground truth}\\
+	 Using the same camera in the same positions, the two images are taken but positioning a chessboard \footnote{See appendix \ref{appendix:cha2:chessboard} for chessboard specifications.} on the scenery, which is used to determine the ground truth through its regular pattern. The ground truth will then be utilized to evaluate the estimation algorithms performance and also the \acrshort{imu}'s performance over the camera.\\
+	 
+	 On Figure \ref{cha3:methodology:imagesex}, an example of the two image pairs that are collected can be observed.
+	 
+\begin{figure}[ht]
+	 \centering
+	 \includegraphics[width=\textwidth]{images/imagesex.png}
+	 \caption[Example of the two pairs of images]{Example of the two pairs of images. The first and second images are used for finding feature matches and estimating the orientation. The third and fourth images are the same as the first and second ones, respectively, but with a chessboard positioned on the scenery, and serve as ground truth to evaluate the algorithms and the \acrshort{imu}'s performance.}
+	 \label{cha3:methodology:imagesex}
+ \end{figure}
+	 
+	 \item \textbf{Collect \acrshort{imu}}\\
+	 The \acrlong{imu} \footnote{See appendix \ref{appendix:cha2:imu} for \acrshort{imu} specifications.} obtains two quaternions (see section \ref{cha2:represent:quat}) with the current camera's orientation before and after rotating.
+	 
+	\item \textbf{Find features and matches}\\
+	As stated on section \ref{cha2:features} of the previous chapter,
+	\acrshort{sift} and \acrshort{surf} seemed to be the most promising algorithms to detect features on the collected images. Because \acrshort{surf} is faster and more accessible due to patenting concerns regarding \acrshort{sift}, it will be be used on this work.
+	\acrshort{flann} also previously referred to in the state of the art will be used for matching the features gathered between the two images, originating a set of point matches. The set of $N$ points matches are pixel coordinates in the first and the second image, $\mathbf{m_{1i}} = [u_{1i} \ v_{1i}]$ and $\mathbf{m_{2i}} = [u_{2i} \ v_{2i}]$, respectively, where $i=1,...,N$.
+	
+	\item \textbf{Filter outliers}\\
+	
+	
+\end{enumerate}
+
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\textwidth]{images/approach.pdf}
@@ -21,7 +53,7 @@
 
 \subsubsection{Translation derivation}
 
-As mentioned before, because the current eye prototype is a coupled system, the translation can be obtained with the knowledge of the rotation and the baseline length. This length is defined as the distance from the center of the camera sensor to the center of rotation, as shown on Figure
+As mentioned before, because the current eye prototype is a coupled system, the translation can be obtained through the knowledge of the rotation and the baseline length. This length is defined as the distance from the center of the camera's sensor to the center of rotation, as shown on Figure
 \ref{cha3:detori:translation}.
 
 \begin{figure}[ht]
@@ -31,7 +63,7 @@ As mentioned before, because the current eye prototype is a coupled system, the 
 	\label{cha3:detori:translation}
 \end{figure}
 
-The translation can be easily derived as follows using . Having the world reference frame, ${W}$, set at the center of rotation, the transformation from the world to the first position of the camera, ${C_1}$, is
+The translation can be easily derived as follows using frame to frame transformations\footnote{Consult Chapter 2 of Introduction to ROBOTICS mechanics and control \cite{robotics} on Spatial descriptions and transformations}. Having the world reference frame, ${W}$, set at the center of rotation, the transformation from the world to the first position of the camera, ${C_1}$, is
 
 \begin{equation}
 ^W_{C_1}T = \begin{bmatrix}
@@ -98,5 +130,7 @@ The image point estimations are obtained the following way
 \subsection{Real world}
 
 \subsubsection{Ground Truth}
+
+Explain how this works on opencv and reference papers. or put on state of the art?
 
 \subsection{C++ Library}

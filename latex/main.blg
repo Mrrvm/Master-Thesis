@@ -7,7 +7,6 @@ A level-1 auxiliary file: abstract/abstract-pt.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/backgroundandsota.aux
 A level-1 auxiliary file: chapters/methodology.aux
-A level-1 auxiliary file: chapters/implementation.aux
 A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 The style file: ieeetr.bst
@@ -26,36 +25,36 @@ Warning--empty journal in ransac
 Warning--empty title in mono
 Warning--empty journal in mono
 Warning--empty year in mono
-You've used 15 entries,
+You've used 16 entries,
             1876 wiz_defined-function locations,
-            567 strings with 5607 characters,
-and the built_in function-call counts, 3633 in all, are:
-= -- 380
-> -- 97
+            572 strings with 5697 characters,
+and the built_in function-call counts, 3754 in all, are:
+= -- 390
+> -- 101
 < -- 0
-+ -- 40
-- -- 25
-* -- 238
-:= -- 507
-add.period$ -- 16
-call.type$ -- 15
-change.case$ -- 13
++ -- 42
+- -- 26
+* -- 242
+:= -- 524
+add.period$ -- 17
+call.type$ -- 16
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 194
-empty$ -- 361
-format.name$ -- 25
-if$ -- 885
+cite$ -- 25
+duplicate$ -- 198
+empty$ -- 379
+format.name$ -- 26
+if$ -- 916
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 16
 missing$ -- 14
-newline$ -- 49
-num.names$ -- 15
-pop$ -- 54
+newline$ -- 52
+num.names$ -- 16
+pop$ -- 61
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 127
+skip$ -- 131
 stack$ -- 0
 substring$ -- 262
 swap$ -- 72
@@ -64,7 +63,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 42
-width$ -- 17
-write$ -- 136
+while$ -- 43
+width$ -- 18
+write$ -- 143
 (There was 1 error message)
