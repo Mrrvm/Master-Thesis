@@ -28,16 +28,51 @@
 \contentsline {subsubsection}{Line joining points}{16}{section*.12}
 \contentsline {subsubsection}{Cross product's \gls {skews} representation}{16}{section*.13}
 \contentsline {subsection}{\numberline {2.5.2}Deducing the fundamental matrix algebraically}{16}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Deducing the fundamental matrix from camera motion}{16}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.3}Deducing the fundamental matrix from camera motion}{17}{subsection.2.5.3}
 \contentsline {subsection}{\numberline {2.5.4}Estimating the fundamental matrix}{17}{subsection.2.5.4}
 \contentsline {subsection}{\numberline {2.5.5}\acrlong {grat}}{18}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {2.5.6}Factorization of the essential matrix}{18}{subsection.2.5.6}
-\contentsline {subsection}{\numberline {2.5.7}Pure rotation}{20}{subsection.2.5.7}
+\contentsline {subsection}{\numberline {2.5.6}Factorization of the essential matrix}{19}{subsection.2.5.6}
+\contentsline {subsection}{\numberline {2.5.7}Pure rotation}{21}{subsection.2.5.7}
 \contentsline {section}{\numberline {2.6}Robust Estimation and Rejection of Image Sections}{21}{section.2.6}
 \contentsline {subsubsection}{\acrlong {ransac}}{21}{section*.14}
-\contentsline {chapter}{Bibliography}{22}{Item.12}
-\contentsline {chapter}{\numberline {A}Background}{25}{appendix.A}
-\contentsline {section}{\numberline {A.1}Feature Detectors}{25}{section.A.1}
-\contentsline {section}{\numberline {A.2}\acrlong {sift}}{25}{section.A.2}
-\contentsline {section}{\numberline {A.3}\acrlong {surf}}{27}{section.A.3}
-\contentsline {section}{\numberline {A.4}Donder's and Listing's laws}{28}{section.A.4}
+\contentsline {chapter}{\numberline {3}Methodology}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Approach}{23}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Feature detection and matching}{24}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Filtering matches}{24}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Determine orientation}{24}{subsection.3.1.3}
+\contentsline {subsubsection}{Translation derivation}{24}{section*.15}
+\contentsline {subsubsection}{\acrlong {grat}}{25}{section*.16}
+\contentsline {subsubsection}{\acrlong {mbpe}}{25}{section*.17}
+\contentsline {subsection}{\numberline {3.1.4}Simulator}{25}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Real world}{25}{subsection.3.1.5}
+\contentsline {subsubsection}{Ground Truth}{25}{section*.18}
+\contentsline {subsection}{\numberline {3.1.6}C++ Library}{25}{subsection.3.1.6}
+\contentsline {chapter}{\numberline {4}Results and Discussion}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Simulator}{27}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Data collection}{27}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Variable baseline}{27}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Variable depth}{27}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Variable noise}{27}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Orientation error}{27}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Real data}{27}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Data collection}{27}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Orientation error}{27}{subsection.4.2.2}
+\contentsline {subsubsection}{Per axis using woodstand}{27}{section*.19}
+\contentsline {subsubsection}{In the eye prototype}{27}{section*.20}
+\contentsline {subsection}{\numberline {4.2.3}Effect of baseline}{27}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Effect of RANSAC}{27}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contributions}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Future Work}{29}{section.5.2}
+\contentsline {chapter}{Bibliography}{30}{section.5.2}
+\contentsline {chapter}{\numberline {A}Background}{33}{appendix.A}
+\contentsline {section}{\numberline {A.1}Feature Detectors}{33}{section.A.1}
+\contentsline {section}{\numberline {A.2}\acrlong {sift}}{33}{section.A.2}
+\contentsline {section}{\numberline {A.3}\acrlong {surf}}{35}{section.A.3}
+\contentsline {section}{\numberline {A.4}Donder's and Listing's laws}{36}{section.A.4}
+\contentsline {chapter}{\numberline {B}Material specifications}{39}{appendix.B}
+\contentsline {section}{\numberline {B.1}Camera}{39}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Lens}{40}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Calibration}{40}{subsection.B.1.2}
+\contentsline {section}{\numberline {B.2}\acrlong {imu}}{40}{section.B.2}
+\contentsline {section}{\numberline {B.3}Chessboard}{40}{section.B.3}

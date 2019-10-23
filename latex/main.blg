@@ -7,6 +7,7 @@ A level-1 auxiliary file: abstract/abstract-pt.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/backgroundandsota.aux
 A level-1 auxiliary file: chapters/methodology.aux
+A level-1 auxiliary file: chapters/implementation.aux
 A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 The style file: ieeetr.bst
@@ -16,19 +17,18 @@ You're missing a field name---line 105 of file bibliography/dissertation.bib
  :  eprint = {arXiv:1709.05815v1},
  :                                ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "eye"
 Warning--empty journal in tesemiguel
+Warning--empty journal in rep
 Warning--empty journal in multiview
 Warning--empty year in surf
 Warning--empty journal in flann
-Warning--empty journal in rep
 Warning--empty journal in ransac
 Warning--empty title in mono
 Warning--empty journal in mono
 Warning--empty year in mono
 You've used 15 entries,
             1876 wiz_defined-function locations,
-            567 strings with 5583 characters,
+            567 strings with 5607 characters,
 and the built_in function-call counts, 3633 in all, are:
 = -- 380
 > -- 97

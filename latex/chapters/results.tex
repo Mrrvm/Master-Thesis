@@ -3,6 +3,8 @@
 \chapter{Results and Discussion}
 \label{cha4:results}
 
+real eye only does small 0-15 º rotations ref
+
 \section{Simulator}
 \subsection{Data collection}
 \subsection{Variable baseline}
@@ -14,7 +16,24 @@
 \subsection{Data collection}
 \subsection{Orientation error}
 \subsubsection{Per axis using woodstand}
+
+\begin{table}[]
+	\centering
+	\renewcommand{\arraystretch}{1.5}%
+	\begin{tabular}{| l | l | l | l | l |}
+		\hline
+		 $\mathbf{x}$ &$\mathbf{y}$  & $\mathbf{z}$  & $\mathbf{all}$ \\
+		 \hline
+		 $16.33 \pm{7.82} \degree $ & 
+		 $19.36 \pm{14.25} \degree$ &  
+		 $40.55 \pm{26.11} \degree$ & 
+		 $27.38 \pm{18.16} \degree $ \\
+		\hline
+	\end{tabular}
+	\caption[IMU orientation's mean error and standard deviation when using the woodstand]{Orientation's mean error and standard deviation when using the woodstand to support the camera and the \acrshort{imu}. The measurements were taken, firstly, by rotating around each axis, $x$, $y$ and $z$ (45, 36, 45 times, respectively) and then by doing random rotations that include all axis (36 times).}
+	\label{cha4:sec2:woodstandres}
+\end{table}
+
 \subsubsection{In the eye prototype}
 \subsection{Effect of baseline}
 \subsection{Effect of RANSAC}
-\subsection{Improvement over \acrlong{imu}}

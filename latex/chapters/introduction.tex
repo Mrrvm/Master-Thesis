@@ -23,8 +23,8 @@ The current prototype uses an \acrfull{imu} to estimate the eye's orientation. A
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=10cm]{images/prototype.pdf}
-	\caption[Current mechanical eye model]{The current mechanical eye model. It is composed of an  \acrshort{imu}, seen on the left, and connected to a supportive green eye mounted on a global joint, in turn connected to six elastics, representing the eye muscles, and finally controlled by three motors that pull at those elastics (paired by the aluminum strips). The three motors are controlled by the computer, which is seen lying on the table. TO CHANGE}
+	\includegraphics[width=10cm]{images/prototypenew.png}
+	\caption[Current mechanical eye model]{The current mechanical eye model. It is composed of an  \acrshort{imu}, seen on the left, and connected to a supportive white eye mounted on a global joint, in turn connected to six elastics, representing the eye muscles, and finally controlled by three motors that pull at those elastics (paired by the aluminum strips). The three motors are controlled by the computer.}
 	\label{cha1:sec1:fig:curr_eye_model}
 \end{figure}
 
@@ -58,16 +58,8 @@ There is a long literature on what are the best algorithms to do so. However, th
 
 \begin{figure}[ht]
 	\centering
-	\begin{minipage}[b]{0.2\linewidth}
-		\centering
-		\includegraphics[width=\textwidth]{images/baselinephoto.png}
-	\end{minipage}
-	\hspace{0.5cm}
-	\begin{minipage}[b]{0.3\linewidth}
-		\centering
-		\includegraphics[width=\textwidth]{images/transf.pdf}
-	\end{minipage}
-	\caption[Camera's support baseline]{Camera's support baseline. On the left, it shows where the camera's center is, blue coordinate system, versus where the eye's rotation center is, red coordinate system, hence creating a baseline length.On the right, it shows how this length affects the rotation movement. TO CHANGE}
+	\includegraphics[width=0.4\textwidth]{images/prototypeaxis.png}
+	\caption[Baseline associated]{Baseline associated. It shows where the camera's center is, red coordinate system, versus where the eye's rotation center is, blue coordinate system, hence creating a baseline length on the Z coordinate.}
 	\label{cha1:sec1:fig:baseline}
 \end{figure}
 

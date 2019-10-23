@@ -14,6 +14,14 @@ M.~{Lucas}, ``{Construction and Characterization of a Biomimetic Robotic Eye
 J.~Van~Opstal, ``{200 years Franciscus Cornelis Donders},'' {\em Strabismus},
   vol.~26, no.~4, pp.~159--162, 2018.
 
+\bibitem{rep}
+{J. van Opstal, A. Berthoz}, ``{Multisensory Control of Movement: Representaion
+  of the eye position in three dimensions},'' pp.~27--41, 1993.
+
+\bibitem{mathrot}
+T.~Haslwanter, ``{Mathematics of three-dimensional eye rotations},'' {\em
+  Vision Research}, vol.~35, no.~12, pp.~1727--1739, 1995.
+
 \bibitem{multiview}
 R.~Hartley and A.~Zisserman, ``{Multiview Geometry in Computer Vision},'' 2003.
 
@@ -35,14 +43,6 @@ H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
 \bibitem{flann}
 M.~Muja and D.~Lowe, ``{Fast approximate nearest neighbors with automatic
   algorithm configuration},'' 2009.
-
-\bibitem{rep}
-{J. van Opstal, A. Berthoz}, ``{Multisensory Control of Movement: Representaion
-  of the eye position in three dimensions},'' pp.~27--41, 1993.
-
-\bibitem{mathrot}
-T.~Haslwanter, ``{Mathematics of three-dimensional eye rotations},'' {\em
-  Vision Research}, vol.~35, no.~12, pp.~1727--1739, 1995.
 
 \bibitem{procrustes}
 D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,

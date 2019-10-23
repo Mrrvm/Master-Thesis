@@ -29,7 +29,10 @@ A point $\mathbf { p } = ( p_1 , p_2 ) ^ T$ lies on a line $\mathbf {\tilde{l}} 
 \subsubsection{Line joining points}
 A line passing through any two points $\mathbf{\tilde{p}}$ and $\mathbf{\tilde{q}}$ can be defined by the cross-product of those points as $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$.
 \subsubsection{Cross product's \gls{skews} representation}
-The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$, can be written as $\mathbf{\tilde{l}} = [\mathbf{\tilde{p}}]_{\times} \mathbf{\tilde{q}}$.
+The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mathbf{\tilde{q}}$, can be written as $\mathbf{\tilde{l}} = [\mathbf{\tilde{p}}]_{\times} \mathbf{\tilde{q}}$, where $[\mathbf{p}]_{\times}$ is a skew symmetric matrix defined as
+\begin{equation}
+\left[ \begin{array} { c c c } { 0 } & { - p_ { 3 } } & { p_{ 2 } } \\ { p_{ 3 } } & { 0 } & { - p_{ 1 } } \\ { - p _ { 2 } } & { p_ { 1 } } & { 0 } \end{array} \right]
+\end{equation}.
 
 \subsection{Deducing the fundamental matrix algebraically}
 
