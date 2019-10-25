@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {2.5}Epipolar Geometry}{14}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Projective geometry concepts}{15}{subsection.2.5.1}
 \contentsline {subsubsection}{Representation of lines in \gls {homo}}{15}{section*.10}
-\contentsline {subsubsection}{Point lying on a line}{16}{section*.11}
+\contentsline {subsubsection}{Point lying on a line}{15}{section*.11}
 \contentsline {subsubsection}{Line joining points}{16}{section*.12}
 \contentsline {subsubsection}{Cross product's \gls {skews} representation}{16}{section*.13}
 \contentsline {subsection}{\numberline {2.5.2}Deducing the fundamental matrix algebraically}{16}{subsection.2.5.2}
@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {2.5.5}\acrlong {grat}}{18}{subsection.2.5.5}
 \contentsline {subsection}{\numberline {2.5.6}Factorization of the essential matrix}{18}{subsection.2.5.6}
 \contentsline {subsection}{\numberline {2.5.7}Pure rotation}{20}{subsection.2.5.7}
-\contentsline {section}{\numberline {2.6}Robust Estimation and Rejection of Image Sections}{20}{section.2.6}
+\contentsline {section}{\numberline {2.6}Robust Estimation and Rejection of Image Sections}{21}{section.2.6}
 \contentsline {subsubsection}{\acrlong {ransac}}{21}{section*.14}
 \contentsline {chapter}{\numberline {3}Methodology}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Approach}{23}{section.3.1}

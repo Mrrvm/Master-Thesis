@@ -4,24 +4,21 @@
 \label{cha2:epipolar}
 
 Epipolar geometry provides an alternative yet powerful tool to obtain image transformations using various different approaches. It describes the relation between two images, before and after a transformation, through a 3x3 singular, non-invertible, matrix called the \textbf{essential matrix}, \textbf{$E$}, if the camera matrix is known, or the \textbf{fundamental matrix}, \textbf{$F$}, otherwise. These matrices are singular because they express an under-constrained relationship between a point in one image and its possible location in the other image, which is not unique due to depth ambiguity. The essential matrix is the product of a rotation matrix and a \gls{skews}, whose determinant is zero, as it will be shown below. If a point in the real world, $M$, is projected as a point $\mathbf{{m}_1}$ in the first image, and point $\mathbf{{m}_2}$ in the second, then those points satisfy the epipolar relation
-
 \begin{equation}
 \label{sec2:eq:epipolar}
 \mathbf{\tilde{m}_2}^T F \mathbf{\tilde{m}_1} = 0,
 \end{equation}
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=11cm]{images/epipolargeo.png}
 	\caption[Epipolar geometry]{Epipolar geometry. The two small vertical planes correspond to the image planes after the rotation and translation of the camera, $R$ and $\bf t$, respectively. $c_1$ and $c_2$ are the centers of projection before and after the transformation. $M$ is the fixed point gazed at in the real world. $\bf m_1$ and $\bf m_2$ are the projections of point $M$ into the respective image planes, whose rays are lying on the plane $L$. $\bf l_{e1}$ and $\bf l_{e2}$ are the epipolar lines, that also lie on the plane and $\bf e_1$ and $\bf e_2$ are the epipoles.}
 	\label{sec2:fig:epipolargeo}
 \end{figure}
-
 which can be easily deduced with projective geometry. In Figure \ref{sec2:fig:epipolargeo}, $c_1$ and $c_2$ are the centers of projection before and after the camera has been displaced by $(R, \mathbf{t})$. Given the point $\bf m_1$ on the first image, its correspondence, $\bf m_2$, in the second image is constrained to a line, the epipolar line, $\bf l_{e2}$. The latter is defined as the intersection of the plane $L$ and the second image plane. Furthermore, plane $L$ is delineated by the two centers of projection and $\bf m_1$. The epipoles, $\bf e_1$ and $\bf e_2$, are born from the intersection of the line $c_1 - c_2$ with the epipolar lines, $\bf l_{e1}$ and $\bf l_{e2}$. 
 
 \subsection{Projective geometry concepts}
 
-Now, before one may understand the upcoming deductions, it is important to first understand the following concepts.
+To understand the upcoming deductions, let's introduce the following concepts.
 \subsubsection{Representation of lines in \gls{homo}}
 A line in a plane is represented by $a x + b y + c = 0$, which can also be defined by a vector $( a , b , c ) ^T$. For any non-zero constant, $k$, the vectors  $( a , b , c ) ^T$ and $k(a , b , c ) ^T$ represent the same line and are equivalent. An equivalence class of vectors is known as an homogenous vector. 
 \subsubsection{Point lying on a line}
@@ -36,9 +33,9 @@ The previous cross product, $\mathbf{\tilde{l}} = \mathbf{\tilde{p}} \times \mat
 
 \subsection{Deducing the fundamental matrix algebraically}
 
-Having said this,
+The derivation of the fundamental matrix uses the following facts,
 \begin{enumerate}
-	\item there is an homographic mapping via $L$ plane from the points of the first to the second image, characterized by $\mathbf{\tilde{m}_2} = H_M \mathbf{\tilde{m}_1}$;
+	\item there is an \gls{homography} mapping via $L$ plane from the points of the first to the second image, characterized by $\mathbf{\tilde{m}_2} = H_M \mathbf{\tilde{m}_1}$;
 	\item because $\mathbf{m_2}$ lies on $\mathbf{\tilde{l}_{e_2}}$, then $\mathbf{ \tilde{m}_2 } ^T \mathbf{\tilde{l}_{e_2}} = 0$;
 	\item and since $\mathbf { e_2 }, \mathbf { m_2 } \in \mathbf{\tilde{l}_{e_2}}$, then $\mathbf{\tilde{l}_{e_2}} = [\mathbf{\tilde{e}_2}]_{\times} \mathbf{\tilde{m}_2}$.
 \end{enumerate}
@@ -56,14 +53,16 @@ where $F$, the fundamental matrix, is an homogeneous matrix of rank-2 (since $[\
 
 \subsection{Deducing the fundamental matrix from camera motion}
 Another way of obtaining this relation is through the camera motion.
-If the point in the real world is expressed in the eye's perspective before rotating, $M_1$, under the camera model studied in section \ref{cha2:features}, (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}) are true.
+If the point in the real world is expressed in the eye's perspective before rotating, $M_1$, under the camera model studied in section \ref{cha2:features}, (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}) are true and (\ref{sec2:eq:eproj3}) can be derived from them.
 \begin{align}
 \label{sec2:eq:eproj1}
-\lambda_1 \mathbf{\tilde{m}_1} = K [ I \ \mathbf{0} ] \tilde{M_1}, \\
+\lambda_1 \mathbf{\tilde{m}_1} = K \tilde{M_1}, \\
 \label{sec2:eq:eproj2}
-\lambda_2 \mathbf{\tilde{m}_2} = K [ R \ \mathbf{t} ] \tilde{M_1}
+\lambda_2 \mathbf{\tilde{m}_2} = K [ R \ \mathbf{t} ] \tilde{M_1}\\
+\label{sec2:eq:eproj3}
+\lambda_2 \mathbf{\tilde{m}_2} = K [ R \ \mathbf{t} ] K^{-1} \lambda_1 \mathbf{\tilde{m}_1}
 \end{align}
-For now, for the sake of simplicity, the intrinsics matrix will be considered the identity, $K= I$, and the scale factors $\lambda_1$ and $\lambda_2$ will be dropped. Hence, by eliminating $\tilde{M_1}$, the previous equations become
+For the sake of simplicity, the intrinsics matrix will be considered the identity, $K= I$, and the scale factors $\lambda_1$ and $\lambda_2$ will be dropped. Hence, by eliminating $\tilde{M_1}$, the previous equations become
 \begin{equation}
 \label{sec2:eq:elimp}
 \mathbf{\tilde{m}_2} = R   \mathbf{\tilde{m}_1} + \mathbf{t},
@@ -96,7 +95,7 @@ where $E$ is the essential matrix.
 
 \subsection{Estimating the fundamental matrix}
 \label{einvonrev}
-In such wise, the question now is how to determine $F$, and consequently the rotation, given two images with matching points. With the last-mentioned referred to as $\mathbf{m_{1}} = [u_{1} \ v_{1}]^T$ and $\mathbf{m_{2}} = [u_{2}  \ v_{2}]^T$, the epipolar equation (\ref{sec2:eq:epipolar}) can then be written as
+Having seen how the fundamental matrix is obtained from the known rotation and translation of a camera, the question now is how to determine $F$, and consequently the rotation, given two images with matching points. With the points referred to as $\mathbf{m_{1}} = [u_{1} \ v_{1}]^T$ and $\mathbf{m_{2}} = [u_{2}  \ v_{2}]^T$, the epipolar equation (\ref{sec2:eq:epipolar}) can then be written as
 \begin{equation}
 \begin{aligned}
 \begin{bmatrix}
@@ -124,7 +123,7 @@ f_{11} \ f_{12} \ f_{13} \ f_{21} \ f_{22} \ f_{23} \ f_{31} \ f_{32} \ f_{33}
 = \mathbf{u} \cdot \mathbf{f}\\ = 0
 \end{aligned}
 \end{equation}
-For $n$ sets of points the expression becomes 
+For $n$ pairs of points the expression becomes 
 \begin{equation}
 \label{sec2:eq:nsets}
 U f = 0,
@@ -133,11 +132,16 @@ where $U = \left[ \mathbf{u_ { 1 }} , \cdots , \mathbf{u_ { n }} \right] ^ { T }
 This linear homogeneous equation, and the rank-2 constraint over $F$, that restrains the matrix to 7 degrees of freedom (since $F$ is also defined up a scalar factor), will permit its unique identification. 
 Hence, the estimation of $F$ may be done using only 7 point matches, or by using 8 or more if enough data points are available. In the latter case, the solution produced is in general unique, and there are several techniques to obtain it. In Zhang 1996's review on the issue \cite{detep}, the conclusion was that linear techniques are usually sensitive to noise and not very stable, because they ignore the constraints of $F$ and the minimization criterion is not physically meaningful. However, the results could be improved by using normalized data points instead of pixel coordinates. 
 
-Nevertheless, non-linear optimization techniques seem to yield better results to the estimation problem of $F$. Three nonlinear algorithms are mentioned in the review paper: (i) a minimization of the epipolar error, (ii) a minimization of the re-projection errors (iii) and a gradient-based technique. The second one is the most time-consuming, thus not recommended. From the other two most promising approaches, the first seems to give the worst results and the last algorithm has been proposed to give the best results in the least amount of computational time. 
+Nevertheless, non-linear optimization techniques seem to yield better results to the estimation problem of $F$. Three nonlinear algorithms are mentioned in the review paper \cite{detep} and in R. Hartley and A. Zisserman \cite{multiview}: (i) a minimization of the re-projection errors, (ii) a minimization of the symmetric epipolar error, (iii) and a minimization of the first order geometric error. The first one is the most time-consuming, thus not recommended. From the other two most promising approaches, the second seems to give the worst results and the last algorithm has been proposed to give the best results in the least amount of computational time. 
 
-Algorithm (i) estimates $F$ by minimizing the distances between points and their corresponding epipolar lines,
+Algorithm (i), also called the Gold Standard, estimates $F$ by minimizing the distances between the points in the image and its re-projections. Having $M_1$ as a point in space, the corresponding points in the images before and after rotating are $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$, respectively, obtained through  (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}).
+The re-projections of $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$ are, 
+\begin{align}
+	\lambda_2 \mathbf{\tilde{m}^r_2} = K [ R \ \mathbf{t} ] K^{-1} \lambda_1 \mathbf{\tilde{m}_1}\\
+	\lambda_1 \mathbf{\tilde{m}^r_1} =  K^{-1} [ R^{-1} \ \mathbf{-t} ]K  \lambda_1 \mathbf{\tilde{m}_2}
+\end{align}
 \begin{equation}
-\label{cha2:sec3:eq:mee}
+\label{cha2:sec3:eq:gold}
 	\min_{\mathbf{F}} \sum_{i}\left(
 	d^{2}(\widetilde{\mathbf{m}}_{2i}, \widetilde{\mathbf{l}}_{e_2i})
 	+
@@ -174,10 +178,10 @@ Because multiplying each term by a constant makes no difference, $\sigma$ can be
 
 \subsection{Factorization of the essential matrix}
 
-Once the fundamental matrix is obtained through one of those methods, assuming the intrinsic parameters are known, which is the case for this project, where the setup is only one camera, the essential matrix may be obtained by $E = K^{T}  F K$ as seen on (\ref{hhh}).
+Once the fundamental matrix is obtained through one of those methods, assuming the intrinsic parameters are known, which is the case for this project, the essential matrix may be obtained by $E = K^{T}  F K$ as seen on (\ref{hhh}).
 From here, it's possible to retrieve the camera matrix, $P = [R \ | \ \mathbf{t}]$, since $E = [\mathbf{t}]_\times R$. 
 
-A $3x3$ matrix is an essential matrix if and only if two of its singular values are equal, and the third is zero. This is easily proven by the decomposition of $E = SR$, where $S$ is a \gls{skews}.
+A $3 \times 3$ matrix is an essential matrix if and only if two of its singular values are equal, and the third is zero. This is easily proven by the decomposition of $E = SR$, where $S$ is a \gls{skews}.
 Considering the matrices 
 \begin{equation}
 \mathrm { W } = \left[ \begin{array} { c c c } { 0 } & { - 1 } & { 0 } \\ { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \quad \text { and } \quad \mathrm { Z } = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right],
