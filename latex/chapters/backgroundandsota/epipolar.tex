@@ -135,116 +135,52 @@ Hence, the estimation of $F$ may be done using only 7 point matches, or by using
 Nevertheless, non-linear optimization techniques seem to yield better results to the estimation problem of $F$. Three nonlinear algorithms are mentioned in the review paper \cite{detep} and in R. Hartley and A. Zisserman \cite{multiview}: (i) a minimization of the re-projection errors, (ii) a minimization of the symmetric epipolar error, (iii) and a minimization of the first order geometric error. The first one is the most time-consuming, thus not recommended. From the other two most promising approaches, the second seems to give the worst results and the last algorithm has been proposed to give the best results in the least amount of computational time. 
 
 Algorithm (i), also called the Gold Standard, estimates $F$ by minimizing the distances between the points in the image and its re-projections. Having $M_1$ as a point in space, the corresponding points in the images before and after rotating are $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$, respectively, obtained through  (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}).
-The re-projections of $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$ are, 
+The re-projections of $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$ are then, 
 \begin{align}
 	\lambda_2 \mathbf{\tilde{m}^r_2} = K [ R \ \mathbf{t} ] K^{-1} \lambda_1 \mathbf{\tilde{m}_1}\\
-	\lambda_1 \mathbf{\tilde{m}^r_1} =  K^{-1} [ R^{-1} \ \mathbf{-t} ]K  \lambda_1 \mathbf{\tilde{m}_2}
+	\lambda_1 \mathbf{\tilde{m}^r_1} =  K^{-1} [ R^{-1} \ \mathbf{-t} ]K  \lambda_2 \mathbf{\tilde{m}_2},
 \end{align}
+where $R$ and $\mathbf{t}$ are obtained from the factorization of $F$, that will be approached briefly on section \ref{cha2:epipolar:fact}, $K$ are the known intrinsic parameters of the camera and $\lambda_1$ and $\lambda_2$ are given by the projection of the points on a sphere mentioned on section \ref{cha2:opprandsphere}. The distance between $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}^r_{1}$ is defined by $|| \widetilde{\mathbf{m}}_{1} - \widetilde{\mathbf{m}}^r_{1} ||$, leading to the following cost function to minimize 
 \begin{equation}
 \label{cha2:sec3:eq:gold}
-	\min_{\mathbf{F}} \sum_{i}\left(
-	d^{2}(\widetilde{\mathbf{m}}_{2i}, \widetilde{\mathbf{l}}_{e_2i})
+	\min_{\mathbf{F}} \sum_{i}
+	||\widetilde{\mathbf{m}}_{1i} - \widetilde{\mathbf{m}}^r_{1i}||^2
 	+
-	d^{2}(\widetilde{\mathbf{m}}_{1i}, \widetilde{\mathbf{l}}_{e_1i})\right),
+	||\widetilde{\mathbf{m}}_{2i} - \widetilde{\mathbf{m}}^r_{2i}||^2,
 \end{equation}
-where $i=1,...,n$ with $n$ being all the point matches and for a generic point in the first image
-\begin{equation}
-\label{cha2:sec3:eq:meed}
-	d(\widetilde{\mathbf{m}}_1, \widetilde{\mathbf{l}}_{e_1}) = \frac{\widetilde{\mathbf{m}}_1^T \widetilde{\mathbf{l}}_{e_1}}{\sqrt{l_{e_{1_x}}^2+l_{e_{1_y}}^2}}.
-\end{equation}
-Algorithm (ii) minimizes 
-\begin{equation}
-\label{cha2:sec3:eq:al3}
-	\min_{\mathbf{F}}\sum_{i}
-	\left(
-	\left\|\widetilde{\mathbf{m}}_{1i}-\mathbf{h}_1(\mathbf{f}, M_i)\right\|^2
-	+
-	\left\|\widetilde{\mathbf{m}}_{2i}-\mathbf{h}_2(\mathbf{f}, M_i)\right\|^2\right),
-\end{equation}
-where $M_i$ with $i=1,...,n$ are the $n$ points in space, while $\mathbf{h}_1(\mathbf{f}, M_i)$ and $\mathbf{h}_2(\mathbf{f}, M_i)$ are the functions that project the points in space into the first and second image plane, respectively, given the fundamental matrix represented as a vector by $\mathbf{f}$.
+where $i=1,...,n$.
 
-\subsection{\acrlong{grat}}
+Algorithm (ii) minimizes the epipolar error symmetrically, which is the distance from a point to its epipolar line. Having the epipolar line of the first image as $\widetilde{\mathbf{l}}_{e_1} =  F\widetilde{\mathbf{m}}_{2}$ and the second's as $\widetilde{\mathbf{l}}_{e_2} =  F\widetilde{\mathbf{m}}_{1}$, as shown on \ref{sec2:eq:fundm}, the quantity to minimize is given by
+\begin{equation}
+	\min _{\mathbf{F}} \sum_{i}\left(d^{2}\left(\mathbf{m}_{2i}, \mathbf{l}_{e_{2}}\right)+d^{2}\left(\mathbf{m}_{1i}, \mathbf{l}_{e_{1}}\right)\right),
+\end{equation}
+where $d\left(\mathbf{p}, \mathbf{l}\right)=\frac{a p_{1}+b _{2}+c}{\sqrt{a^{2}+b^{2}}}$, with $\widetilde{\mathbf{l}} = (a, b, c)^{T}$
+and $\mathbf{p}=\left(p_{1}, p_{2}\right)^{T}$, is the distance of a point to a line.
 
-Minimizing $ \sum_i (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance of each $i$ term is not the same and the least-squares technique produces an optimal solution if each term has the same variance.
-So one possibility to determine the fundamental matrix, given by algorithm (iii), is
+Minimizing $ \sum_i (\mathbf{\widetilde{m_i}}'^T F \mathbf{\widetilde{m_i}})^2$ doesn't yield a good result because the variance of each $i$ term is not the same and the least-squares technique produces an optimal solution if each term has the same variance. So one possibility is to determine the fundamental matrix the way it's given by algorithm (iii), 
 \begin{equation}
 \min_F \sum_i \frac{ (\mathbf{\widetilde{\mathbf{m}}_{2i}}^T F \widetilde{\mathbf{m}}_{1i})^2}{\sigma_i^2},
 \end{equation}
-where $i=1,...,n$ and $\sigma_i^2$ is the variance given by 
+where $\sigma_i^2$ is the variance given by 
 \begin{equation}
 \sigma_i^2 = \sigma [l_{{e1i}_x}^2 + l_{{e1i}_y}^2 + l_{{e2i}_x}^2 + l_{{e2i}_y}^2].
 \end{equation}
-Because multiplying each term by a constant makes no difference, $\sigma$ can be dropped. $\sigma_i$ is what originates the name as it is the  epipolar relation gradient.
+This corresponds to minimizing the derivative of the epipolar relation, thus its also called gradient-based technique, or the Sampson error.
+Because multiplying each term by a constant makes no difference, $\sigma$ can be dropped. 
 
 \subsection{Factorization of the essential matrix}
-
-Once the fundamental matrix is obtained through one of those methods, assuming the intrinsic parameters are known, which is the case for this project, the essential matrix may be obtained by $E = K^{T}  F K$ as seen on (\ref{hhh}).
-From here, it's possible to retrieve the camera matrix, $P = [R \ | \ \mathbf{t}]$, since $E = [\mathbf{t}]_\times R$. 
-
-A $3 \times 3$ matrix is an essential matrix if and only if two of its singular values are equal, and the third is zero. This is easily proven by the decomposition of $E = SR$, where $S$ is a \gls{skews}.
-Considering the matrices 
-\begin{equation}
-\mathrm { W } = \left[ \begin{array} { c c c } { 0 } & { - 1 } & { 0 } \\ { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \quad \text { and } \quad \mathrm { Z } = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right],
-\end{equation}
-where $W$ is orthogonal and $Z$ is a \gls{skews}, $S$ may be written as $S = kUZU^T$\footnote{A proof of this is given in Result A4.1 of R. Hartley and A. Zisserman,Multiple View Geometry in Computer Vision \cite{multiview}}, where $U$ is orthogonal and $Z = \operatorname{diag}(1,1,0)W$, up to sign. Thus, $S = U \operatorname { diag } ( 1,1,0 ) WU^T$, up to scale, and 
-\begin{equation}
-E = SR = U \operatorname { diag } ( 1,1,0 ) \left( WU^T R \right) = U \operatorname { diag } ( 1,1,0 ) V^T,
-\end{equation}
-proving the initial statement.
-
-Because the singular values have to be equal, the \acrshort{svdd} of $E$ is not unique, in fact 
-\begin{equation}
-\label{gf}
-E = U \operatorname { diag } ( 1,1,0 ) V ^ { T },
-\end{equation}
-or 
-\begin{equation}
-E = U \operatorname { diag } ( 1,1,0 ) ( - V ) ^ { T }.
-\end{equation} 
-Considering (\ref{gf}), because
-\begin{equation}
-\begin{aligned} 
-Z W = \operatorname { diag } ( 1,1,0 ) \\ 
-\text{and} \
-Z W ^ { T } = - \operatorname { diag } ( 1,1,0 ) ,
-\end{aligned}
-\end{equation}
-$E=SR$ may be decomposed into two forms,
-\begin{equation}
-\label{ccha}
-S = - U Z U ^ { T } , \quad R = U W ^ { T } V ^ { T },
-\end{equation}
-or
-\begin{equation}
-\label{ccha2}
-S = U Z U ^ { T } , \quad R = U W V ^ { T }.
-\end{equation}
-The matrix $R$ on (\ref{ccha}) is a rotation, since it is orthogonal,
-\begin{equation}
-R ^ { T } R = \left( U W ^ { T } V ^ { T } \right) ^ { T } U W ^ { T } V ^ { T } = V W U ^ { T } U W ^ { T } V ^ { T } = I,
-\end{equation}
-and 
-\begin{equation}
-\operatorname { det } \left( U W ^ { T } V ^ { T } \right) = \operatorname { det } ( U ) \operatorname { det } \left( W ^ { T } \right) \operatorname { det } \left( V ^ { T } \right) = \operatorname { det } ( W ) \operatorname { det } \left( U V ^ { T } \right) = 1,
-\end{equation}
-which are enough conditions to prove it. Furthermore, $S$ is a \gls{skews} because,
-\begin{equation}
-- S^ { T } = \left( U Z U ^ { T } \right) ^ { T } = U Z ^ { T } U ^ { T } = - U Z U ^ { T } = S.
-\end{equation}
-The same applies to (\ref{ccha2}).\footnote{C. Olsson. \href{http://www.maths.lth.se/matematiklth/personal/calle/datorseende13/notes/forelas6.pdf}{http://www.maths.lth.se/matematiklth/personal/calle/datorseende13/notes/forelas6.pdf}. Lund Institue of Technology. Computer Vision 2013. Lecture 6.} A proof that these are the only solutions is given in Result 9.18 of R. Hartley and A. Zisserman \cite{multiview}.
-
-Now regarding the translation, since $S \mathbf{t} = [\mathbf{t}]_{\times}\mathbf{t} = 0$, it follows that $t = U (0, 0, 1)^T = u_3$, the last column of $U$, which can be explained by the following. Assuming $S \mathbf{t} = U Z U^T \mathbf{t} = 0$, $Z U^T \mathbf{t}$ should be equal to zero to satisfy the equation. Because $Z$ is an orthogonal matrix,
-\begin{equation}
-Z U^T \mathbf{t} = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] U^T \mathbf{t}  = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] \left[ \begin{array} { c } { 0 } \\ { 0} \\ s \end{array} \right] = 0,
-\end{equation}
-where $s$ is any non-zero constant, such as $1$. Therefore, $\mathbf{t} = U [0 \ 0 \ 1]^T = u_3$, as U is orthogonal as well.\\
-Finally, due to the lack of uniqueness of the \acrshort{svdd}, there are 4 possible solutions for the camera matrix,
+\label{cha2:epipolar:fact}
+Once the fundamental matrix is obtained through one of those methods, assuming the intrinsic parameters are known, which is the case for this work, the essential matrix may be obtained by $E = K^{T}  F K$ as seen on (\ref{hhh}).
+From here, it's possible to retrieve the camera matrix, $P = [R \ | \ \mathbf{t}]$, since $E = [\mathbf{t}]_\times R$, so that the rotation, $R$, and thus the orientation of the camera becomes known.
+To find the camera matrix, one can apply the \acrshort{svdd} to the essential matrix, which generates 4 possible solutions,
 \begin{equation}
 P = \left[UWV^T | + u_{ 3 } \right] \quad \text { or } \quad \left[ UWV^T | - u_ { 3 } \right] \quad \text { or } \quad \left[ UW^T V^T | + u_ { 3 } \right] \quad \text { or } \quad \left[ UW^T V^T |- u _ { 3 } \right],
 \end{equation}
-that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2:fig:ep4}. 
-
-The real world point is only in front of both cameras in one of the four solutions, thus it is enough to use a single point to decide which of the different solutions produces the correct camera matrix. \cite{multiview}
+that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2:fig:ep4} \footnote{The way this solutions are obtained is further detailed on appendix \ref{appendix:cha1:epipolar}.}. $U$ and $V$ are the outputs of \acrshort{svdd} and 
+\begin{equation}
+	\mathrm { W } = \left[ \begin{array} { c c c } { 0 } & { - 1 } & { 0 } \\ { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \quad.
+\end{equation}
+The real world point is only in front of both cameras in one of the four solutions, thus it is enough to use a single point to decide which of the different solutions produces the correct camera matrix. \cite{multiview}\\
 
 To summarize, the steps for obtaining the projective transformation from epipolar geometry are:
 
@@ -264,7 +200,7 @@ To summarize, the steps for obtaining the projective transformation from epipola
 
 \subsection{Pure rotation}
 
-As a disadvantage of epipolar geometry, if the eye's movement is not constrained by a translation component, the epipolar relation will not work, since $[\mathbf{t}]_\times$ would be a $3x3$ matrix of zeros and, consequently, $E = [\mathbf{t}]_\times R$ would yield the same, making it unfeasible to retrieve the rotation.\\
+As a disadvantage of epipolar geometry, if the eye's movement is not constrained by a translation component, the epipolar relation will not work, since $[\mathbf{t}]_\times$ would be a $3x3$ matrix of zeros and, consequently, $E = [\mathbf{t}]_\times R$ would yield the same, making it impossible to retrieve the rotation.\\
 
 When doing feature detection and matching, wrongly matched pairs of points between the two images, or points with large location errors, could severely affect the precision of the estimation of $F$. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.
 

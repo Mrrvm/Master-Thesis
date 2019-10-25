@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  25 OCT 2019 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  25 OCT 2019 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,7 +947,7 @@ Package epstopdf Info: Source file: <images/ist_logo.eps>
 ted-to.pdf images/ist_logo.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
-<images/ist_logo-eps-converted-to.pdf, id=304, 500.87125pt x 193.72375pt>
+<images/ist_logo-eps-converted-to.pdf, id=300, 500.87125pt x 193.72375pt>
 File: images/ist_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use images/ist_logo-eps-converted-to.pdf>
 Package pdftex.def Info: images/ist_logo-eps-converted-to.pdf  used on input li
@@ -1065,28 +1065,28 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 18.
 [3]
-<images/prototypenew.png, id=671, 1132.23pt x 846.16125pt>
+<images/prototypenew.png, id=665, 1132.23pt x 846.16125pt>
 File: images/prototypenew.png Graphic file (type png)
 <use images/prototypenew.png>
 Package pdftex.def Info: images/prototypenew.png  used on input line 29.
 (pdftex.def)             Requested size: 284.52756pt x 212.63725pt.
-<images/drift1.png, id=675, 436.63126pt x 435.6275pt>
+<images/drift1.png, id=669, 436.63126pt x 435.6275pt>
 File: images/drift1.png Graphic file (type png)
 <use images/drift1.png>
 Package pdftex.def Info: images/drift1.png  used on input line 38.
 (pdftex.def)             Requested size: 136.57462pt x 136.25955pt.
-<images/drift2.png, id=676, 428.60126pt x 430.60875pt>
+<images/drift2.png, id=670, 428.60126pt x 430.60875pt>
 File: images/drift2.png Graphic file (type png)
 <use images/drift2.png>
 Package pdftex.def Info: images/drift2.png  used on input line 43.
 (pdftex.def)             Requested size: 136.57462pt x 137.21283pt.
-<images/lpmscu.jpg, id=677, 271.0125pt x 248.93pt>
+<images/lpmscu.jpg, id=671, 271.0125pt x 248.93pt>
 File: images/lpmscu.jpg Graphic file (type jpg)
 <use images/lpmscu.jpg>
 Package pdftex.def Info: images/lpmscu.jpg  used on input line 48.
 (pdftex.def)             Requested size: 136.57462pt x 125.44846pt.
  [4 <./images/prototypenew.png>]
-<images/prototypeaxis.png, id=696, 441.65pt x 551.05875pt>
+<images/prototypeaxis.png, id=690, 441.65pt x 551.05875pt>
 File: images/prototypeaxis.png Graphic file (type png)
 <use images/prototypeaxis.png>
 Package pdftex.def Info: images/prototypeaxis.png  used on input line 62.
@@ -1107,12 +1107,12 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (./chapters/backgroundandsota.tex
 Chapter 2.
 (./chapters/backgroundandsota/represent.tex
-<images/cvcoordinatesys.pdf, id=712, 174.6525pt x 111.29579pt>
+<images/cvcoordinatesys.pdf, id=706, 174.6525pt x 111.29579pt>
 File: images/cvcoordinatesys.pdf Graphic file (type pdf)
 <use images/cvcoordinatesys.pdf>
 Package pdftex.def Info: images/cvcoordinatesys.pdf  used on input line 8.
 (pdftex.def)             Requested size: 186.65175pt x 118.94943pt.
-<images/cvcoordinatesysq.pdf, id=713, 108.405pt x 88.41031pt>
+<images/cvcoordinatesysq.pdf, id=707, 108.405pt x 88.41031pt>
 File: images/cvcoordinatesysq.pdf Graphic file (type pdf)
 <use images/cvcoordinatesysq.pdf>
 Package pdftex.def Info: images/cvcoordinatesysq.pdf  used on input line 9.
@@ -1145,7 +1145,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./images/cvcoordinatesysq.pdf): PDF inc
 lusion: invalid other resource which is no dict (key 'ProcSets', type <array>);
  ignored.
 >] [8]) (./chapters/backgroundandsota/cameramodel.tex
-<images/cameraconcepts.pdf, id=752, 525.88469pt x 329.31029pt>
+<images/cameraconcepts.pdf, id=746, 525.88469pt x 329.31029pt>
 File: images/cameraconcepts.pdf Graphic file (type pdf)
 <use images/cameraconcepts.pdf>
 Package pdftex.def Info: images/cameraconcepts.pdf  used on input line 16.
@@ -1158,7 +1158,7 @@ gnored.
 >]) (./chapters/backgroundandsota/features.tex [11] [12])
 (./chapters/backgroundandsota/opprandsphere.tex [13])
 (./chapters/backgroundandsota/epipolar.tex [14]
-<images/epipolargeo.png, id=868, 495.8525pt x 322.20375pt>
+<images/epipolargeo.png, id=862, 495.8525pt x 322.20375pt>
 File: images/epipolargeo.png Graphic file (type png)
 <use images/epipolargeo.png>
 Package pdftex.def Info: images/epipolargeo.png  used on input line 13.
@@ -1173,23 +1173,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 28.
 
-[16] [17]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 168.
-
-[18] [19]
-<images/ep4sols.png, id=961, 1614.03pt x 1105.12875pt>
-File: images/ep4sols.png Graphic file (type png)
-<use images/ep4sols.png>
-Package pdftex.def Info: images/ep4sols.png  used on input line 262.
-(pdftex.def)             Requested size: 284.52756pt x 194.81691pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+[16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
 
  []
 
-[20 <./images/ep4sols.png (PNG copy)>])
+<images/ep4sols.png, id=932, 1614.03pt x 1105.12875pt>
+File: images/ep4sols.png Graphic file (type png)
+<use images/ep4sols.png>
+Package pdftex.def Info: images/ep4sols.png  used on input line 196.
+(pdftex.def)             Requested size: 284.52756pt x 194.81691pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+[19 <./images/ep4sols.png (PNG copy)>])
 (./chapters/backgroundandsota/robustest.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -1199,76 +1198,78 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 8.
 
-)) [21]
+)) [20]
 \openout2 = `chapters/methodology.aux'.
 
- (./chapters/methodology.tex [22
+ (./chapters/methodology.tex
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+<images/imagesex.png, id=972, 2247.39626pt x 433.62pt>
+File: images/imagesex.png Graphic file (type png)
+<use images/imagesex.png>
+Package pdftex.def Info: images/imagesex.png  used on input line 27.
+(pdftex.def)             Requested size: 455.24411pt x 87.83403pt.
+[21
 
 
 
 ]
-Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--18
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<images/imagesex.png, id=1005, 2247.39626pt x 433.62pt>
-File: images/imagesex.png Graphic file (type png)
-<use images/imagesex.png>
-Package pdftex.def Info: images/imagesex.png  used on input line 23.
-(pdftex.def)             Requested size: 455.24411pt x 87.83403pt.
-[23 <./images/imagesex.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-<images/approach.pdf, id=1030, 407.60278pt x 431.69278pt>
+<images/approach.pdf, id=999, 407.60278pt x 431.69278pt>
 File: images/approach.pdf Graphic file (type pdf)
 <use images/approach.pdf>
-Package pdftex.def Info: images/approach.pdf  used on input line 44.
+Package pdftex.def Info: images/approach.pdf  used on input line 48.
 (pdftex.def)             Requested size: 318.66948pt x 337.50946pt.
+<images/transf.pdf, id=1005, 256.07669pt x 292.2117pt>
+File: images/transf.pdf Graphic file (type pdf)
+<use images/transf.pdf>
+Package pdftex.def Info: images/transf.pdf  used on input line 67.
+(pdftex.def)             Requested size: 227.62206pt x 259.75548pt.
+[22 <./images/imagesex.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\acrlong' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\acrlong' on input line 120.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <./images/approach.pdf
+ [23 <./images/approach.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/approach.pdf): PDF inclusion: 
 invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
 .
 >]
-<images/transf.pdf, id=1050, 256.07669pt x 292.2117pt>
-File: images/transf.pdf Graphic file (type pdf)
-<use images/transf.pdf>
-Package pdftex.def Info: images/transf.pdf  used on input line 63.
-(pdftex.def)             Requested size: 227.62206pt x 259.75548pt.
- [25 <./images/transf.pdf
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./images/transf.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/transf.pdf): PDF inclusion: in
 valid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 111.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 116.
-
-) [26]
+>]) [25]
 \openout2 = `chapters/results.aux'.
 
- (./chapters/results.tex
+ (./chapters/results.tex [26
+
+
+
+]
 Chapter 4.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 20.
 
-) [27
-
-
-
-]
+) [27]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex [28
@@ -1289,115 +1290,122 @@ Chapter 5.
 
 ]
 Appendix A.
+<images/ll.png, id=1090, 1013.7875pt x 487.8225pt>
+File: images/ll.png Graphic file (type png)
+<use images/ll.png>
+Package pdftex.def Info: images/ll.png  used on input line 14.
+(pdftex.def)             Requested size: 369.88582pt x 177.98302pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 6.
+(hyperref)                removing `\acrlong' on input line 20.
 
-<images/sift1.png, id=1118, 1320.935pt x 918.43124pt>
+[33]
+<images/sift1.png, id=1104, 1320.935pt x 918.43124pt>
 File: images/sift1.png Graphic file (type png)
 <use images/sift1.png>
-Package pdftex.def Info: images/sift1.png  used on input line 17.
+Package pdftex.def Info: images/sift1.png  used on input line 31.
 (pdftex.def)             Requested size: 295.90588pt x 205.74121pt.
-<images/sift2.png, id=1121, 450.68375pt x 394.47375pt>
+<images/sift2.png, id=1107, 450.68375pt x 394.47375pt>
 File: images/sift2.png Graphic file (type png)
 <use images/sift2.png>
-Package pdftex.def Info: images/sift2.png  used on input line 24.
+Package pdftex.def Info: images/sift2.png  used on input line 38.
 (pdftex.def)             Requested size: 136.57462pt x 119.54085pt.
 
-Underfull \hbox (badness 1789) in paragraph at lines 25--25
-[]\OT1/phv/m/n/10 Figure A.2: []Search for the
+Underfull \hbox (badness 1789) in paragraph at lines 39--39
+[]\OT1/phv/m/n/10 Figure A.3: []Search for the
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 25--25
+Underfull \hbox (badness 2460) in paragraph at lines 39--39
 \OT1/phv/m/n/10 max-ima and min-ima of the
  []
 
-[33]
-<images/sift3.png, id=1129, 488.82625pt x 229.85875pt>
+[34 <./images/ll.png> <./images/sift1.png> <./images/sift2.png>]
+<images/sift3.png, id=1115, 488.82625pt x 229.85875pt>
 File: images/sift3.png Graphic file (type png)
 <use images/sift3.png>
-Package pdftex.def Info: images/sift3.png  used on input line 48.
+Package pdftex.def Info: images/sift3.png  used on input line 62.
 (pdftex.def)             Requested size: 227.62204pt x 107.03401pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 55.
+(hyperref)                removing `\acrlong' on input line 69.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./images/sift1.png> <./images/sift2.png> <./images/sift3.png (PNG copy)>]
-<images/surf.png, id=1145, 1395.2125pt x 274.02374pt>
+<images/surf.png, id=1126, 1395.2125pt x 274.02374pt>
 File: images/surf.png Graphic file (type png)
 <use images/surf.png>
-Package pdftex.def Info: images/surf.png  used on input line 71.
+Package pdftex.def Info: images/surf.png  used on input line 85.
 (pdftex.def)             Requested size: 295.90588pt x 58.11533pt.
-<images/surf2.jpg, id=1148, 345.54094pt x 207.77625pt>
+<images/surf2.jpg, id=1129, 345.54094pt x 207.77625pt>
 File: images/surf2.jpg Graphic file (type jpg)
 <use images/surf2.jpg>
-Package pdftex.def Info: images/surf2.jpg  used on input line 78.
+Package pdftex.def Info: images/surf2.jpg  used on input line 92.
 (pdftex.def)             Requested size: 136.57462pt x 82.12302pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []$
  []
 
-[35 <./images/surf.png> <./images/surf2.jpg>]
-<images/ll.png, id=1166, 1013.7875pt x 487.8225pt>
-File: images/ll.png Graphic file (type png)
-<use images/ll.png>
-Package pdftex.def Info: images/ll.png  used on input line 112.
-(pdftex.def)             Requested size: 369.88582pt x 177.98302pt.
- [36 <./images/ll.png>]
+[35 <./images/sift3.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36 <./images/surf.png> <./images/surf2.jpg>]
+Underfull \vbox (badness 3240) has occurred while \output is active []
+
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
+
+ []
+
+[38]
 Appendix B.
-<images/camview.png, id=1174, 467.7475pt x 551.05875pt>
+<images/camview.png, id=1183, 467.7475pt x 551.05875pt>
 File: images/camview.png Graphic file (type png)
 <use images/camview.png>
-Package pdftex.def Info: images/camview.png  used on input line 126.
+Package pdftex.def Info: images/camview.png  used on input line 190.
 (pdftex.def)             Requested size: 113.81102pt x 134.08144pt.
-<images/camwlens.png, id=1175, 387.4475pt x 415.5525pt>
+<images/camwlens.png, id=1184, 387.4475pt x 415.5525pt>
 File: images/camwlens.png Graphic file (type png)
 <use images/camwlens.png>
-Package pdftex.def Info: images/camwlens.png  used on input line 127.
+Package pdftex.def Info: images/camwlens.png  used on input line 191.
 (pdftex.def)             Requested size: 113.81102pt x 122.06697pt.
-<images/camfronttview.png, id=1178, 642.4pt x 571.13374pt>
+<images/camfronttview.png, id=1187, 642.4pt x 571.13374pt>
 File: images/camfronttview.png Graphic file (type png)
 <use images/camfronttview.png>
-Package pdftex.def Info: images/camfronttview.png  used on input line 134.
+Package pdftex.def Info: images/camfronttview.png  used on input line 198.
 (pdftex.def)             Requested size: 159.33821pt x 141.65887pt.
-<images/camsideview.png, id=1179, 319.1925pt x 561.09625pt>
+<images/camsideview.png, id=1188, 319.1925pt x 561.09625pt>
 File: images/camsideview.png Graphic file (type png)
 <use images/camsideview.png>
-Package pdftex.def Info: images/camsideview.png  used on input line 135.
+Package pdftex.def Info: images/camsideview.png  used on input line 199.
 (pdftex.def)             Requested size: 113.81102pt x 200.05957pt.
-<images/camwlensfront.png, id=1182, 636.3775pt x 563.10374pt>
+<images/camwlensfront.png, id=1191, 636.3775pt x 563.10374pt>
 File: images/camwlensfront.png Graphic file (type png)
 <use images/camwlensfront.png>
-Package pdftex.def Info: images/camwlensfront.png  used on input line 142.
+Package pdftex.def Info: images/camwlensfront.png  used on input line 206.
 (pdftex.def)             Requested size: 159.33821pt x 140.99039pt.
-<images/camwlensside.png, id=1183, 356.33125pt x 526.96875pt>
+<images/camwlensside.png, id=1192, 356.33125pt x 526.96875pt>
 File: images/camwlensside.png Graphic file (type png)
 <use images/camwlensside.png>
-Package pdftex.def Info: images/camwlensside.png  used on input line 143.
+Package pdftex.def Info: images/camwlensside.png  used on input line 207.
 (pdftex.def)             Requested size: 113.81102pt x 168.3118pt.
-<images/lens.png, id=1184, 812.03375pt x 1025.8325pt>
+<images/lens.png, id=1193, 812.03375pt x 1025.8325pt>
 File: images/lens.png Graphic file (type png)
 <use images/lens.png>
-Package pdftex.def Info: images/lens.png  used on input line 151.
+Package pdftex.def Info: images/lens.png  used on input line 215.
 (pdftex.def)             Requested size: 409.71692pt x 517.57957pt.
 
 Underfull \vbox (badness 2343) has occurred while \output is active []
 
- [37
+ [39
 
  <./images/camview.png> <./images/camwlens.png> <./images/camfronttview.png> <.
 /images/camsideview.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 158.
+(hyperref)                removing `\acrlong' on input line 222.
 
-) [38 <./images/camwlensfront.png> <./images/camwlensside.png>] [39 <./images/l
+) [40 <./images/camwlensfront.png> <./images/camwlensside.png>] [41 <./images/l
 ens.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
@@ -1409,7 +1417,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B476FF4FB9BC36BC304303B4DE9A38B7;4969.
+(rerunfilecheck)             Checksum: C9260E157ADB300D3B26FE1C8EED2F72;4931.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1417,15 +1425,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 14475 strings out of 492982
- 234234 string characters out of 6134896
- 381852 words of memory out of 5000000
- 17323 multiletter control sequences out of 15000+600000
+ 14477 strings out of 492982
+ 234237 string characters out of 6134896
+ 381810 words of memory out of 5000000
+ 17322 multiletter control sequences out of 15000+600000
  32751 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,13n,37p,1996b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not ex
+ 45i,13n,37p,1996b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1477,10 +1488,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
 /type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
 elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
 o8a.pfb>
-Output written on main.pdf (61 pages, 6496180 bytes).
+Output written on main.pdf (63 pages, 6498958 bytes).
 PDF statistics:
- 1328 PDF objects out of 1440 (max. 8388607)
- 1159 compressed objects within 12 object streams
- 291 named destinations out of 1000 (max. 500000)
- 736 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1339 PDF objects out of 1440 (max. 8388607)
+ 1168 compressed objects within 12 object streams
+ 294 named destinations out of 1000 (max. 500000)
+ 728 words of extra memory for PDF output out of 10000 (max. 10000000)
 

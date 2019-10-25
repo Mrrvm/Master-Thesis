@@ -1,8 +1,22 @@
 %!TEX root = ../dissertation.tex
 
 \chapter{Background}
-\section{Feature Detectors}
-\label{appendix:cha1}
+
+\section{Donder's and Listing's laws}
+\label{appendix:cha1:listings}
+
+Donders' law states that the orientation of the eye, when looking in a specific direction at infinity, is always the same; in other words, as described by Donders: "with the head erect and looking at infinity, any gaze direction has a unique torsional angle, regardless the path followed by the eye to get there". Thus, the eye has 2 degrees of freedom for pointing.
+
+Moreover, the 3D orientations of the eye can be uniquely described by head-fixed Cartesian coordinate system of single-axis rotations (section \ref{killme}) that bring the eye from the primary position to the current orientation. Described in this way, Listing's law holds that the rotation axis corresponding to all possible eye orientations is confined to the yz-plane, called Listing's plane. The primary position of the eye is an unique position from which any other eye position can be reached through rotation around an axis lying in Listing's plane. This hypothetical rotation axis is defined by a vector, $ \mathbf{r}$, the torsional component perpendicular to the Listing's plane, is zero. 
+Figure \ref{sec2:fig:monkey} illustrates that this law is very precise, by showing 3500 different eye orientations made by a head-restrained monkey, where the left image is the frontal view on the rotation axis, representing the gazed points coordinates of the horizontal and vertical components of the axis, and the right-hand plot is a side view, representing the coordinates expressed by the  horizontal and torsional components. A plane is clearly seen around $0 \ degrees$ of torsion with little deviation ($\approx 0.6$ deg).
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm]{images/ll.png}
+	\caption[Listing’s law, illustrated for 3500 eye orientations made by a head-restrained monkey]{Listing’s law, illustrated for 3500 eye orientations made by a head-restrained monkey, freely looking around in the laboratory room. Eye fixations are represented by the head-fixed Cartesian components of the 3D rotation axes, expressed in half-radians, and calculated as $angle = 2 \cdot atan(component)$. \cite{donders}}
+	\label{sec2:fig:monkey}
+\end{figure}
+\cite{donders} 
+
 \section{\acrlong{sift}}
 \label{appendix:cha1:sift}
 The \acrshort{sift} algorithm consists of a local feature detector and local histogram-based descriptor. At first, \acrshort{sift} takes the original image, and generates progressively blurred images through a Gaussian filter as $L (u , v , \sigma ) = G ( u , v, \sigma ) * I ( u , v )$, where $(u, v)$ are the pixel coordinates, $L$ is the blurred image, $I$ is the original image, $G$ is the \gls{gauss}, and finally $\sigma$ is the amount of blur. Then, it re-sizes the original image to half its size, and generates the blurred images again, and repeats. Each new re-sizing of the previous image is scaled by an octave, and each octave can be blurred  several times. This process ensures the scale invariance of potential features.
@@ -100,21 +114,71 @@ To obtain rotation invariance, the sampling window is rotated towards the domina
 
 The dominant orientation, here lightly and carelessly explained, is captured through the calculation of Haar-wavelet responses over a circular region around the point of interest with a radius of 6$s$. Those responses are then summed within a sliding orientation window covering an angle of $\frac{\pi}{3}$. \cite{surf} \cite{compsiftsurf}
 
-\section{Donder's and Listing's laws}
-\label{appendix:cha1:listings}
+\section{Factorization of the essential matrix}
+\label{appendix:cha1:epipolar}
+To obtain the camera matrix from the essential matrix, the following should be considered.
+A $3 \times 3$ matrix is an essential matrix if and only if two of its singular values are equal, and the third is zero. This is easily proven by the decomposition of $E = SR$, where $S$ is a \gls{skews}.
+Considering the matrices 
+\begin{equation}
+\mathrm { W } = \left[ \begin{array} { c c c } { 0 } & { - 1 } & { 0 } \\ { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \quad \text { and } \quad \mathrm { Z } = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right],
+\end{equation}
+where $W$ is orthogonal and $Z$ is a \gls{skews}, $S$ may be written as $S = kUZU^T$\footnote{A proof of this is given in Result A4.1 of R. Hartley and A. Zisserman,Multiple View Geometry in Computer Vision \cite{multiview}}, where $U$ is orthogonal and $Z = \operatorname{diag}(1,1,0)W$, up to sign. Thus, $S = U \operatorname { diag } ( 1,1,0 ) WU^T$, up to scale, and 
+\begin{equation}
+E = SR = U \operatorname { diag } ( 1,1,0 ) \left( WU^T R \right) = U \operatorname { diag } ( 1,1,0 ) V^T,
+\end{equation}
+proving the initial statement.
+Because the singular values have to be equal, the \acrshort{svdd} of $E$ is not unique, in fact 
+\begin{equation}
+\label{gf}
+E = U \operatorname { diag } ( 1,1,0 ) V ^ { T },
+\end{equation}
+or 
+\begin{equation}
+E = U \operatorname { diag } ( 1,1,0 ) ( - V ) ^ { T }.
+\end{equation} 
+Considering (\ref{gf}), because
+\begin{equation}
+\begin{aligned} 
+Z W = \operatorname { diag } ( 1,1,0 ) \\ 
+\text{and} \
+Z W ^ { T } = - \operatorname { diag } ( 1,1,0 ) ,
+\end{aligned}
+\end{equation}
+$E=SR$ may be decomposed into two forms,
+\begin{equation}
+\label{ccha}
+S = - U Z U ^ { T } , \quad R = U W ^ { T } V ^ { T },
+\end{equation}
+or
+\begin{equation}
+\label{ccha2}
+S = U Z U ^ { T } , \quad R = U W V ^ { T }.
+\end{equation}
+(\ref{ccha}) is a rotation matrix and can be proven as such. Since it's orthogonal,
+\begin{equation}
+R ^ { T } R = \left( U W ^ { T } V ^ { T } \right) ^ { T } U W ^ { T } V ^ { T } = V W U ^ { T } U W ^ { T } V ^ { T } = I,
+\end{equation}
+and 
+\begin{equation}
+\operatorname { det } \left( U W ^ { T } V ^ { T } \right) = \operatorname { det } ( U ) \operatorname { det } \left( W ^ { T } \right) \operatorname { det } \left( V ^ { T } \right) = \operatorname { det } ( W ) \operatorname { det } \left( U V ^ { T } \right) = 1,
+\end{equation}
+which are enough conditions to prove it. Furthermore, $S$ is a \gls{skews} because,
+\begin{equation}
+- S^ { T } = \left( U Z U ^ { T } \right) ^ { T } = U Z ^ { T } U ^ { T } = - U Z U ^ { T } = S.
+\end{equation}
+The same applies to (\ref{ccha2}).\footnote{C. Olsson. \href{http://www.maths.lth.se/matematiklth/personal/calle/datorseende13/notes/forelas6.pdf}{http://www.maths.lth.se/matematiklth/personal/calle/datorseende13/notes/forelas6.pdf}. Lund Institue of Technology. Computer Vision 2013. Lecture 6.} A proof that these are the only solutions is given in Result 9.18 of R. Hartley and A. Zisserman \cite{multiview}.
 
-Donders' law states that the orientation of the eye, when looking in a specific direction at infinity, is always the same; in other words, as described by Donders: "with the head erect and looking at infinity, any gaze direction has a unique torsional angle, regardless the path followed by the eye to get there". Thus, the eye has 2 degrees of freedom for pointing.
+Now regarding how to obtain the translation, since $S \mathbf{t} = [\mathbf{t}]_{\times}\mathbf{t} = 0$, it follows that $t = U (0, 0, 1)^T = u_3$, the last column of $U$, which can be explained by the following. Assuming $S \mathbf{t} = U Z U^T \mathbf{t} = 0$, $Z U^T \mathbf{t}$ should be equal to zero to satisfy the equation. Because $Z$ is an orthogonal matrix,
+\begin{equation}
+Z U^T \mathbf{t} = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] U^T \mathbf{t}  = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { - 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] \left[ \begin{array} { c } { 0 } \\ { 0} \\ s \end{array} \right] = 0,
+\end{equation}
+where $s$ is any non-zero constant, such as $1$. Therefore, $\mathbf{t} = U [0 \ 0 \ 1]^T = u_3$, as U is orthogonal as well.\\
 
-Moreover, the 3D orientations of the eye can be uniquely described by head-fixed Cartesian coordinate system of single-axis rotations (section \ref{killme}) that bring the eye from the primary position to the current orientation. Described in this way, Listing's law holds that the rotation axis corresponding to all possible eye orientations is confined to the yz-plane, called Listing's plane. The primary position of the eye is an unique position from which any other eye position can be reached through rotation around an axis lying in Listing's plane. This hypothetical rotation axis is defined by a vector, $ \mathbf{r}$, the torsional component perpendicular to the Listing's plane, is zero. 
-Figure \ref{sec2:fig:monkey} illustrates that this law is very precise, by showing 3500 different eye orientations made by a head-restrained monkey, where the left image is the frontal view on the rotation axis, representing the gazed points coordinates of the horizontal and vertical components of the axis, and the right-hand plot is a side view, representing the coordinates expressed by the  horizontal and torsional components. A plane is clearly seen around $0 \ degrees$ of torsion with little deviation ($\approx 0.6$ deg).
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm]{images/ll.png}
-	\caption[Listing’s law, illustrated for 3500 eye orientations made by a head-restrained monkey]{Listing’s law, illustrated for 3500 eye orientations made by a head-restrained monkey, freely looking around in the laboratory room. Eye fixations are represented by the head-fixed Cartesian components of the 3D rotation axes, expressed in half-radians, and calculated as $angle = 2 \cdot atan(component)$. \cite{donders}}
-	\label{sec2:fig:monkey}
-\end{figure}
-\cite{donders} 
-
+Finally, having $R$ and $\mathbf{t}$, there are 4 possible solutions for the camera matrix,
+\begin{equation}
+P = \left[UWV^T | + u_{ 3 } \right] \quad \text { or } \quad \left[ UWV^T | - u_ { 3 } \right] \quad \text { or } \quad \left[ UW^T V^T | + u_ { 3 } \right] \quad \text { or } \quad \left[ UW^T V^T |- u _ { 3 } \right],
+\end{equation}
+that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2:fig:ep4}. 
 
 \chapter{Material specifications}
 

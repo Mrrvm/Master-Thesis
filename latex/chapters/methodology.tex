@@ -3,7 +3,10 @@
 \chapter{Methodology}
 \label{methodology}
 
-EXPLAIN NOTATION ROT MAT COORDINATE SYSTEM USED WHY
+This chapter presents the methodology used on this work. This includes an explanation on how the problem was approached and the implementation of that approach, which entails several aspects, such as how the image features are obtained, what algorithms are used to estimate the orientation of the camera and why, how are the algorithms evaluated, and so on. 
+As a reminder, the coordinate system convention that will be used throughout this chapter is the computer vision one mentioned in section \ref{cha2:represent}.
+
+why rotation matrix???? 
 
 \section{Approach}
 
@@ -12,6 +15,7 @@ Figure \ref{cha3:methodology:approach} summarizes the approach that this work wi
 \begin{enumerate}
 	\item \textbf{Collect images}\\
 	 Using an uEye LE USB3 camera \footnote{See appendix \ref{appendix:cha2:camera} for camera specifications.}, two grayscale images are collected before and after a certain rotation.
+	 ISTO NAO É AQUI
 	 
 	 \item \textbf{Collect ground truth}\\
 	 Using the same camera in the same positions, the two images are taken but positioning a chessboard \footnote{See appendix \ref{appendix:cha2:chessboard} for chessboard specifications.} on the scenery, which is used to determine the ground truth through its regular pattern. The ground truth will then be utilized to evaluate the estimation algorithms performance and also the \acrshort{imu}'s performance over the camera.\\
@@ -112,7 +116,7 @@ And finally, the translation ends up as
 
 por isto no background
 SAY THAT EPIPOLAR IS GOOD CUZ NO NEED TO DETERMINE Z, reference PAMI paper
-IN TERMS OF R INSTEAD OF F
+IN TERMS OF R INSTEAD OF F BUT NEEDS T
 \subsubsection{\acrlong{mbpe}}
 \label{MBaPE}
 This method is a bundle adjustment of the previous one. It uses the rotation matrix obtained with OPPr and it tries to tune it to obtain a rotation and a translation dependent on the former, through 
