@@ -6,7 +6,8 @@ A level-1 auxiliary file: abstract/abstract-en.aux
 A level-1 auxiliary file: abstract/abstract-pt.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/backgroundandsota.aux
-A level-1 auxiliary file: chapters/methodology.aux
+A level-1 auxiliary file: chapters/methods.aux
+A level-1 auxiliary file: chapters/implementation.aux
 A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 The style file: ieeetr.bst
@@ -25,45 +26,47 @@ Warning--empty journal in ransac
 Warning--empty title in mono
 Warning--empty journal in mono
 Warning--empty year in mono
-You've used 16 entries,
+Name 1 in "Y. Ma, S. Soatto, J. Kosecka, and S. Sastr" has a comma at the end for entry bundle
+while executing---line 969 of file ieeetr.bst
+You've used 18 entries,
             1876 wiz_defined-function locations,
-            572 strings with 5697 characters,
-and the built_in function-call counts, 3754 in all, are:
-= -- 390
-> -- 101
+            583 strings with 6058 characters,
+and the built_in function-call counts, 4248 in all, are:
+= -- 440
+> -- 120
 < -- 0
-+ -- 42
-- -- 26
-* -- 242
-:= -- 524
-add.period$ -- 17
-call.type$ -- 16
-change.case$ -- 14
++ -- 49
+- -- 31
+* -- 277
+:= -- 595
+add.period$ -- 19
+call.type$ -- 18
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 198
-empty$ -- 379
-format.name$ -- 26
-if$ -- 916
+cite$ -- 27
+duplicate$ -- 224
+empty$ -- 426
+format.name$ -- 31
+if$ -- 1036
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 14
-newline$ -- 52
-num.names$ -- 16
-pop$ -- 61
+int.to.str$ -- 18
+missing$ -- 16
+newline$ -- 58
+num.names$ -- 18
+pop$ -- 66
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 147
 stack$ -- 0
-substring$ -- 262
-swap$ -- 72
+substring$ -- 294
+swap$ -- 82
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 43
-width$ -- 18
-write$ -- 143
-(There was 1 error message)
+while$ -- 48
+width$ -- 20
+write$ -- 162
+(There were 2 error messages)

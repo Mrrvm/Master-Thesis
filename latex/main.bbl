@@ -64,6 +64,16 @@ D.~Burschka and E.~Mair
 \bibitem{robotics}
 J.~Baillieul, ``{Introduction to ROBOTICS mechanics and control},'' 2004.
 
+\bibitem{vasconcelos}
+F.~Vasconcelos, J.~P. Barreto, and E.~Boyer, ``{Automatic Camera Calibration
+  Using Multiple Sets of Pairwise Correspondences},'' {\em IEEE Transactions on
+  Pattern Analysis and Machine Intelligence}, vol.~40, no.~4, pp.~791--803,
+  2018.
+
+\bibitem{bundle}
+J.~K. Y.~Ma, S.~Soatto and S.~Sastr, ``An invitation to 3-d vision: from images
+  to geometric models,'' {\em Springer}, 2004.
+
 \bibitem{compsiftsurf}
 D.~Mistry and A.~Banerjee, ``{Comparison of Feature Detection and Matching
   Approaches: SIFT and SURF},'' {\em GRD Journals- Global Research and

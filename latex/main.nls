@@ -38,6 +38,8 @@
 
  \nomgroup{C}
 
+  \item [{$\theta_X, \theta_Y, \theta_Z$}]\begingroup Euler angles\nomeqref {0}
+		\nompageref{xv}
   \item [{$R$}]\begingroup Rotation Matrix\nomeqref {0}\nompageref{xv}
   \item [{$\bf t$}]\begingroup Translation vector\nomeqref {0}
 		\nompageref{xv}

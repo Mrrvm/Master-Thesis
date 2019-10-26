@@ -15,7 +15,8 @@
 \nomenclatureentry{A, 15$s_x, s_y$@[{$s_x, s_y$}]\begingroup Pixel scalings\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{B, 01$E$@[{$E$}]\begingroup Essential Matrix\nomeqref {0}|nompageref}{xv}
 \nomenclatureentry{B, 02$F$@[{$F$}]\begingroup Fundamental Matrix\nomeqref {0}|nompageref}{xv}
-\nomenclatureentry{C, 01$R$@[{$R$}]\begingroup Rotation Matrix\nomeqref {0}|nompageref}{xv}
-\nomenclatureentry{C, 02$\bf t$@[{$\bf t$}]\begingroup Translation vector\nomeqref {0}|nompageref}{xv}
-\nomenclatureentry{C, 03$\bf r$@[{$\bf r$}]\begingroup Rotation vector\nomeqref {0}|nompageref}{xv}
-\nomenclatureentry{C, 04$\bf q$@[{$\bf q$}]\begingroup Quaternion vector\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 01$\theta_X, \theta_Y, \theta_Z$@[{$\theta_X, \theta_Y, \theta_Z$}]\begingroup Euler angles\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 02$R$@[{$R$}]\begingroup Rotation Matrix\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 03$\bf t$@[{$\bf t$}]\begingroup Translation vector\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 04$\bf r$@[{$\bf r$}]\begingroup Rotation vector\nomeqref {0}|nompageref}{xv}
+\nomenclatureentry{C, 05$\bf q$@[{$\bf q$}]\begingroup Quaternion vector\nomeqref {0}|nompageref}{xv}

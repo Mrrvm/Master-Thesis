@@ -137,8 +137,10 @@ Nevertheless, non-linear optimization techniques seem to yield better results to
 Algorithm (i), also called the Gold Standard, estimates $F$ by minimizing the distances between the points in the image and its re-projections. Having $M_1$ as a point in space, the corresponding points in the images before and after rotating are $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$, respectively, obtained through  (\ref{sec2:eq:eproj1}) and ((\ref{sec2:eq:eproj2}).
 The re-projections of $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}_{2}$ are then, 
 \begin{align}
+\label{cha2:epipolar:shitshit1}
 	\lambda_2 \mathbf{\tilde{m}^r_2} = K [ R \ \mathbf{t} ] K^{-1} \lambda_1 \mathbf{\tilde{m}_1}\\
-	\lambda_1 \mathbf{\tilde{m}^r_1} =  K^{-1} [ R^{-1} \ \mathbf{-t} ]K  \lambda_2 \mathbf{\tilde{m}_2},
+\label{cha2:epipolar:shitshit2}
+	\lambda_1 \mathbf{\tilde{m}^r_1} =  K [ R^{T} \ -R^{T}\mathbf{t} ] K^{-1}  \lambda_2 \mathbf{\tilde{m}_2},
 \end{align}
 where $R$ and $\mathbf{t}$ are obtained from the factorization of $F$, that will be approached briefly on section \ref{cha2:epipolar:fact}, $K$ are the known intrinsic parameters of the camera and $\lambda_1$ and $\lambda_2$ are given by the projection of the points on a sphere mentioned on section \ref{cha2:opprandsphere}. The distance between $\widetilde{\mathbf{m}}_{1}$ and $\widetilde{\mathbf{m}}^r_{1}$ is defined by $|| \widetilde{\mathbf{m}}_{1} - \widetilde{\mathbf{m}}^r_{1} ||$, leading to the following cost function to minimize 
 \begin{equation}
@@ -165,7 +167,7 @@ where $\sigma_i^2$ is the variance given by
 \begin{equation}
 \sigma_i^2 = \sigma [l_{{e1i}_x}^2 + l_{{e1i}_y}^2 + l_{{e2i}_x}^2 + l_{{e2i}_y}^2].
 \end{equation}
-This corresponds to minimizing the derivative of the epipolar relation, thus its also called gradient-based technique, or the Sampson error.
+This corresponds to minimizing the derivative of the epipolar relation, thus its also called \acrfull{grat}, or the Sampson error.
 Because multiplying each term by a constant makes no difference, $\sigma$ can be dropped. 
 
 \subsection{Factorization of the essential matrix}
@@ -182,7 +184,7 @@ that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2
 \end{equation}
 The real world point is only in front of both cameras in one of the four solutions, thus it is enough to use a single point to decide which of the different solutions produces the correct camera matrix. \cite{multiview}\\
 
-To summarize, the steps for obtaining the projective transformation from epipolar geometry are:
+To summarize, the steps for obtaining the camera matrix from epipolar geometry are:
 
 \begin{enumerate}
 	\item Determining the fundamental matrix, $F$, using one of the algorithms described on section \ref{einvonrev};
@@ -199,7 +201,7 @@ To summarize, the steps for obtaining the projective transformation from epipola
 \end{figure}
 
 \subsection{Pure rotation}
-
+\label{urerrrrr}
 As a disadvantage of epipolar geometry, if the eye's movement is not constrained by a translation component, the epipolar relation will not work, since $[\mathbf{t}]_\times$ would be a $3x3$ matrix of zeros and, consequently, $E = [\mathbf{t}]_\times R$ would yield the same, making it impossible to retrieve the rotation.\\
 
 When doing feature detection and matching, wrongly matched pairs of points between the two images, or points with large location errors, could severely affect the precision of the estimation of $F$. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.
