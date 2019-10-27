@@ -3,7 +3,9 @@
 \section{Orthogonal Procrustes Problem and Lack of Depth}
 \label{cha2:opprandsphere}
 
-Concerning the algorithm used to estimate the orientation, one of the potential candidates is the \acrfull{oppr}. This algorithm finds the optimal linear transformation between two 3D clouds of points.
+Assuming that the image points are obtained from the RGB camera installed on the eye prototype, using the camera model, this 2D points can be converted to corresponding points in space. 
+
+The 3D points can then be used to estimate the rotation executed by the eye. There are several ways to do this, a potential one is \acrfull{oppr}. This algorithm finds the optimal linear transformation between two 3D clouds of points.
 
 Procrustes, the son of Poseidon in Greek mythology, made his victims fit in a wonderful all-fitting bed, either by stretching their limbs, or by cutting them off. Ultimately, he was fitted into his own bed by Theseus.\footnote{Karl Kerenyi, The Heroes of the Greeks, 1959:223, noting pseudo-ApollodorusDiodorus Siculus, 4.59.5.} This is similar to the analysis held here, there are 3 elements to Procrustes's problem: $M_2$, the bed, $M_1$, the unlucky adventurer, and T, the fitting treatment. The solution to the problem is a matrix, T, that minimizes
 \begin{equation}

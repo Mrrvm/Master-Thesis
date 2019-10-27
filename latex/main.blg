@@ -13,60 +13,60 @@ A level-1 auxiliary file: chapters/conclusion.aux
 The style file: ieeetr.bst
 A level-1 auxiliary file: appendix/appendixa.aux
 Database file #1: bibliography/dissertation.bib
-You're missing a field name---line 105 of file bibliography/dissertation.bib
+You're missing a field name---line 116 of file bibliography/dissertation.bib
  :  eprint = {arXiv:1709.05815v1},
  :                                ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in tesemiguel
 Warning--empty journal in rep
 Warning--empty journal in multiview
-Warning--empty year in surf
-Warning--empty journal in flann
 Warning--empty journal in ransac
 Warning--empty title in mono
 Warning--empty journal in mono
 Warning--empty year in mono
 Name 1 in "Y. Ma, S. Soatto, J. Kosecka, and S. Sastr" has a comma at the end for entry bundle
 while executing---line 969 of file ieeetr.bst
-You've used 18 entries,
+Warning--empty year in surf
+Warning--empty journal in flann
+You've used 19 entries,
             1876 wiz_defined-function locations,
-            583 strings with 6058 characters,
-and the built_in function-call counts, 4248 in all, are:
-= -- 440
-> -- 120
+            591 strings with 6271 characters,
+and the built_in function-call counts, 4624 in all, are:
+= -- 481
+> -- 131
 < -- 0
-+ -- 49
-- -- 31
-* -- 277
-:= -- 595
-add.period$ -- 19
-call.type$ -- 18
-change.case$ -- 16
++ -- 53
+- -- 34
+* -- 303
+:= -- 642
+add.period$ -- 20
+call.type$ -- 19
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 224
-empty$ -- 426
-format.name$ -- 31
-if$ -- 1036
+cite$ -- 28
+duplicate$ -- 244
+empty$ -- 457
+format.name$ -- 34
+if$ -- 1132
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 16
-newline$ -- 58
-num.names$ -- 18
-pop$ -- 66
+int.to.str$ -- 19
+missing$ -- 17
+newline$ -- 61
+num.names$ -- 19
+pop$ -- 67
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 147
+skip$ -- 168
 stack$ -- 0
-substring$ -- 294
-swap$ -- 82
+substring$ -- 329
+swap$ -- 95
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 48
-width$ -- 20
-write$ -- 162
+while$ -- 51
+width$ -- 21
+write$ -- 172
 (There were 2 error messages)

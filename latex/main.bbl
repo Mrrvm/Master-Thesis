@@ -22,28 +22,6 @@ J.~Van~Opstal, ``{200 years Franciscus Cornelis Donders},'' {\em Strabismus},
 T.~Haslwanter, ``{Mathematics of three-dimensional eye rotations},'' {\em
   Vision Research}, vol.~35, no.~12, pp.~1727--1739, 1995.
 
-\bibitem{multiview}
-R.~Hartley and A.~Zisserman, ``{Multiview Geometry in Computer Vision},'' 2003.
-
-\bibitem{featsift}
-E.~Salahat and M.~Qasaimeh, ``{Recent advances in features extraction and
-  description algorithms: A comprehensive survey},'' {\em Proceedings of the
-  IEEE International Conference on Industrial Technology}, pp.~1059--1063,
-  2017.
-
-\bibitem{sift}
-D.~G. Lowe, ``{Distinctive Image Features from Scale-Invariant Keypoints},''
-  {\em International Journal of Computer Vision}, pp.~1--28, 2004.
-
-\bibitem{surf}
-H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
-  (SURF) Herbert},'' {\em Revue du Praticien - Medecine Generale}, no.~465
-  SUPPL., pp.~44--45.
-
-\bibitem{flann}
-M.~Muja and D.~Lowe, ``{Fast approximate nearest neighbors with automatic
-  algorithm configuration},'' 2009.
-
 \bibitem{procrustes}
 D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,
   no.~3, pp.~376--376, 2005.
@@ -52,6 +30,9 @@ D.~G. Gower, J., ``{Procrustes Problems},'' {\em Technometrics}, vol.~47,
 Z.~Z., ``{Determining the Epipolar Geometry and its Uncertainty: A Review},''
   {\em International Journal of Computer Vision}, vol.~27, no.~2, pp.~161--195,
   1998.
+
+\bibitem{multiview}
+R.~Hartley and A.~Zisserman, ``{Multiview Geometry in Computer Vision},'' 2003.
 
 \bibitem{ransac}
 M.~A. Fischler and R.~C. Bolles, ``{Random Sample Consensus: A Paradigm for
@@ -73,6 +54,30 @@ F.~Vasconcelos, J.~P. Barreto, and E.~Boyer, ``{Automatic Camera Calibration
 \bibitem{bundle}
 J.~K. Y.~Ma, S.~Soatto and S.~Sastr, ``An invitation to 3-d vision: from images
   to geometric models,'' {\em Springer}, 2004.
+
+\bibitem{saccadeamp}
+M.~Poletti, D.~Burr, and M.~Rucci, ``Optimal multimodal integration in spatial
+  localization,'' {\em The Journal of neuroscience : the official journal of
+  the Society for Neuroscience}, vol.~33, pp.~14259--68, 08 2013.
+
+\bibitem{featsift}
+E.~Salahat and M.~Qasaimeh, ``{Recent advances in features extraction and
+  description algorithms: A comprehensive survey},'' {\em Proceedings of the
+  IEEE International Conference on Industrial Technology}, pp.~1059--1063,
+  2017.
+
+\bibitem{sift}
+D.~G. Lowe, ``{Distinctive Image Features from Scale-Invariant Keypoints},''
+  {\em International Journal of Computer Vision}, pp.~1--28, 2004.
+
+\bibitem{surf}
+H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
+  (SURF) Herbert},'' {\em Revue du Praticien - Medecine Generale}, no.~465
+  SUPPL., pp.~44--45.
+
+\bibitem{flann}
+M.~Muja and D.~Lowe, ``{Fast approximate nearest neighbors with automatic
+  algorithm configuration},'' 2009.
 
 \bibitem{compsiftsurf}
 D.~Mistry and A.~Banerjee, ``{Comparison of Feature Detection and Matching

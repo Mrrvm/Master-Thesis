@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  26 OCT 2019 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  27 OCT 2019 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,7 +785,62 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (./extra_stuff.tex)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen141
+\captionmargin@=\dimen142
+\captionwidth=\dimen143
+\caption@tempdima=\dimen144
+\caption@indent=\dimen145
+\caption@parindent=\dimen146
+\caption@hangindent=\dimen147
+)
+\c@ContinuedFloat=\count143
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mwe/mwe.sty
+Package: mwe 2017/12/10 v0.4 Package to support minimal working examples (MWE)
+
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count145
+\c@Blindtext=\count146
+\c@blind@countparstart=\count147
+\blind@countxx=\count148
+\blindtext@numBlindtext=\count149
+\blind@countyy=\count150
+\c@blindlist=\count151
+\c@blindlistlevel=\count152
+\c@blindlist@level=\count153
+\blind@listitem=\count154
+\c@blind@listcount=\count155
+\c@blind@levelcount=\count156
+\blind@mathformula=\count157
+\blind@Mathformula=\count158
+\c@blind@randomcount=\count159
+\c@blind@randommax=\count160
+\c@blind@pangramcount=\count161
+\c@blind@pangrammax=\count162
+)) (./extra_stuff.tex)
 \@nomenclaturefile=\write3
 \openout3 = `main.nlo'.
 
@@ -795,11 +850,11 @@ Writing nomenclature file main.nlo
 \glo@main@file=\write5
 \openout5 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 32.
+Package glossaries Info: Writing glossary file main.glo on input line 34.
 \glo@acronym@file=\write6
 \openout6 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 32.
+Package glossaries Info: Writing glossary file main.acn on input line 34.
 (./glossary/glossary.tex) (./acronyms/acronyms.tex) (./main.aux (./cover.aux)
 (./abstract/abstract-en.aux) (./abstract/abstract-pt.aux)
 (./chapters/introduction.aux) (./chapters/backgroundandsota.aux
@@ -820,21 +875,21 @@ LaTeX Warning: Label `sec2:eq:ptrace' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -874,16 +929,16 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen141
+\scratchcounter=\count163
+\scratchdimen=\dimen148
 \scratchbox=\box33
-\nofMPsegments=\count144
-\nofMParguments=\count145
+\nofMPsegments=\count164
+\nofMParguments=\count165
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen142
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen149
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
 \everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -903,7 +958,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 61.
+Package hyperref Info: Link coloring OFF on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -911,28 +966,30 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count169
 )
-LaTeX Info: Redefining \ref on input line 61.
-LaTeX Info: Redefining \pageref on input line 61.
-LaTeX Info: Redefining \nameref on input line 61.
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \nameref on input line 63.
 
 (./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
-LaTeX Info: Redefining \celsius on input line 61.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 61.
+LaTeX Info: Redefining \celsius on input line 63.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 63.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 61.
-Package gensymb Info: Using \Omega for \ohm on input line 61.
+LaTeX Info: Redefining \ohm on input line 63.
+Package gensymb Info: Using \Omega for \ohm on input line 63.
 
 Package gensymb Warning: Not defining \micro.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 (./variables.tex)
 \openout2 = `cover.aux'.
 
@@ -947,7 +1004,7 @@ Package epstopdf Info: Source file: <images/ist_logo.eps>
 ted-to.pdf images/ist_logo.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
-<images/ist_logo-eps-converted-to.pdf, id=300, 500.87125pt x 193.72375pt>
+<images/ist_logo-eps-converted-to.pdf, id=316, 500.87125pt x 193.72375pt>
 File: images/ist_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use images/ist_logo-eps-converted-to.pdf>
 Package pdftex.def Info: images/ist_logo-eps-converted-to.pdf  used on input li
@@ -973,7 +1030,7 @@ erted-to.pdf>])pdfTeX warning (ext4): destination with the same identifier (nam
 e{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 	\NewPage
+l.70 	\NewPage
                [2
 
 ] (./declaration/declaration.tex
@@ -1003,7 +1060,7 @@ l.17 \end{abstract}
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81 	\NewPage
+l.83 	\NewPage
                [4
 \babel@aux{english}{}
 
@@ -1019,17 +1076,16 @@ l.81 	\NewPage
 ] (./main.toc [7
 
 
-])
+] [8])
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- [8] [9] [10
-
-] (./main.lot)
+ [9] [10] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
  [11
+
 
 ] [12] (./main.lof)
 \tf@lof=\write10
@@ -1065,28 +1121,28 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 18.
 [3]
-<images/prototypenew.png, id=671, 1132.23pt x 846.16125pt>
+<images/prototypenew.png, id=707, 1132.23pt x 846.16125pt>
 File: images/prototypenew.png Graphic file (type png)
 <use images/prototypenew.png>
 Package pdftex.def Info: images/prototypenew.png  used on input line 29.
 (pdftex.def)             Requested size: 284.52756pt x 212.63725pt.
-<images/drift1.png, id=675, 436.63126pt x 435.6275pt>
+<images/drift1.png, id=711, 436.63126pt x 435.6275pt>
 File: images/drift1.png Graphic file (type png)
 <use images/drift1.png>
 Package pdftex.def Info: images/drift1.png  used on input line 38.
 (pdftex.def)             Requested size: 136.57462pt x 136.25955pt.
-<images/drift2.png, id=676, 428.60126pt x 430.60875pt>
+<images/drift2.png, id=712, 428.60126pt x 430.60875pt>
 File: images/drift2.png Graphic file (type png)
 <use images/drift2.png>
 Package pdftex.def Info: images/drift2.png  used on input line 43.
 (pdftex.def)             Requested size: 136.57462pt x 137.21283pt.
-<images/lpmscu.jpg, id=677, 271.0125pt x 248.93pt>
+<images/lpmscu.jpg, id=713, 271.0125pt x 248.93pt>
 File: images/lpmscu.jpg Graphic file (type jpg)
 <use images/lpmscu.jpg>
 Package pdftex.def Info: images/lpmscu.jpg  used on input line 48.
 (pdftex.def)             Requested size: 136.57462pt x 125.44846pt.
  [4 <./images/prototypenew.png>]
-<images/prototypeaxis.png, id=696, 441.65pt x 551.05875pt>
+<images/prototypeaxis.png, id=732, 441.65pt x 551.05875pt>
 File: images/prototypeaxis.png Graphic file (type png)
 <use images/prototypeaxis.png>
 Package pdftex.def Info: images/prototypeaxis.png  used on input line 62.
@@ -1107,12 +1163,12 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (./chapters/backgroundandsota.tex
 Chapter 2.
 (./chapters/backgroundandsota/represent.tex
-<images/cvcoordinatesys.pdf, id=712, 174.6525pt x 111.29579pt>
+<images/cvcoordinatesys.pdf, id=748, 174.6525pt x 111.29579pt>
 File: images/cvcoordinatesys.pdf Graphic file (type pdf)
 <use images/cvcoordinatesys.pdf>
 Package pdftex.def Info: images/cvcoordinatesys.pdf  used on input line 8.
 (pdftex.def)             Requested size: 186.65175pt x 118.94943pt.
-<images/cvcoordinatesysq.pdf, id=713, 108.405pt x 88.41031pt>
+<images/cvcoordinatesysq.pdf, id=749, 108.405pt x 88.41031pt>
 File: images/cvcoordinatesysq.pdf Graphic file (type pdf)
 <use images/cvcoordinatesysq.pdf>
 Package pdftex.def Info: images/cvcoordinatesysq.pdf  used on input line 9.
@@ -1128,7 +1184,7 @@ Overfull \hbox (31.69843pt too wide) detected at line 24
  []
 
 
-Underfull \vbox (badness 6063) has occurred while \output is active []
+Underfull \vbox (badness 6758) has occurred while \output is active []
 
  [7
 
@@ -1145,7 +1201,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./images/cvcoordinatesysq.pdf): PDF inc
 lusion: invalid other resource which is no dict (key 'ProcSets', type <array>);
  ignored.
 >] [8]) (./chapters/backgroundandsota/cameramodel.tex
-<images/cameraconcepts.pdf, id=752, 525.88469pt x 329.31029pt>
+<images/cameraconcepts.pdf, id=789, 525.88469pt x 329.31029pt>
 File: images/cameraconcepts.pdf Graphic file (type pdf)
 <use images/cameraconcepts.pdf>
 Package pdftex.def Info: images/cameraconcepts.pdf  used on input line 16.
@@ -1155,30 +1211,39 @@ Package pdftex.def Info: images/cameraconcepts.pdf  used on input line 16.
 pdfTeX warning: /usr/bin/pdflatex (file ./images/cameraconcepts.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->]) (./chapters/backgroundandsota/features.tex [11] [12])
-(./chapters/backgroundandsota/opprandsphere.tex [13])
-(./chapters/backgroundandsota/epipolar.tex [14]
-<images/epipolargeo.png, id=868, 495.8525pt x 322.20375pt>
+>]) (./chapters/backgroundandsota/opprandsphere.tex [11] [12])
+(./chapters/backgroundandsota/epipolar.tex
+<images/epipolargeo.png, id=867, 495.8525pt x 322.20375pt>
 File: images/epipolargeo.png Graphic file (type png)
 <use images/epipolargeo.png>
 Package pdftex.def Info: images/epipolargeo.png  used on input line 13.
 (pdftex.def)             Requested size: 312.9803pt x 203.37291pt.
-
+ [13 <./images/epipolargeo.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 22.
 
-[15 <./images/epipolargeo.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 28.
 
-[16] [17] [18]
+[14]
+
+LaTeX Warning: Reference `cha2:features' on page 15 undefined on input line 56.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+Underfull \vbox (badness 4886) has occurred while \output is active []
+
+ [16]
 Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
-<images/ep4sols.png, id=941, 1614.03pt x 1105.12875pt>
+<images/ep4sols.png, id=938, 1614.03pt x 1105.12875pt>
 File: images/ep4sols.png Graphic file (type png)
 <use images/ep4sols.png>
 Package pdftex.def Info: images/ep4sols.png  used on input line 198.
@@ -1188,37 +1253,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-[19 <./images/ep4sols.png (PNG copy)>])
-(./chapters/backgroundandsota/robustest.tex
+[17]) (./chapters/backgroundandsota/robustest.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 8.
+(hyperref)                than one, level fixed on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 8.
+(hyperref)                removing `\acrlong' on input line 10.
 
-)) [20]
+[18 <./images/ep4sols.png (PNG copy)>])) [19]
 \openout2 = `chapters/methods.aux'.
 
- (./chapters/methods.tex
-Chapter 3.
-<images/transf.pdf, id=983, 256.07669pt x 292.2117pt>
-File: images/transf.pdf Graphic file (type pdf)
-<use images/transf.pdf>
-Package pdftex.def Info: images/transf.pdf  used on input line 15.
-(pdftex.def)             Requested size: 227.62206pt x 259.75548pt.
-[21
+ (./chapters/methods.tex [20
 
 
 
 ]
+Chapter 3.
+<images/transf.pdf, id=991, 256.07669pt x 292.2117pt>
+File: images/transf.pdf Graphic file (type pdf)
+<use images/transf.pdf>
+Package pdftex.def Info: images/transf.pdf  used on input line 15.
+(pdftex.def)             Requested size: 227.62206pt x 259.75548pt.
+
+Underfull \vbox (badness 1253) has occurred while \output is active []
+
+ [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 58.
 
 
-Underfull \vbox (badness 1342) has occurred while \output is active []
+Underfull \vbox (badness 1742) has occurred while \output is active []
 
  [22 <./images/transf.pdf
 
@@ -1230,7 +1297,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 82.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
@@ -1243,66 +1310,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
 ]
 Chapter 4.
-<images/imagesex.png, id=1049, 2247.39626pt x 433.62pt>
-File: images/imagesex.png Graphic file (type png)
-<use images/imagesex.png>
-Package pdftex.def Info: images/imagesex.png  used on input line 12.
-(pdftex.def)             Requested size: 455.24411pt x 87.83403pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
-
- []
-
-[25 <./images/imagesex.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-<images/approach.pdf, id=1080, 407.60278pt x 431.69278pt>
+<images/approach.pdf, id=1059, 407.60278pt x 431.69278pt>
 File: images/approach.pdf Graphic file (type pdf)
 <use images/approach.pdf>
-Package pdftex.def Info: images/approach.pdf  used on input line 43.
+Package pdftex.def Info: images/approach.pdf  used on input line 11.
 (pdftex.def)             Requested size: 318.66948pt x 337.50946pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
- [26 <./images/approach.pdf
+ []
+
+<images/rangesim.pdf, id=1074, 376.52669pt x 319.1925pt>
+File: images/rangesim.pdf Graphic file (type pdf)
+<use images/rangesim.pdf>
+Package pdftex.def Info: images/rangesim.pdf  used on input line 27.
+(pdftex.def)             Requested size: 204.85846pt x 173.66666pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 28.
+See the caption package documentation for explanation.
+
+<images/freeview.png, id=1075, 354.32375pt x 295.1025pt>
+File: images/freeview.png Graphic file (type png)
+<use images/freeview.png>
+Package pdftex.def Info: images/freeview.png  used on input line 33.
+(pdftex.def)             Requested size: 136.57462pt x 113.74763pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 25--37
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \vbox (badness 1009) has occurred while \output is active []
+
+ [25]
+[26 <./images/approach.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/approach.pdf): PDF inclusion: 
 invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
 .
->]) [27]
+> <./images/rangesim.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./images/rangesim.pdf): PDF inclusion: 
+invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
+.
+> <./images/freeview.png>]
+<images/eyescheme.pdf, id=1124, 650.43pt x 277.035pt>
+File: images/eyescheme.pdf Graphic file (type pdf)
+<use images/eyescheme.pdf>
+Package pdftex.def Info: images/eyescheme.pdf  used on input line 51.
+(pdftex.def)             Requested size: 455.24411pt x 193.90627pt.
+ [27 <./images/eyescheme.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./images/eyescheme.pdf): PDF inclusion:
+ invalid other resource which is no dict (key 'ProcSets', type <array>); ignore
+d.
+>]
+<images/imagesex.png, id=1153, 2247.39626pt x 433.62pt>
+File: images/imagesex.png Graphic file (type png)
+<use images/imagesex.png>
+Package pdftex.def Info: images/imagesex.png  used on input line 66.
+(pdftex.def)             Requested size: 455.24411pt x 87.83403pt.
+
+
+LaTeX Warning: Reference `cha2:features' on page 28 undefined on input line 74.
+
+
+[28 <./images/imagesex.png>] [29]) [30]
 \openout2 = `chapters/results.aux'.
 
- (./chapters/results.tex [28
-
-
-
-]
+ (./chapters/results.tex
 Chapter 5.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 20.
 
-) [29]
+) [31
+
+
+
+]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex [30
+ (./chapters/conclusion.tex [32
 
 
 
 ]
 Chapter 6.
-) [31]) (./main.bbl [32
+) [33]) (./main.bbl [34
 
 
-] [33]) (./appendix/main.tex [34]
+] [35]) (./appendix/main.tex [36]
 \openout2 = `appendix/appendixa.aux'.
 
 
 (./appendix/appendixa.tex
 Appendix A.
-<images/ll.png, id=1141, 1013.7875pt x 487.8225pt>
+<images/ll.png, id=1237, 1013.7875pt x 487.8225pt>
 File: images/ll.png Graphic file (type png)
 <use images/ll.png>
 Package pdftex.def Info: images/ll.png  used on input line 14.
@@ -1311,23 +1421,23 @@ Package pdftex.def Info: images/ll.png  used on input line 14.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 20.
 
-[35
+[37
 
 
 ]
-<images/sift1.png, id=1155, 1320.935pt x 918.43124pt>
+<images/sift1.png, id=1250, 1320.935pt x 918.43124pt>
 File: images/sift1.png Graphic file (type png)
 <use images/sift1.png>
 Package pdftex.def Info: images/sift1.png  used on input line 31.
 (pdftex.def)             Requested size: 295.90588pt x 205.74121pt.
-<images/sift2.png, id=1158, 450.68375pt x 394.47375pt>
+<images/sift2.png, id=1253, 450.68375pt x 394.47375pt>
 File: images/sift2.png Graphic file (type png)
 <use images/sift2.png>
 Package pdftex.def Info: images/sift2.png  used on input line 38.
 (pdftex.def)             Requested size: 136.57462pt x 119.54085pt.
 
 Underfull \hbox (badness 1789) in paragraph at lines 39--39
-[]\OT1/phv/m/n/10 Figure A.3: []Search for the
+[]\OT1/phv/m/n/10 Figure A.3: |Search for the
  []
 
 
@@ -1335,8 +1445,8 @@ Underfull \hbox (badness 2460) in paragraph at lines 39--39
 \OT1/phv/m/n/10 max-ima and min-ima of the
  []
 
-[36 <./images/ll.png> <./images/sift1.png> <./images/sift2.png>]
-<images/sift3.png, id=1166, 488.82625pt x 229.85875pt>
+[38 <./images/ll.png> <./images/sift1.png> <./images/sift2.png>]
+<images/sift3.png, id=1261, 488.82625pt x 229.85875pt>
 File: images/sift3.png Graphic file (type png)
 <use images/sift3.png>
 Package pdftex.def Info: images/sift3.png  used on input line 62.
@@ -1346,12 +1456,12 @@ Package pdftex.def Info: images/sift3.png  used on input line 62.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 69.
 
-<images/surf.png, id=1177, 1395.2125pt x 274.02374pt>
+<images/surf.png, id=1272, 1395.2125pt x 274.02374pt>
 File: images/surf.png Graphic file (type png)
 <use images/surf.png>
 Package pdftex.def Info: images/surf.png  used on input line 85.
 (pdftex.def)             Requested size: 295.90588pt x 58.11533pt.
-<images/surf2.jpg, id=1180, 345.54094pt x 207.77625pt>
+<images/surf2.jpg, id=1275, 345.54094pt x 207.77625pt>
 File: images/surf2.jpg Graphic file (type jpg)
 <use images/surf2.jpg>
 Package pdftex.def Info: images/surf2.jpg  used on input line 92.
@@ -1361,94 +1471,112 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []$
  []
 
-[37 <./images/sift3.png (PNG copy)>]
+[39 <./images/sift3.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./images/surf.png> <./images/surf2.jpg>]
+ [40 <./images/surf.png> <./images/surf2.jpg>]
 Underfull \vbox (badness 3240) has occurred while \output is active []
 
- [39]
+ [41]
 Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
-[40]
+[42]
 Appendix B.
-<images/camview.png, id=1234, 467.7475pt x 551.05875pt>
+<images/camview.png, id=1330, 467.7475pt x 551.05875pt>
 File: images/camview.png Graphic file (type png)
 <use images/camview.png>
 Package pdftex.def Info: images/camview.png  used on input line 190.
 (pdftex.def)             Requested size: 113.81102pt x 134.08144pt.
-<images/camwlens.png, id=1235, 387.4475pt x 415.5525pt>
+<images/camwlens.png, id=1331, 387.4475pt x 415.5525pt>
 File: images/camwlens.png Graphic file (type png)
 <use images/camwlens.png>
 Package pdftex.def Info: images/camwlens.png  used on input line 191.
 (pdftex.def)             Requested size: 113.81102pt x 122.06697pt.
-<images/camfronttview.png, id=1238, 642.4pt x 571.13374pt>
+<images/camfronttview.png, id=1334, 642.4pt x 571.13374pt>
 File: images/camfronttview.png Graphic file (type png)
 <use images/camfronttview.png>
 Package pdftex.def Info: images/camfronttview.png  used on input line 198.
 (pdftex.def)             Requested size: 159.33821pt x 141.65887pt.
-<images/camsideview.png, id=1239, 319.1925pt x 561.09625pt>
+<images/camsideview.png, id=1335, 319.1925pt x 561.09625pt>
 File: images/camsideview.png Graphic file (type png)
 <use images/camsideview.png>
 Package pdftex.def Info: images/camsideview.png  used on input line 199.
 (pdftex.def)             Requested size: 113.81102pt x 200.05957pt.
-<images/camwlensfront.png, id=1242, 636.3775pt x 563.10374pt>
+<images/camwlensfront.png, id=1338, 636.3775pt x 563.10374pt>
 File: images/camwlensfront.png Graphic file (type png)
 <use images/camwlensfront.png>
 Package pdftex.def Info: images/camwlensfront.png  used on input line 206.
 (pdftex.def)             Requested size: 159.33821pt x 140.99039pt.
-<images/camwlensside.png, id=1243, 356.33125pt x 526.96875pt>
+<images/camwlensside.png, id=1339, 356.33125pt x 526.96875pt>
 File: images/camwlensside.png Graphic file (type png)
 <use images/camwlensside.png>
 Package pdftex.def Info: images/camwlensside.png  used on input line 207.
 (pdftex.def)             Requested size: 113.81102pt x 168.3118pt.
-<images/lens.png, id=1244, 812.03375pt x 1025.8325pt>
+<images/lens.png, id=1340, 812.03375pt x 1025.8325pt>
 File: images/lens.png Graphic file (type png)
 <use images/lens.png>
 Package pdftex.def Info: images/lens.png  used on input line 215.
 (pdftex.def)             Requested size: 409.71692pt x 517.57957pt.
 
-Underfull \vbox (badness 2343) has occurred while \output is active []
+Underfull \vbox (badness 2426) has occurred while \output is active []
 
- [41
+ [43
 
  <./images/camview.png> <./images/camwlens.png> <./images/camfronttview.png> <.
 /images/camsideview.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 222.
+(hyperref)                removing `\acrlong' on input line 225.
 
-) [42 <./images/camwlensfront.png> <./images/camwlensside.png>] [43 <./images/l
-ens.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
- (./main.aux (./cover.aux) (./abstract/abstract-en.aux)
-(./abstract/abstract-pt.aux) (./chapters/introduction.aux)
-(./chapters/backgroundandsota.aux) (./chapters/methods.aux)
-(./chapters/implementation.aux) (./chapters/results.aux)
-(./chapters/conclusion.aux) (./appendix/appendixa.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
+<images/imuspecs.png, id=1351, 1129.21875pt x 1032.85875pt>
+File: images/imuspecs.png Graphic file (type png)
+<use images/imuspecs.png>
+Package pdftex.def Info: images/imuspecs.png  used on input line 231.
+(pdftex.def)             Requested size: 455.24411pt x 416.39853pt.
+) [44 <./images/camwlensfront.png> <./images/camwlensside.png>] [45 <./images/l
+ens.png>] [46 <./images/imuspecs.png>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+ (./main.aux (./cover.aux)
+(./abstract/abstract-en.aux) (./abstract/abstract-pt.aux)
+(./chapters/introduction.aux) (./chapters/backgroundandsota.aux)
+(./chapters/methods.aux) (./chapters/implementation.aux)
+(./chapters/results.aux) (./chapters/conclusion.aux) (./appendix/appendixa.aux)
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FFF26591316C0F30DC638671A9A15EDF;4886.
+(rerunfilecheck)             Checksum: 1173566713D32B69BC81FE560E137F1B;5158.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 14500 strings out of 492982
- 234614 string characters out of 6134896
- 382482 words of memory out of 5000000
- 17328 multiletter control sequences out of 15000+600000
+ 16012 strings out of 492982
+ 261046 string characters out of 6134896
+ 519536 words of memory out of 5000000
+ 18806 multiletter control sequences out of 15000+600000
  32751 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,13n,37p,1996b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
+ 53i,13n,92p,1996b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1503,10 +1631,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
 /type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
 elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
 o8a.pfb>
-Output written on main.pdf (65 pages, 6504383 bytes).
+Output written on main.pdf (68 pages, 6733826 bytes).
 PDF statistics:
- 1390 PDF objects out of 1440 (max. 8388607)
- 1216 compressed objects within 13 object streams
- 304 named destinations out of 1000 (max. 500000)
- 728 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1494 PDF objects out of 1728 (max. 8388607)
+ 1299 compressed objects within 13 object streams
+ 313 named destinations out of 1000 (max. 500000)
+ 780 words of extra memory for PDF output out of 10000 (max. 10000000)
 
