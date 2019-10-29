@@ -3,7 +3,7 @@
 \section{Robust Estimation and Rejection of Image Sections}
 \label{cha2:robustest}
 
-Until now, the image points were assumed as given, yet it is necessary to use strong feature detection and matching algorithms to determine this them. Wrongly matched pairs of points between the two images, or points with large location errors, can severely affect the precision of the rotation estimation. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.
+Until now, the image points were assumed as given, yet it is necessary to use strong feature detection and matching algorithms to determine them. Wrongly matched pairs of points between the two images, or points with large location errors, can severely affect the precision of the rotation estimation. The reason for this is that all methods are least-square techniques that assume the noise which corrupts the data has zero mean. Hence, it is relevant to look into techniques of robust estimation.
 
 In computer vision, it is very common to estimate the parameters of a model from image data. Robust estimation eliminates non-gaussian noise from the data. Points that don’t conform to a model are called outliers and are eliminated.
 
@@ -21,7 +21,7 @@ Besides the accuracy, there is another interesting effect produced using this te
 
 \item \acrshort{oppr} derives pure rotations as explained in section \ref{cha2:opprandsphere}. 
 \end{enumerate}
-Therefore by using \acrshort{ransac} and \acrshort{oppr} together, points matches closer to the camera, are naturally eliminated. This corresponds to image sections that would be more affected by translation and might prove beneficial to eliminate them. \cite{mono} 
+Therefore by using \acrshort{ransac} and \acrshort{oppr} together, points matches closer to the camera, are naturally eliminated. This corresponds to image sections that would be more affected by translation and might prove beneficial to eliminate them. \cite{mono} \\
 
 To summarize \acrshort{ransac} works as following:
 

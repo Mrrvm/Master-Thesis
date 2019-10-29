@@ -2,7 +2,7 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{G}\relax \glsresetentrylist %
 \glossentry{gauss}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{29}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{30}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{37}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossentry{homo}{\glossaryentrynumbers{\relax 
@@ -13,7 +13,8 @@
 		\setentrycounter[]{page}\glsnumberformat{14}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossentry{saccade}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{26}}}%
+		\setentrycounter[]{page}\glsnumberformat{xiii}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{25\delimN 26}}}%
 \glossentry{svd}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{12}}}%
 \glossentry{skews}{\glossaryentrynumbers{\relax 

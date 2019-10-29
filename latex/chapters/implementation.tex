@@ -20,7 +20,7 @@ Both the simulator and the procedures to deal with real data were implemented in
 
 \section{Simulator}
 
-To generate corresponding points in two simulated images, first it's necessary to pick the rotation amplitude between them. This was defined as an uniform distribution between a certain lower/upper limit, so that the quantity of error obtained according to the amplitude can be tested.
+To generate corresponding points in two simulated images, first it's necessary to pick the rotation amplitude between them. This amplitude is defined by a normal distribution with a certain variance, so that it simulates the real environment. Poletti, M. et al \cite{saccadeamp}, provides information on the probability of specific \gls{saccade} amplitudes when free viewing. Free viewing is measured during normal examination of a scene, the observers freely view pictures of natural scenes, each presented for $10 \ s$. The mean of the distribution is $3.3 \ degrees$, shown on figure \ref{cha4:sec3:freeview}.
 
 \begin{minipage}{0.5\textwidth}
 	\centering
@@ -35,7 +35,7 @@ To generate corresponding points in two simulated images, first it's necessary t
 	\label{cha4:sec3:freeview}
 \end{minipage}
 
-Afterwards, 3D points represented in the world reference frame, ${W}$, are generated within a camera viewing range of $90 \ degrees$, as represented on figure \ref{cha4:sec3:rangesim} in both $Y$ and $X$ directions, and within a range of depth $Zmin$ and $Zmax$, in order to represent a real environment where objects are at certain distances, that may affect the accuracy of the estimation. This is enough range to simulate the environment in, because the real eye moves in small saccade amplitudes. Poletti, M. et al \cite{saccadeamp}, provides information on the probability of specific \gls{saccade} amplitudes when free viewing. Free viewing is measured during normal examination of a scene, the observers freely view pictures of natural scenes, each presented for $10 \ s$. The mean of the distribution is $3.3 \ degrees$, shown on figure \ref{cha4:sec3:freeview}.
+Afterwards, 3D points represented in the world reference frame, ${W}$, are generated within a camera viewing range of $90 \ degrees$, as represented on figure \ref{cha4:sec3:rangesim} in both $Y$ and $X$ directions, and within a range of depth $Zmin$ and $Zmax$, in order to represent a real environment where objects are at certain distances, that may affect the accuracy of the estimation. This is enough range to simulate real eye saccades, given the amplitudes are small as seen before. 
 
 Having the points in the world frame, they are then represented in the camera reference frame before rotating, ${C_1}$, and after rotating, ${C_2}$, according to the amplitude designated between them. Finally, the 3D points are projected into the 2D image plane, and it's verified if they fit the image dimensions chosen for the simulated images.
 
@@ -46,20 +46,20 @@ The 2D point matches are now ready to be sent to the rotation estimator.
 \section{Real system}
 
 \subsection{Setup}
+As shown on Figure \ref{cha1:sec1:fig:curr_eye_model}, the current eye prototype is composed by 6 motors that move the elastics, working as muscles. To the center of rotation seen on Figure \ref{cha4:sec3:eyescheme} is attached a camera, and an \acrshort{imu}. The distance from the center of rotation to the camera, defined previously as baseline length, is $[0 \ 0 \ 53.7] \pm 3 \ mm $. The camera reference frame and the \acrshort{imu} reference frame differ. 
+This setup was fixed $5 \ m$ away from the object with the most depth.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{images/eyescheme.pdf}
-	\caption[Eye prototype scheme used on the experiments]{Eye prototype scheme used on the experiments.}
+	\caption[Eye prototype scheme used on the experiments]{Eye prototype scheme used on the experiments. The camera is displaced from th center of rotation by $b_z$ }
 	\label{cha4:sec3:eyescheme}
 \end{figure}
 
-\subsection{Collect images}
 The images are collected using an uEye LE USB3 camera\footnote{See appendix \ref{appendix:cha2:camera} for camera specifications.} in grayscale before and after a certain rotation.
 
 \subsection{Collect ground truth}
-
-	Using the same camera in the same positions, the two images are taken but positioning a chessboard \footnote{See appendix \ref{appendix:cha2:chessboard} for chessboard specifications.} on the scenery, which is used to determine the ground truth through its regular pattern. The ground truth will then be utilized to evaluate the estimation algorithms performance and also the \acrshort{imu}'s performance over the camera.\\
-		On Figure \ref{cha3:methodology:imagesex}, an example of the two image pairs that are collected can be observed.
+\label{rnfrfref}
+Using the same camera in the same positions, the two images are taken but positioning a chessboard \footnote{See appendix \ref{appendix:cha2:chessboard} for chessboard specifications.} on the scenery, which is used to determine the ground truth through its regular pattern. The ground truth is then utilized to evaluate the estimation algorithms performance and also the \acrshort{imu}'s performance over the camera. On Figure \ref{cha3:methodology:imagesex}, an example of the two image pairs that are collected can be observed.
 	
 \begin{figure}[ht]
 	\centering
@@ -68,14 +68,22 @@ The images are collected using an uEye LE USB3 camera\footnote{See appendix \ref
 	\label{cha3:methodology:imagesex}
 \end{figure}
 
+To determine the ground truth from the images with the chessboard using Matlab, the following steps are taken.
+
+\begin{enumerate}
+	\item Checkboard points are detected using \texttt{detectCheckerboardPoints}\footnote{\href{https://www.mathworks.com/help/vision/ref/detectcheckerboardpoints.html}{https://www.mathworks.com/help/vision/ref/detectcheckerboardpoints.html}} by Geiger A. et al \cite{geiger} for each of the images;
+	\item The extrinsic parameters are determined using \texttt{extrinsics}\footnote{\href{https://www.mathworks.com/help/vision/ref/extrinsics.html}{https://www.mathworks.com/help/vision/ref/extrinsics.html}} for each of the images. This function outputs a rotation matrix that allows the transformation from the world coordinate to the camera coordinate frame before rotating, $^{C_1}_{W}R$ and after rotating, $^{C_2}_{W}R$;
+	\item The rotation from the camera's position before rotating to its position after rotating is computed as
+	\begin{equation}
+		^{C_1}_{C_2}R = (^{W}_{C_1}R)^T  \cdot  ^{W}_{C_2}R
+	\end{equation}
+	and used as ground truth to compare with the rotations determined by the estimation algorithms.
+\end{enumerate}
+
 \subsection{Feature detection, matching and filtering}
 \label{cha3:features}
 
-As stated on section \ref{cha2:features} of the previous chapter,
-\acrshort{sift} and \acrshort{surf} seemed to be the most promising algorithms to detect features on the collected images. Because \acrshort{surf} is faster and more accessible due to patenting concerns regarding \acrshort{sift}, it will be be used on this work.
-\acrshort{flann} also previously referred to in the state of the art will be used for matching the features gathered between the two images, originating a set of point matches. The set of $n$ points matches are the pixel coordinates in the first and the second image, $\mathbf{m_{1i}} = [u_{1i} \ v_{1i}]$ and $\mathbf{m_{2i}} = [u_{2i} \ v_{2i}]$, respectively, where $i=1,...,n$.
-
-As explained before on section \ref{cha1:problemdef}, it is necessary to gather corresponding features in consecutive images taken before and after a rotation, and to use an algorithm to estimate the orientation using those features. The latter, also referred to as keypoints or interest points, are spatial locations of an image that "stand out", allowing it to be identifiable. This points should be such that even after rotating, translating, shrinking or distorting the image, they can be found.
+As explained until here, it is necessary to gather corresponding features in consecutive images taken before and after a rotation, and to use an algorithm to estimate the orientation using those features. The latter, also referred to as keypoints or interest points, are spatial locations of an image that "stand out", allowing it to be identifiable. This points should be such that even after rotating, translating, shrinking or distorting the image, they can be found.
 
 It is absolutely needed to have a solid detection and trust-worthy correspondence of image features (matching) when doing an "eye" movement to eventually estimate the its current orientation. Two main approaches exist to the problem of feature detection and matching. The first method finds features in one image and matches these features in the other image. The second method, which is more suitable for points in the near space, independently detects features in both images and subsequently matches them on the basis of local correspondences.
 
@@ -83,7 +91,7 @@ It might not be appropriate to extract features from an image having high detail
 
 Besides scale, preserving rotation and orientation invariance is also a concern. One way to deal with this problem is to define a descriptor. This is a scaled and oriented patch around the chosen point with the local orientation and scale, from which the dominant orientation can be extracted to guarantee its invariance. \cite{multiview}
 
-There exist a number of algorithms that can do the job. However, none of these algorithms is optimal for all images, as each of them is optimized for particular computer vision applications, with performance depending heavily on the environmental properties (illumination, image quality, contrast, ...). A comprehensive survey on the state of the art of feature detection and description  \cite{featsift} (by Salahat E. and Qasaimeh M. in 2017), proposes that ideal features should have the following properties:
+There exist a multitude of algorithms that can do the job. However, none of these algorithms is optimal for all images, as each of them is optimized for particular computer vision applications, with performance depending heavily on the environmental properties (illumination, image quality, contrast, ...). A comprehensive survey on the state of the art of feature detection and description  \cite{featsift} (by Salahat E. and Qasaimeh M. in 2017), proposes that ideal features should have the following properties:
 \begin{itemize}
 	\item Distinctiveness: the gradient variations surrounding the point should be sufficiently large;
 	\item Locality: to avoid obstruction and deformation between the two images.
@@ -102,21 +110,58 @@ MSER (by Matas J. et al in 2002)\footnote{J. Matas J., O. Chum, M. Urban and T. 
 
 \acrshort{surf} (by Bay, Herbert et al in 1999) \cite{surf} uses an integral image, which is an intermediate representation of the original image where the value of a location is the sum of all pixels of a rectangular region formed around that location. This is called box filter and serves as an approximation to the \gls{gauss}, speeding up the process in relation to \acrshort{sift}.
 
-A more comprehensive explanation on both SIFT and SURF can be found at appendix \ref{appendix:cha1:sift} and \ref{appendix:cha1:surf}, respectively. Any of these 3 algorithms mentioned seems promising to use as feature detector in this work.
+A more comprehensive explanation on both SIFT and SURF can be found at appendix \ref{appendix:cha1:sift} and \ref{appendix:cha1:surf}, respectively. Because \acrshort{surf} is faster and more accessible due to patenting concerns regarding \acrshort{sift}, it will be be used on this work.
 
 \subsection{Matching step}
-Regarding the matching of feature descriptors, one of the most common search algorithms used is the Nearest Neighbor Search. \acrfull{flann}  \cite{flann} provides a library for performing this kind of searches in high-dimensional spaces. It contains a collection of algorithms that the authors found to  work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset.
+Regarding the matching of feature descriptors, one of the most common search algorithms used, that will also be used here, is the Nearest Neighbor Search. \acrfull{flann} \cite{flann} provides a library for performing this kind of searches in high-dimensional spaces. It contains a collection of algorithms that the authors found to  work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset. The set of $n$ points matches that are obtained are the pixel coordinates in the first and the second image, $\mathbf{m_{1i}} = [u_{1i} \ v_{1i}]$ and $\mathbf{m_{2i}} = [u_{2i} \ v_{2i}]$, respectively, where $i=1,...,n$.
 
-\subsection{Filtering matches}
-
-\section{Collect IMU data}
+\subsection{Collect IMU data}
 The \acrlong{imu} \footnote{See appendix \ref{appendix:cha2:imu} for \acrshort{imu} specifications.} obtains two quaternions (see section \ref{cha2:represent:quat}) with the current camera's orientation before and after rotating.
 
-\subsection{Determine the rotation}
-talk about fminsearch
+\section{Filtering matches}
 
-\subsection{Compute the error}
+As referred on section \ref{cha2:robustest}, robust estimation is essential to guarantee an accurate estimation by eliminating outliers that can interfere with the estimation. On that note, \acrshort{ransac} with \acrshort{oppr} is used to filter the matches.
 
-\subsection{C++ Library}
+Regarding the summary on section \ref{cha2:robustest}, \acrshort{ransac} was implemented the following way.
+
+\begin{itemize}
+	\item 3 matches are selected for the small random sample, as only three are necessary to estimate the rotation through \acrshort{oppr}.
+	\item For the matches to be inliers, the projection of the points from the camera's first position to the second through the defined model must not differ more than $ 5 cm$.
+	\item The quantity of matches necessary for the the model to be considered good and the quantity of iterations needed to, in principle, estimate it are designated as following.
+	
+	If the whole set of matches contains a fraction $\varepsilon$ of outliers, the probability, $P$, of at least one of the subsets of "inliers" being tested generating a good model is 
+	\begin{equation}
+	P=1-\left[1-(1-\varepsilon)^{p}\right]^{iters},\\
+	\end{equation}
+	where $p$ is the quantity of needed matches for the model to be good and $iters$ is the number of iterations. \cite{detep}
+	Making the probability near 1, the quantity of subsets - iterations - to test is
+	\begin{equation}
+	iters = \frac{\log (1-P)}{\log \left[1-(1-\varepsilon)^{p}\right]}.
+	\end{equation}
+	
+	$P$ was considered $40\%$ and $p = 15$, which is half of the quantity of the maximum number of matches allowed, due to speed concerns. 
+\end{itemize}
+
+\section{Determine the rotation}
+To estimate the rotation, the three different methods \acrshort{oppr}, \acrshort{mbpe} and \acrshort{grat} are tried out. For the last two, it is necessary to initialize them with \acrshort{oppr} as mentioned on section \ref{MBaPE}. 
+
+\acrshort{oppr} is easily implemented using \acrshort{svdd}. However, the others are non-linear unconstrained minimization problems, thus a non-linear solver is necessary. For that, Matlab's \texttt{fminsearch}\footnote{\href{https://www.mathworks.com/help/matlab/ref/fminsearch.html}{https://www.mathworks.com/help/matlab/ref/fminsearch.html}} was utilized.
+
+As it's easier to do the intermediate math with a rotation matrix while on the optimizer, the Euler angles being estimated are only used as an initial input for creating the matrix and later for computing the error.
+Converting from Euler to a rotation matrix guarantees that the matrix is, in fact, a rotation matrix,
+
+\section{Compute the error}
+When running on the simulator the error is given by the random amplitudes derived from the Gaussian distribution in Euler angles (see section \ref{cha2:represent}). This representation is used for convenience as it's easier to understand the amplitude in each axis.
+
+Whereas, when running on the real system, the ground truth comes as a rotation matrix obtained from the Matlab functions mentioned in section \ref{rnfrfref}. Thus to compute the error it must be transformed into Euler angles. The same goes for the resulting estimation for the rotation. and the quaternion rotation obtained from the \acrshort{imu}.
+
+The error is then calculated as
+\begin{equation}
+	err = ||{\mathbf{ \theta}_{gt}-\mathbf{ \theta}_{est}}||,
+\end{equation}
+where $\mathbf{ \theta}_{gt}$ are the ground truth Euler angles and $\mathbf{ \theta}_{est}$ are the Euler angles of the estimation.
+
+
+\section{C++ Library}
 
 

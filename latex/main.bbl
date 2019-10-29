@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{saccadeamp}
+M.~Poletti, D.~Burr, and M.~Rucci, ``Optimal multimodal integration in spatial
+  localization,'' {\em The Journal of neuroscience : the official journal of
+  the Society for Neuroscience}, vol.~33, pp.~14259--68, 08 2013.
+
 \bibitem{johnpage}
 J.~Van~Opstal.
   \url{http://www.mbfys.ru.nl/~johnvo/OrientWeb/orient_1.html#Abstract}.
@@ -55,10 +60,10 @@ F.~Vasconcelos, J.~P. Barreto, and E.~Boyer, ``{Automatic Camera Calibration
 J.~K. Y.~Ma, S.~Soatto and S.~Sastr, ``An invitation to 3-d vision: from images
   to geometric models,'' {\em Springer}, 2004.
 
-\bibitem{saccadeamp}
-M.~Poletti, D.~Burr, and M.~Rucci, ``Optimal multimodal integration in spatial
-  localization,'' {\em The Journal of neuroscience : the official journal of
-  the Society for Neuroscience}, vol.~33, pp.~14259--68, 08 2013.
+\bibitem{geiger}
+A.~Geiger, F.~Moosmann, {\"{O}}.~Car, and B.~Schuster, ``{Automatic camera and
+  range sensor calibration using a single shot},'' {\em Proceedings - IEEE
+  International Conference on Robotics and Automation}, pp.~3936--3943, 2012.
 
 \bibitem{featsift}
 E.~Salahat and M.~Qasaimeh, ``{Recent advances in features extraction and

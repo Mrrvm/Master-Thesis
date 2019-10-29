@@ -28,45 +28,45 @@ Name 1 in "Y. Ma, S. Soatto, J. Kosecka, and S. Sastr" has a comma at the end fo
 while executing---line 969 of file ieeetr.bst
 Warning--empty year in surf
 Warning--empty journal in flann
-You've used 19 entries,
+You've used 20 entries,
             1876 wiz_defined-function locations,
-            591 strings with 6271 characters,
-and the built_in function-call counts, 4624 in all, are:
-= -- 481
-> -- 131
+            597 strings with 6506 characters,
+and the built_in function-call counts, 5010 in all, are:
+= -- 522
+> -- 145
 < -- 0
-+ -- 53
-- -- 34
-* -- 303
-:= -- 642
-add.period$ -- 20
-call.type$ -- 19
-change.case$ -- 17
++ -- 58
+- -- 38
+* -- 329
+:= -- 692
+add.period$ -- 21
+call.type$ -- 20
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 244
-empty$ -- 457
-format.name$ -- 34
-if$ -- 1132
+cite$ -- 29
+duplicate$ -- 263
+empty$ -- 490
+format.name$ -- 38
+if$ -- 1227
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 17
-newline$ -- 61
-num.names$ -- 19
-pop$ -- 67
+int.to.str$ -- 20
+missing$ -- 18
+newline$ -- 64
+num.names$ -- 20
+pop$ -- 70
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 168
+skip$ -- 185
 stack$ -- 0
-substring$ -- 329
-swap$ -- 95
+substring$ -- 369
+swap$ -- 106
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 51
-width$ -- 21
-write$ -- 172
+while$ -- 55
+width$ -- 22
+write$ -- 181
 (There were 2 error messages)

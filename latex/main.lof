@@ -21,15 +21,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Listing\IeC {\textquoteright }s law, illustrated for 3500 eye orientations made by a head-restrained monkey}}{38}{figure.caption.30}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Difference of Gaussians (DoG) by octave}}{38}{figure.caption.31}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Search for the maxima and minima of the DoG}}{38}{figure.caption.31}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces \acrshort {sift} feature descriptor}}{39}{figure.caption.32}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Comparison between Gaussian second order derivatives and box filter}}{40}{figure.caption.33}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces \acrshort {surf} feature descriptor}}{40}{figure.caption.33}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Listing\IeC {\textquoteright }s law, illustrated for 3500 eye orientations made by a head-restrained monkey}}{40}{figure.caption.30}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Difference of Gaussians (DoG) by octave}}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Search for the maxima and minima of the DoG}}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces \acrshort {sift} feature descriptor}}{41}{figure.caption.32}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Comparison between Gaussian second order derivatives and box filter}}{42}{figure.caption.33}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces \acrshort {surf} feature descriptor}}{42}{figure.caption.33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Camera uEye LE USB3}}{43}{figure.caption.34}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Camera uEye LE USB3's \acrshort {pcb}}}{43}{figure.caption.35}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Camera uEye LE USB3 with lens holder}}{44}{figure.caption.36}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Lens BM2920S118 $2.95 \ mm$}}{45}{figure.caption.37}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces IMU specifications}}{46}{figure.caption.38}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Camera uEye LE USB3}}{45}{figure.caption.34}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Camera uEye LE USB3's \acrshort {pcb}}}{45}{figure.caption.35}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Camera uEye LE USB3 with lens holder}}{46}{figure.caption.36}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Lens BM2920S118 $2.95 \ mm$}}{47}{figure.caption.37}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces IMU specifications}}{48}{figure.caption.38}
