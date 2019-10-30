@@ -90,6 +90,7 @@ The cost function for this algorithm is then
 \begin{align}
 \min_\mathbf{\theta} \sum_i \frac{ (\mathbf{\widetilde{\mathbf{m}}_{2i}}^T F \widetilde{\mathbf{m}}_{1i})^2}{\sigma_i^2} \ \text{with}\\
 F = K^{-T} [\mathbf{t}]_\times R(\mathbf{ \theta}), K^{-1} \ \text{and}\\
+\label{dopewnrvno}
 \sigma_i^2 =  [l_{{e1i}_x}^2 + l_{{e1i}_y}^2 + l_{{e2i}_x}^2 + l_{{e2i}_y}^2],
 \end{align}
 where $\sigma_i^2$ is the variance, $l_{e1i} = F\widetilde{\mathbf{m}}_{2}$ and $l_{e2i} = F\widetilde{\mathbf{m}}_{1}$ are the epipolar lines for each point $i$, $\mathbf{\theta}$ are the Euler angles and $R(\mathbf{ \theta})$ is a rotation matrix obtained through \ref{rrr}. Once again, the initialization of $\mathbf{ \theta}$ can be done using \acrlong{oppr}.\\

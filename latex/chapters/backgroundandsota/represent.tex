@@ -24,7 +24,9 @@ R _ { x } ( \theta_X ) = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\
 \end{equation}
 where each angle is defined in counter-clockwise direction around each axis. An arbitrary rotation, $R$, may then be defined as some multiplication (i.e. a serial order) of those three, noting that the order by which they are multiplied matters (rotations are non-commutative). A matrix originated from any combination of those is a rotation matrix because it satisfies the following conditions,
 \begin{align}
+	\label{epwifneprnf}
 	R^{-1} = R^T\\
+	\label{ienvpirnf}
 	det(R) = 1.
 \end{align} 
 
@@ -51,6 +53,7 @@ The product of a quaternion $\mathbf{q}$ with a quaternion $\mathbf{p}$ is
 \end{equation}
 The rotation between two quaternions can be obtained by 
 \begin{equation}
+\label{inrefiorenf}
 \mathbf{p} \cdot \mathbf{q}^{-1},
 \end{equation}
 where $\mathbf{q}^{-1} = \frac{q^*}{|q|}$ with $q^*$ being the conjugate of $q$.

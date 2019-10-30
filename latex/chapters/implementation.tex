@@ -3,6 +3,8 @@
 \chapter{Implementation}
 \label{implementation}
 
+This chapter will start with a brief overview on how the whole system for this thesis is implemented and flows, detailing then further each of the procedures. It goes through the implementation of a simulator that is used to test the estimation algorithms in a safe and closed environment, the specifications of the real system setup and also the conception of a C++ library that deals with all of this.
+
 As a reminder, the coordinate system convention that will be used throughout this chapter is the computer vision one mentioned in section \ref{cha2:represent}. 
 
 \section{Flow Overview}
@@ -14,13 +16,11 @@ As a reminder, the coordinate system convention that will be used throughout thi
 \end{figure}
 Figure \ref{cha3:methodology:approach} shows the flow of the procedures that accompany the determination of the eye rotation. Firstly two images are collected, before and after rotating. In each of the images, points that make the image unique and identifiable, called feature points, are detected. These points are then matched together between the images. Because some may be wrongly matched, as mentioned on section \ref{cha2:robustest}, they need to go through a filtering process. Afterwards, the rotation can be determined using one the algorithms presented on section \ref{methods}. In order, to understand which one is best they are all put to test by determining their error against the ground truth. Besides that, the \acrshort{imu} data is collected to compare its performance against the camera.\\
 
-This workflow is what is necessary to determine the rotation of the camera under real data sets. However, in order to evaluate the three algorithms in a controlled environment, a simulator was implemented and what it does is generate image points matches with defined rotations. This points may have added non-gaussian noise, or even false matches to test the performance of the outlier filtering. 
+This workflow is what is necessary to determine the rotation of the camera under real data sets. However, in order to evaluate the three algorithms in a controlled environment, a simulator was implemented and what it does is generate image points matches with defined rotations. This points may have added Gaussian noise, or even false matches to test the performance of the outlier filtering and the resilience of the estimator. 
 
-Both the simulator and the procedures to deal with real data were implemented in Matlab \footnote{\href{https://www.mathworks.com/products/matlab.html}{https://www.mathworks.com/products/matlab.html}} and can be found in the this thesis github repository\footnote{\href{https://github.com/Mrrvm/Orient/tree/master/Matlab}{https://github.com/Mrrvm/Orient/tree/master/Matlab}}. A C++ library was also created to deal with the data on the real system for convenience and computation speed, and can also be found at the repository\footnote{\href{https://github.com/Mrrvm/Orient/tree/master/C++}{https://github.com/Mrrvm/Orient/tree/master/C++}}.
+Both the simulator and the procedures to deal with real data were implemented in Matlab \footnote{\href{https://www.mathworks.com/products/matlab.html}{https://www.mathworks.com/products/matlab.html}} and can be found in the thesis github repository\footnote{\href{https://github.com/Mrrvm/Orient/tree/master/Matlab}{https://github.com/Mrrvm/Orient/tree/master/Matlab}}. A C++ library was also created to deal with the data on the real system for convenience and computational speed, and can also be found at the repository\footnote{\href{https://github.com/Mrrvm/Orient/tree/master/C++}{https://github.com/Mrrvm/Orient/tree/master/C++}}.
 
 \section{Simulator}
-
-To generate corresponding points in two simulated images, first it's necessary to pick the rotation amplitude between them. This amplitude is defined by a normal distribution with a certain variance, so that it simulates the real environment. Poletti, M. et al \cite{saccadeamp}, provides information on the probability of specific \gls{saccade} amplitudes when free viewing. Free viewing is measured during normal examination of a scene, the observers freely view pictures of natural scenes, each presented for $10 \ s$. The mean of the distribution is $3.3 \ degrees$, shown on figure \ref{cha4:sec3:freeview}.
 
 \begin{minipage}{0.5\textwidth}
 	\centering
@@ -33,7 +33,9 @@ To generate corresponding points in two simulated images, first it's necessary t
 	\includegraphics[width=0.6\textwidth]{images/freeview.png}
 	\captionof{figure}{Probability of executing a specific \gls{saccade} amplitude when free viewing \cite{saccadeamp}}
 	\label{cha4:sec3:freeview}
-\end{minipage}
+\end{minipage}\\
+
+To generate corresponding points in two simulated images, first it's necessary to pick the rotation amplitude between them. This amplitude is defined by a normal distribution with a certain variance, so that it simulates the real environment. Poletti, M. et al \cite{saccadeamp}, provides information on the probability of specific \gls{saccade} amplitudes when free viewing. Free viewing is measured during normal examination of a scene, the observers freely view pictures of natural scenes, each presented for $10 \ s$. The mean of the distribution is $3.3 \ degrees$, shown on figure \ref{cha4:sec3:freeview}.
 
 Afterwards, 3D points represented in the world reference frame, ${W}$, are generated within a camera viewing range of $90 \ degrees$, as represented on figure \ref{cha4:sec3:rangesim} in both $Y$ and $X$ directions, and within a range of depth $Zmin$ and $Zmax$, in order to represent a real environment where objects are at certain distances, that may affect the accuracy of the estimation. This is enough range to simulate real eye saccades, given the amplitudes are small as seen before. 
 
@@ -55,7 +57,7 @@ This setup was fixed $5 \ m$ away from the object with the most depth.
 	\label{cha4:sec3:eyescheme}
 \end{figure}
 
-The images are collected using an uEye LE USB3 camera\footnote{See appendix \ref{appendix:cha2:camera} for camera specifications.} in grayscale before and after a certain rotation.
+The camera is calibrated\footnote{See appendix \ref{appendix:cha2:calibration} for more details on this} and the images are collected using an uEye LE USB3 camera\footnote{See appendix \ref{appendix:cha2:camera} for camera specifications.} in grayscale before and after a certain rotation.
 
 \subsection{Collect ground truth}
 \label{rnfrfref}
@@ -83,7 +85,7 @@ To determine the ground truth from the images with the chessboard using Matlab, 
 \subsection{Feature detection, matching and filtering}
 \label{cha3:features}
 
-As explained until here, it is necessary to gather corresponding features in consecutive images taken before and after a rotation, and to use an algorithm to estimate the orientation using those features. The latter, also referred to as keypoints or interest points, are spatial locations of an image that "stand out", allowing it to be identifiable. This points should be such that even after rotating, translating, shrinking or distorting the image, they can be found.
+It is necessary to gather corresponding features in consecutive images taken before and after a rotation, and to use an algorithm to estimate the orientation using those features. The latter, also referred to as keypoints or interest points, are spatial locations of an image that "stand out", allowing it to be identifiable. This points should be such that even after rotating, translating, shrinking or distorting the image, they can be found.
 
 It is absolutely needed to have a solid detection and trust-worthy correspondence of image features (matching) when doing an "eye" movement to eventually estimate the its current orientation. Two main approaches exist to the problem of feature detection and matching. The first method finds features in one image and matches these features in the other image. The second method, which is more suitable for points in the near space, independently detects features in both images and subsequently matches them on the basis of local correspondences.
 
@@ -104,7 +106,7 @@ There exist a multitude of algorithms that can do the job. However, none of thes
 \end{itemize} 
 The review paper also presents an overview on the recent algorithms proposed on this matter, comparing them in terms of the metrics defined above. The analysis in that article suggests that Maximally stable extremal regions (MSER) and \acrfull{sift} algorithms enhance performance on computational complexity, accuracy and execution time. From the scale and rotation invariant algorithms, \acrfull{surf}, proved to be faster than \acrshort{sift}, although not as robust.
 
-MSER (by Matas J. et al in 2002)\footnote{J. Matas J., O. Chum, M. Urban and T. Pajdla, “Robust Wide Baseline Stereo from Maximally Stable Extremal Regions,” 2002.} are areas of uniform intensity outlined by contrasting backgrounds. They are constructed by trying multiple thresholds on the input image. The ones that remain unchanged in shape over the range of thresholds are the potential features to be selected as areas of interest. The centroids of these areas can subsequently be used to create a feature descriptor for the matching step.
+MSER, by Matas J. et al in 2002 \cite{mser}, are areas of uniform intensity outlined by contrasting backgrounds. They are constructed by trying multiple thresholds on the input image. The ones that remain unchanged in shape over the range of thresholds are the potential features to be selected as areas of interest. The centroids of these areas can subsequently be used to create a feature descriptor for the matching step.
 
 \acrshort{sift} (by Lowe, David G. et al in 2004) \cite{sift} algorithm detects image features using a Gaussian filter by generating increasingly blurred images, and subtracting each image to each other. This is done in several scales in order to provide scale invariance. Afterwards, a descriptor for each feature at a certain scale is created and includes information about the orientation and gradient magnitude around the point, which also grants rotation invariance.
 
@@ -113,10 +115,12 @@ MSER (by Matas J. et al in 2002)\footnote{J. Matas J., O. Chum, M. Urban and T. 
 A more comprehensive explanation on both SIFT and SURF can be found at appendix \ref{appendix:cha1:sift} and \ref{appendix:cha1:surf}, respectively. Because \acrshort{surf} is faster and more accessible due to patenting concerns regarding \acrshort{sift}, it will be be used on this work.
 
 \subsection{Matching step}
-Regarding the matching of feature descriptors, one of the most common search algorithms used, that will also be used here, is the Nearest Neighbor Search. \acrfull{flann} \cite{flann} provides a library for performing this kind of searches in high-dimensional spaces. It contains a collection of algorithms that the authors found to  work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset. The set of $n$ points matches that are obtained are the pixel coordinates in the first and the second image, $\mathbf{m_{1i}} = [u_{1i} \ v_{1i}]$ and $\mathbf{m_{2i}} = [u_{2i} \ v_{2i}]$, respectively, where $i=1,...,n$.
+Regarding the matching of feature descriptors, one of the most common search algorithms used, that will also be used here, is the Nearest Neighbor Search. \acrfull{flann} \cite{flann} provides a library for performing this kind of searches in high-dimensional spaces. It contains a collection of algorithms that the authors found to  work best for nearest neighbor search and a system for automatically choosing the best algorithm and optimum parameters depending on the dataset.
 
 \subsection{Collect IMU data}
-The \acrlong{imu} \footnote{See appendix \ref{appendix:cha2:imu} for \acrshort{imu} specifications.} obtains two quaternions (see section \ref{cha2:represent:quat}) with the current camera's orientation before and after rotating.
+The \acrlong{imu} \footnote{See appendix \ref{appendix:cha2:imu} for \acrshort{imu} specifications.} obtains two quaternions (see section \ref{cha2:represent:quat}) with the current camera's orientation before and after rotating, coherently with the images. To estimate the rotation between the two positions of the camera, the rotation quaternion is simply computed by \ref{inrefiorenf}. 
+
+The \acrshort{lpmscu} \acrshort{imu} offers a C++ library, the LpSensor library, that contains classes that allow the integration of these devices into their own applications, and also wrappers for other platforms, yet the Matlab one is still under development. Hence, the \acrshort{imu} data is obtained through C++ as it will be seen further ahead on section \ref{diwefneoinfof}.
 
 \section{Filtering matches}
 
@@ -126,7 +130,7 @@ Regarding the summary on section \ref{cha2:robustest}, \acrshort{ransac} was imp
 
 \begin{itemize}
 	\item 3 matches are selected for the small random sample, as only three are necessary to estimate the rotation through \acrshort{oppr}.
-	\item For the matches to be inliers, the projection of the points from the camera's first position to the second through the defined model must not differ more than $ 5 cm$.
+	\item For the matches to be inliers, the projection of the points from the camera's first position to the second through the defined model must not differ more than $5 cm$.
 	\item The quantity of matches necessary for the the model to be considered good and the quantity of iterations needed to, in principle, estimate it are designated as following.
 	
 	If the whole set of matches contains a fraction $\varepsilon$ of outliers, the probability, $P$, of at least one of the subsets of "inliers" being tested generating a good model is 
@@ -143,25 +147,58 @@ Regarding the summary on section \ref{cha2:robustest}, \acrshort{ransac} was imp
 \end{itemize}
 
 \section{Determine the rotation}
-To estimate the rotation, the three different methods \acrshort{oppr}, \acrshort{mbpe} and \acrshort{grat} are tried out. For the last two, it is necessary to initialize them with \acrshort{oppr} as mentioned on section \ref{MBaPE}. 
+To estimate the rotation, the three different methods \acrshort{oppr}, \acrshort{mbpe} and \acrshort{grat} are tried out. For the last two, it is necessary to initialize them with \acrshort{oppr} as mentioned on section \ref{MBaPE}, and for \acrshort{oppr} and \acrshort{mbpe} it is necessary to projected the points into a sphere of enough radius. \acrshort{oppr} is easily implemented using \acrshort{svdd}. However, the others are non-linear unconstrained minimization problems, thus a non-linear solver is necessary. 
 
-\acrshort{oppr} is easily implemented using \acrshort{svdd}. However, the others are non-linear unconstrained minimization problems, thus a non-linear solver is necessary. For that, Matlab's \texttt{fminsearch}\footnote{\href{https://www.mathworks.com/help/matlab/ref/fminsearch.html}{https://www.mathworks.com/help/matlab/ref/fminsearch.html}} was utilized.
+For that, Matlab's \texttt{fminsearch}\footnote{\href{https://www.mathworks.com/help/matlab/ref/fminsearch.html}{https://www.mathworks.com/help/matlab/ref/fminsearch.html}} was utilized. This function is an adaptation of the Nelder-Mead simplex algorithm, described by Lagarias et al. \cite{lagarias} \texttt{fminunc}, another possible function to use, implements the Newton method and deals with explicit boundaries. It usually is more suitable for problems with a large number of parameters and it needs to know the gradient of the cost function. However, \texttt{fminsearch} was chosen as it is simpler, gives less trouble to implement and should be enough for the current problem.
 
-As it's easier to do the intermediate math with a rotation matrix while on the optimizer, the Euler angles being estimated are only used as an initial input for creating the matrix and later for computing the error.
-Converting from Euler to a rotation matrix guarantees that the matrix is, in fact, a rotation matrix,
+\acrshort{oppr} outputs a rotation matrix from the \acrshort{svdd}.
+\acrshort{grat} requires the fundamental matrix to be computed, thus it is necessary to have a rotation matrix previously, as expressed on \ref{dopewnrvno}. For \acrshort{mbpe}, it's also easier to use a rotation matrix to calculate the points back projections. Hence, this rotation representation is the most suited for the problem. Yet, in order to estimate only 3 parameters instead of 9, the Euler angles representation (see section \ref{cha2:represent}) in the ZYX convention is used as the variable to estimate. This has some more advantageous, as debug it's easier to understand how the results of the estimations differ from each other and the ground truth, and during the optimizations by converting the Euler angles into a rotation matrix, it guarantees the constraint that the matrix being determined is in fact, a rotation matrix, meaning it satisfies the conditions \ref{epwifneprnf} and \ref{ienvpirnf}.
 
 \section{Compute the error}
-When running on the simulator the error is given by the random amplitudes derived from the Gaussian distribution in Euler angles (see section \ref{cha2:represent}). This representation is used for convenience as it's easier to understand the amplitude in each axis.
-
-Whereas, when running on the real system, the ground truth comes as a rotation matrix obtained from the Matlab functions mentioned in section \ref{rnfrfref}. Thus to compute the error it must be transformed into Euler angles. The same goes for the resulting estimation for the rotation. and the quaternion rotation obtained from the \acrshort{imu}.
-
 The error is then calculated as
 \begin{equation}
-	err = ||{\mathbf{ \theta}_{gt}-\mathbf{ \theta}_{est}}||,
+	error = ||{\mathbf{ \theta}_{gt}-\mathbf{ \theta}_{est}}||,
 \end{equation}
 where $\mathbf{ \theta}_{gt}$ are the ground truth Euler angles and $\mathbf{ \theta}_{est}$ are the Euler angles of the estimation.
 
 
 \section{C++ Library}
+\label{diwefneoinfof}
+
+So that in the future, it becomes more convenient to estimate the orientation of the camera on the actual prototype, which is an essential aspect of this work, a C++ library was implemented. It provides a number of classes that wrap and simplify the code, along with documentation and basic usage examples. The idea was to create it open-source, in such a way that it may help whomever uses the same hardware, or wants to do similar estimations.
+
+It is organized into 4 different classes, \texttt{Camera}, \texttt{Sensor}, \texttt{Image} and \texttt{Rotation}, that provide all the data in the same computer vision friendly format. In other words, it makes everything compatible with the very popular \acrlong{opencv}\footnote{\href{https://opencv.org/}{https://opencv.org/}}, that contains up to 2500 optimized algorithms for this type of work.
+
+
+\begin{itemize}
+	\item Class \texttt{Camera} deals with all the little details of using uEye camera software, reducing it to a couple of easy-to-use functions: \texttt{Connect()} and \texttt{Disconnect()}, \texttt{Capture()} for capturing images, \texttt{SpawnCameraError()} for debugging camera errors and finally \texttt{Calibrate()}, for calibrating the camera given a bunch of chessboard images\footnote{See appendix \ref{appendix:cha2:calibration}}.
+	
+	\item Class \texttt{Sensor} again wraps all the work fo dealing with the LpSensor Library, into 3 functions, \texttt{Connect()}, \texttt{Disconnect()} and \texttt{GetOrientation()}.
+	
+	\item Class \texttt{Image} holds an image object with which it's possible to execute several functions within the range of this work, such as \texttt{FindKeypoints()}, \texttt{FindMatches()}, \texttt{ShowMatches()} and \\
+	\texttt{DetectChessboardRotation()} for obtaining the ground truth as mentioned on section \ref{rnfrfref}. It essentially process the data comming from the \texttt{Camera} class.
+	
+	\item Class \texttt{Rotation} implements the three estimation algorithms and some auxiliary functions:\\ \texttt{RansacByProcrustes()},  \texttt{ProjectToPlane()}, \texttt{ProjectToSphere()}, \texttt{MakeHomogeneous()} and \texttt{Estimate()} that estimates the rotation according to the algorithm chosen.\\
+	To implement the \acrshort{mbpe} and \acrshort{grat} into C++, it was again necessary to use a non-linear optimizer. For that it was made use of Ceres Solver\footnote{\href{http://ceres-solver.org/}{http://ceres-solver.org/}}, which is a very complete and well-documented library produced by Google since 2010, that can solve non-linear least squares.
+	
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

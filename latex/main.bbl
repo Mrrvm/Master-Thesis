@@ -71,6 +71,11 @@ E.~Salahat and M.~Qasaimeh, ``{Recent advances in features extraction and
   IEEE International Conference on Industrial Technology}, pp.~1059--1063,
   2017.
 
+\bibitem{mser}
+J.~Matas, O.~Chum, M.~Urban, and T.~Pajdla, ``Robust wide baseline stereo from
+  maximally stable extremal regions,'' {\em Image and Vision Computing},
+  vol.~22, pp.~761--767, 09 2004.
+
 \bibitem{sift}
 D.~G. Lowe, ``{Distinctive Image Features from Scale-Invariant Keypoints},''
   {\em International Journal of Computer Vision}, pp.~1--28, 2004.
@@ -83,6 +88,12 @@ H.~Bay, A.~Ess, T.~Tuytelaars, Gool, and L.~Van, ``{Speeded-Up Robust Features
 \bibitem{flann}
 M.~Muja and D.~Lowe, ``{Fast approximate nearest neighbors with automatic
   algorithm configuration},'' 2009.
+
+\bibitem{lagarias}
+C.~{Lagarias, Jeffrey}, A.~{Reeds, James}, H.~{Wright, Margaret}, and
+  E.~{Wright, Paul}, ``{Convergence properties of the nelder–mead simplex
+  method in low dimensions},'' {\em SIAM Journal on Optimization}, vol.~9,
+  no.~1, pp.~112--147, 1998.
 
 \bibitem{compsiftsurf}
 D.~Mistry and A.~Banerjee, ``{Comparison of Feature Detection and Matching
