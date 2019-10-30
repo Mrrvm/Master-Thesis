@@ -58,32 +58,30 @@
 \contentsline {subsubsection}{Overview}{35}{section*.30}
 \contentsline {subsection}{\numberline {5.1.2}Variable noise}{35}{subsection.5.1.2}
 \contentsline {subsubsection}{Simulation Parameters}{35}{section*.31}
-\contentsline {subsubsection}{Overview}{36}{section*.33}
 \contentsline {subsection}{\numberline {5.1.3}Variable baseline}{36}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Variable depth}{36}{subsection.5.1.4}
 \contentsline {subsection}{\numberline {5.1.5}Effect of RANSAC}{36}{subsection.5.1.5}
 \contentsline {section}{\numberline {5.2}Real System}{36}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Rotation estimation error}{36}{subsection.5.2.1}
-\contentsline {subsubsection}{Data collection}{36}{section*.34}
-\contentsline {subsubsection}{System Parameters}{36}{section*.35}
-\contentsline {subsubsection}{Experiment 1}{37}{section*.36}
-\contentsline {subsubsection}{Overview}{37}{section*.38}
-\contentsline {subsubsection}{Experiment 2}{37}{section*.39}
-\contentsline {subsubsection}{Overview}{38}{section*.41}
-\contentsline {subsection}{\numberline {5.2.2}Effect of RANSAC}{38}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Computational speed}{38}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Contributions}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{39}{section.6.2}
-\contentsline {chapter}{Bibliography}{40}{section.6.2}
-\contentsline {chapter}{\numberline {A}Background}{43}{appendix.A}
-\contentsline {section}{\numberline {A.1}Donder's and Listing's laws}{43}{section.A.1}
-\contentsline {section}{\numberline {A.2}\acrlong {sift}}{43}{section.A.2}
-\contentsline {section}{\numberline {A.3}\acrlong {surf}}{45}{section.A.3}
-\contentsline {section}{\numberline {A.4}Factorization of the essential matrix}{47}{section.A.4}
-\contentsline {chapter}{\numberline {B}Material specifications}{49}{appendix.B}
-\contentsline {section}{\numberline {B.1}Camera}{49}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Lens}{50}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Chessboard}{50}{subsection.B.1.2}
-\contentsline {subsection}{\numberline {B.1.3}Calibration}{50}{subsection.B.1.3}
-\contentsline {section}{\numberline {B.2}\acrlong {imu}}{50}{section.B.2}
+\contentsline {subsubsection}{Data collection}{36}{section*.33}
+\contentsline {subsubsection}{System Parameters}{36}{section*.34}
+\contentsline {subsubsection}{Experiment 1}{37}{section*.35}
+\contentsline {subsubsection}{Experiment 2}{37}{section*.38}
+\contentsline {subsubsection}{Overview}{38}{section*.40}
+\contentsline {subsection}{\numberline {5.2.2}Effect of RANSAC}{39}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Computational speed}{39}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contributions}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{41}{section.6.2}
+\contentsline {chapter}{Bibliography}{42}{section.6.2}
+\contentsline {chapter}{\numberline {A}Background}{45}{appendix.A}
+\contentsline {section}{\numberline {A.1}Donder's and Listing's laws}{45}{section.A.1}
+\contentsline {section}{\numberline {A.2}\acrlong {sift}}{45}{section.A.2}
+\contentsline {section}{\numberline {A.3}\acrlong {surf}}{47}{section.A.3}
+\contentsline {section}{\numberline {A.4}Factorization of the essential matrix}{49}{section.A.4}
+\contentsline {chapter}{\numberline {B}Material specifications}{51}{appendix.B}
+\contentsline {section}{\numberline {B.1}Camera}{51}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Lens}{52}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Chessboard}{52}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Calibration}{52}{subsection.B.1.3}
+\contentsline {section}{\numberline {B.2}\acrlong {imu}}{52}{section.B.2}
