@@ -67,6 +67,7 @@ It can be seen by the equations \ref{cha2:epipolar:shitshit1} and \ref{cha2:epip
 that $\lambda_1$ and $\lambda_2$, the depth of the corresponding 3D points, is unknown. Therefore, it has to be estimated for each point, making a total of $3+n$ variables to estimate in the minimization.
 The cost function to this algorithm is then
 \begin{equation}
+\label{fiorenfe}
 	\min_{\mathbf{\theta}, \lambda^r_{11}, ..., \lambda^r_{1n}} \sum^n_{i=1} [(u^r_{1i}-u_{1i})^2  + (v^r_{1i}-v_{1i})^2 + (u^r_{2i}-u_{2i})^2 + (v^r_{2i}-v_{2i})^2]
 \end{equation}
 where $[u_{1i} \ v_{1i}] = \mathbf{m_{1i}}$ are the pixel points in the image before rotating, $[u_{2i} \ v_{2i}] = \mathbf{m_{2i}}$ are the pixel points after rotating, $[u_{1i}^r \ v_{1i}^r] = \mathbf{m_{1i}^r}$ and $[u_{2i}^r \ v_{2i}^r] = \mathbf{m_{2i}^r}$ are its corresponding back projections, $\lambda^r_{11}, ..., \lambda^r_{1n}$ are the estimated depths and $\mathbf{\theta} = [\theta_Z \ \theta_Y \ \theta_X]$ are Euler angles used to determine the rotation.

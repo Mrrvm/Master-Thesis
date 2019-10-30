@@ -21,7 +21,7 @@ This workflow is what is necessary to determine the rotation of the camera under
 Both the simulator and the procedures to deal with real data were implemented in Matlab \footnote{\href{https://www.mathworks.com/products/matlab.html}{https://www.mathworks.com/products/matlab.html}} and can be found in the thesis github repository\footnote{\href{https://github.com/Mrrvm/Orient/tree/master/Matlab}{https://github.com/Mrrvm/Orient/tree/master/Matlab}}. A C++ library was also created to deal with the data on the real system for convenience and computational speed, and can also be found at the repository\footnote{\href{https://github.com/Mrrvm/Orient/tree/master/C++}{https://github.com/Mrrvm/Orient/tree/master/C++}}.
 
 \section{Simulator}
-
+\label{rienreive}
 \begin{minipage}{0.5\textwidth}
 	\centering
 	\includegraphics[width=0.9\textwidth]{images/rangesim.pdf}
@@ -158,6 +158,7 @@ For that, Matlab's \texttt{fminsearch}\footnote{\href{https://www.mathworks.com/
 The error is then calculated as
 \begin{equation}
 	error = ||{\mathbf{ \theta}_{gt}-\mathbf{ \theta}_{est}}||,
+	\label{firenr}
 \end{equation}
 where $\mathbf{ \theta}_{gt}$ are the ground truth Euler angles and $\mathbf{ \theta}_{est}$ are the Euler angles of the estimation.
 

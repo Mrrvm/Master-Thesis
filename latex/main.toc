@@ -55,23 +55,23 @@
 \contentsline {subsubsection}{Simulation Parameters}{33}{section*.26}
 \contentsline {subsubsection}{Experiment 1 - Saccade amplitudes generated with $\sigma ^2 = 4 \ensuremath {^\circ }$}{33}{section*.27}
 \contentsline {subsubsection}{Experiment 2 - Saccade amplitudes generated with $\sigma ^2 = 15 \ensuremath {^\circ }$}{34}{section*.29}
-\contentsline {subsubsection}{Overview}{34}{section*.30}
-\contentsline {subsection}{\numberline {5.1.2}Variable noise}{34}{subsection.5.1.2}
-\contentsline {subsubsection}{Simulation Parameters}{34}{section*.31}
-\contentsline {subsubsection}{Overview}{35}{section*.33}
-\contentsline {subsection}{\numberline {5.1.3}Variable baseline}{35}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Variable depth}{35}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Effect of RANSAC}{35}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Real System}{35}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Rotation estimation error}{35}{subsection.5.2.1}
-\contentsline {subsubsection}{Data collection}{35}{section*.34}
-\contentsline {subsubsection}{System Parameters}{35}{section*.35}
-\contentsline {subsubsection}{Experiment 1}{36}{section*.36}
-\contentsline {subsubsection}{Overview}{36}{section*.38}
-\contentsline {subsubsection}{Experiment 2}{36}{section*.39}
-\contentsline {subsubsection}{Overview}{37}{section*.41}
-\contentsline {subsection}{\numberline {5.2.2}Effect of RANSAC}{37}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Computational speed}{37}{subsection.5.2.3}
+\contentsline {subsubsection}{Overview}{35}{section*.30}
+\contentsline {subsection}{\numberline {5.1.2}Variable noise}{35}{subsection.5.1.2}
+\contentsline {subsubsection}{Simulation Parameters}{35}{section*.31}
+\contentsline {subsubsection}{Overview}{36}{section*.33}
+\contentsline {subsection}{\numberline {5.1.3}Variable baseline}{36}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Variable depth}{36}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Effect of RANSAC}{36}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Real System}{36}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Rotation estimation error}{36}{subsection.5.2.1}
+\contentsline {subsubsection}{Data collection}{36}{section*.34}
+\contentsline {subsubsection}{System Parameters}{36}{section*.35}
+\contentsline {subsubsection}{Experiment 1}{37}{section*.36}
+\contentsline {subsubsection}{Overview}{37}{section*.38}
+\contentsline {subsubsection}{Experiment 2}{37}{section*.39}
+\contentsline {subsubsection}{Overview}{38}{section*.41}
+\contentsline {subsection}{\numberline {5.2.2}Effect of RANSAC}{38}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Computational speed}{38}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}
 \contentsline {section}{\numberline {6.1}Contributions}{39}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future Work}{39}{section.6.2}
