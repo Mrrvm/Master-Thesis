@@ -8,7 +8,7 @@ This chapter presents the three most propitious strategies to determine the rota
 It's relevant to note for the following deductions that the baseline length, $\mathbf{b}$ and the intrinsic parameters, $K$, are known values taken from the current eye prototype.
 
 \section{Translation derivation}
-
+\label{rignreg}
 Because the current eye prototype is a coupled system, the translation can be obtained through the knowledge of the rotation and the baseline length associated. This length is defined as the distance from the center of the camera's sensor to the center of rotation, as shown on Figure \ref{cha3:detori:translation}.
 \begin{figure}[ht]
 	\centering
@@ -81,6 +81,7 @@ The back projections should be obtained by
 In order to start running the algorithm it's necessary to give it initialization parameters, $\lambda_{1}^r$ and $\lambda_{2}^r$ can be acquired from the projection of the image points in a 3D sphere, explained in section \ref{cha2:opprandsphere}, and the Euler angles, $\mathbf{\theta}$, can be given by \acrlong{oppr} as it's a fast and light-weight approximation.
 
 \section{\acrlong{grat}}
+\label{fjeopfe}
 On section \ref{cha2:epipolar:fact}, a brief summary explains that to obtain the camera matrix, $R$ and $\mathbf{t}$, using epipolar geometry, the procedure is to determine the fundamental matrix, $F$, followed by determining the essential matrix, $E$, and finally the camera matrix through the \acrshort{svdd} of $E$, choosing the most feasible solution.\\
 However, instead of obtaining $R$ and $\mathbf{t}$ through a factorization, this can be estimated rather estimating $F$. Furthermore, given that $\mathbf{t}$ depends on $R$, like before only the 3 parameters have to be estimated. 
 

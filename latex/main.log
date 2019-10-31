@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  31 OCT 2019 01:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.8)  31 OCT 2019 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1004,7 +1004,7 @@ Package epstopdf Info: Source file: <images/ist_logo.eps>
 ted-to.pdf images/ist_logo.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
-<images/ist_logo-eps-converted-to.pdf, id=356, 500.87125pt x 193.72375pt>
+<images/ist_logo-eps-converted-to.pdf, id=360, 500.87125pt x 193.72375pt>
 File: images/ist_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use images/ist_logo-eps-converted-to.pdf>
 Package pdftex.def Info: images/ist_logo-eps-converted-to.pdf  used on input li
@@ -1142,41 +1142,41 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 18.
 [3]
-<images/prototypenew.png, id=831, 1132.23pt x 846.16125pt>
+<images/prototypenew.png, id=884, 1132.23pt x 846.16125pt>
 File: images/prototypenew.png Graphic file (type png)
 <use images/prototypenew.png>
 Package pdftex.def Info: images/prototypenew.png  used on input line 29.
 (pdftex.def)             Requested size: 284.52756pt x 212.63725pt.
-<images/drift1.png, id=835, 436.63126pt x 435.6275pt>
+<images/drift1.png, id=888, 436.63126pt x 435.6275pt>
 File: images/drift1.png Graphic file (type png)
 <use images/drift1.png>
 Package pdftex.def Info: images/drift1.png  used on input line 38.
 (pdftex.def)             Requested size: 136.57462pt x 136.25955pt.
-<images/drift2.png, id=836, 428.60126pt x 430.60875pt>
+<images/drift2.png, id=889, 428.60126pt x 430.60875pt>
 File: images/drift2.png Graphic file (type png)
 <use images/drift2.png>
 Package pdftex.def Info: images/drift2.png  used on input line 43.
 (pdftex.def)             Requested size: 136.57462pt x 137.21283pt.
-<images/lpmscu.jpg, id=837, 271.0125pt x 248.93pt>
+<images/lpmscu.jpg, id=890, 271.0125pt x 248.93pt>
 File: images/lpmscu.jpg Graphic file (type jpg)
 <use images/lpmscu.jpg>
 Package pdftex.def Info: images/lpmscu.jpg  used on input line 48.
 (pdftex.def)             Requested size: 136.57462pt x 125.44846pt.
  [4 <./images/prototypenew.png>]
-<images/prototypeaxis.png, id=856, 441.65pt x 551.05875pt>
+<images/prototypeaxis.png, id=909, 441.65pt x 551.05875pt>
 File: images/prototypeaxis.png Graphic file (type png)
 <use images/prototypeaxis.png>
 Package pdftex.def Info: images/prototypeaxis.png  used on input line 62.
 (pdftex.def)             Requested size: 182.09486pt x 227.20522pt.
  [5 <./images/drift1.png> <./images/drift2.png> <./images/lpmscu.jpg> <./images
 /prototypeaxis.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
 ) [6]
 \openout2 = `chapters/backgroundandsota.aux'.
 
@@ -1184,12 +1184,12 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (./chapters/backgroundandsota.tex
 Chapter 2.
 (./chapters/backgroundandsota/represent.tex
-<images/cvcoordinatesys.pdf, id=872, 174.6525pt x 111.29579pt>
+<images/cvcoordinatesys.pdf, id=926, 174.6525pt x 111.29579pt>
 File: images/cvcoordinatesys.pdf Graphic file (type pdf)
 <use images/cvcoordinatesys.pdf>
 Package pdftex.def Info: images/cvcoordinatesys.pdf  used on input line 8.
 (pdftex.def)             Requested size: 186.65175pt x 118.94943pt.
-<images/cvcoordinatesysq.pdf, id=873, 108.405pt x 88.41031pt>
+<images/cvcoordinatesysq.pdf, id=927, 108.405pt x 88.41031pt>
 File: images/cvcoordinatesysq.pdf Graphic file (type pdf)
 <use images/cvcoordinatesysq.pdf>
 Package pdftex.def Info: images/cvcoordinatesysq.pdf  used on input line 9.
@@ -1222,7 +1222,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./images/cvcoordinatesysq.pdf): PDF inc
 lusion: invalid other resource which is no dict (key 'ProcSets', type <array>);
  ignored.
 >] [8]) (./chapters/backgroundandsota/cameramodel.tex
-<images/cameraconcepts.pdf, id=913, 525.88469pt x 329.31029pt>
+<images/cameraconcepts.pdf, id=967, 525.88469pt x 329.31029pt>
 File: images/cameraconcepts.pdf Graphic file (type pdf)
 <use images/cameraconcepts.pdf>
 Package pdftex.def Info: images/cameraconcepts.pdf  used on input line 16.
@@ -1234,7 +1234,7 @@ sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
 >]) (./chapters/backgroundandsota/opprandsphere.tex [11] [12])
 (./chapters/backgroundandsota/epipolar.tex
-<images/epipolargeo.png, id=991, 495.8525pt x 322.20375pt>
+<images/epipolargeo.png, id=1045, 495.8525pt x 322.20375pt>
 File: images/epipolargeo.png Graphic file (type png)
 <use images/epipolargeo.png>
 Package pdftex.def Info: images/epipolargeo.png  used on input line 13.
@@ -1259,7 +1259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
-<images/ep4sols.png, id=1063, 1614.03pt x 1105.12875pt>
+<images/ep4sols.png, id=1116, 1614.03pt x 1105.12875pt>
 File: images/ep4sols.png Graphic file (type png)
 <use images/ep4sols.png>
 Package pdftex.def Info: images/ep4sols.png  used on input line 198.
@@ -1292,7 +1292,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
 ]
 Chapter 3.
-<images/transf.pdf, id=1116, 256.07669pt x 292.2117pt>
+<images/transf.pdf, id=1170, 256.07669pt x 292.2117pt>
 File: images/transf.pdf Graphic file (type pdf)
 <use images/transf.pdf>
 Package pdftex.def Info: images/transf.pdf  used on input line 15.
@@ -1318,7 +1318,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 83.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
@@ -1331,7 +1331,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
 ]
 Chapter 4.
-<images/approach.pdf, id=1184, 407.60278pt x 431.69278pt>
+<images/approach.pdf, id=1237, 407.60278pt x 431.69278pt>
 File: images/approach.pdf Graphic file (type pdf)
 <use images/approach.pdf>
 Package pdftex.def Info: images/approach.pdf  used on input line 13.
@@ -1341,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<images/rangesim.pdf, id=1199, 376.52669pt x 319.1925pt>
+<images/rangesim.pdf, id=1252, 376.52669pt x 319.1925pt>
 File: images/rangesim.pdf Graphic file (type pdf)
 <use images/rangesim.pdf>
 Package pdftex.def Info: images/rangesim.pdf  used on input line 27.
@@ -1351,7 +1351,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 28.
 See the caption package documentation for explanation.
 
-<images/freeview.png, id=1200, 354.32375pt x 295.1025pt>
+<images/freeview.png, id=1253, 354.32375pt x 295.1025pt>
 File: images/freeview.png Graphic file (type png)
 <use images/freeview.png>
 Package pdftex.def Info: images/freeview.png  used on input line 33.
@@ -1386,7 +1386,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./images/rangesim.pdf): PDF inclusion:
 invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
 .
 > <./images/freeview.png>]
-<images/eyescheme.pdf, id=1253, 650.43pt x 277.035pt>
+<images/eyescheme.pdf, id=1307, 650.43pt x 277.035pt>
 File: images/eyescheme.pdf Graphic file (type pdf)
 <use images/eyescheme.pdf>
 Package pdftex.def Info: images/eyescheme.pdf  used on input line 55.
@@ -1397,7 +1397,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./images/eyescheme.pdf): PDF inclusion:
  invalid other resource which is no dict (key 'ProcSets', type <array>); ignore
 d.
 >]
-<images/imagesex.png, id=1283, 2247.39626pt x 433.62pt>
+<images/imagesex.png, id=1335, 2247.39626pt x 433.62pt>
 File: images/imagesex.png Graphic file (type png)
 <use images/imagesex.png>
 Package pdftex.def Info: images/imagesex.png  used on input line 68.
@@ -1415,356 +1415,354 @@ e()
 
  (./chapters/results.tex
 Chapter 5.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\circ' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 24.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
 [33
 
 
 
 ]
-<images/sim/10anglex.png, id=1416, 436.63126pt x 325.215pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 28.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 28.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 28.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 28.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\circ' on input line 28.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 28.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+<images/sim/10anglex.png, id=1468, 436.63126pt x 325.215pt>
 File: images/sim/10anglex.png Graphic file (type png)
 <use images/sim/10anglex.png>
-Package pdftex.def Info: images/sim/10anglex.png  used on input line 29.
+Package pdftex.def Info: images/sim/10anglex.png  used on input line 33.
 (pdftex.def)             Requested size: 150.23138pt x 111.89659pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 30.
+(caption)                particular \caption on input line 34.
 See the caption package documentation for explanation.
 
-<images/sim/10angley.png, id=1417, 421.575pt x 316.18124pt>
+<images/sim/10angley.png, id=1469, 421.575pt x 316.18124pt>
 File: images/sim/10angley.png Graphic file (type png)
 <use images/sim/10angley.png>
-Package pdftex.def Info: images/sim/10angley.png  used on input line 35.
+Package pdftex.def Info: images/sim/10angley.png  used on input line 39.
 (pdftex.def)             Requested size: 150.23138pt x 112.67209pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 36.
+(caption)                particular \caption on input line 40.
 See the caption package documentation for explanation.
 
-<images/sim/10anglez.png, id=1418, 436.63126pt x 325.215pt>
+<images/sim/10anglez.png, id=1470, 436.63126pt x 325.215pt>
 File: images/sim/10anglez.png Graphic file (type png)
 <use images/sim/10anglez.png>
-Package pdftex.def Info: images/sim/10anglez.png  used on input line 41.
+Package pdftex.def Info: images/sim/10anglez.png  used on input line 45.
 (pdftex.def)             Requested size: 150.23138pt x 111.89659pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 42.
+(caption)                particular \caption on input line 46.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (14.69pt too wide) in paragraph at lines 27--61
+Overfull \hbox (14.69pt too wide) in paragraph at lines 31--65
 []$[]$ $[]$ $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-<images/sim/10angle.png, id=1421, 421.575pt x 316.18124pt>
+<images/sim/10angle.png, id=1473, 421.575pt x 316.18124pt>
 File: images/sim/10angle.png Graphic file (type png)
 <use images/sim/10angle.png>
-Package pdftex.def Info: images/sim/10angle.png  used on input line 66.
+Package pdftex.def Info: images/sim/10angle.png  used on input line 70.
 (pdftex.def)             Requested size: 227.62206pt x 170.72084pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 67.
+(caption)                particular \caption on input line 71.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 83.
+(caption)                particular \caption on input line 87.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.11998pt too wide) in paragraph at lines 64--86
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 68--90
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--86
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\circ' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 89.
-
-<images/sim/45angle.png, id=1424, 429.2838pt x 320.8788pt>
-File: images/sim/45angle.png Graphic file (type png)
-<use images/sim/45angle.png>
-Package pdftex.def Info: images/sim/45angle.png  used on input line 95.
-(pdftex.def)             Requested size: 227.62206pt x 170.13838pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 96.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 112.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (17.11998pt too wide) in paragraph at lines 93--115
-[]$[]$ $[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--115
+Underfull \hbox (badness 10000) in paragraph at lines 68--90
 
  []
 
 [34 <./images/sim/10anglex.png (PNG copy)> <./images/sim/10angley.png (PNG copy
 )> <./images/sim/10anglez.png (PNG copy)> <./images/sim/10angle.png (PNG copy)>
-] [35 <./images/sim/45angle.png (PNG copy)>]
-<images/sim/noise.png, id=1453, 429.2838pt x 320.8788pt>
-File: images/sim/noise.png Graphic file (type png)
-<use images/sim/noise.png>
-Package pdftex.def Info: images/sim/noise.png  used on input line 144.
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\circ' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 93.
+
+<images/sim/45angle.png, id=1481, 429.2838pt x 320.8788pt>
+File: images/sim/45angle.png Graphic file (type png)
+<use images/sim/45angle.png>
+Package pdftex.def Info: images/sim/45angle.png  used on input line 99.
 (pdftex.def)             Requested size: 227.62206pt x 170.13838pt.
-<images/sim/depthh.png, id=1459, 429.10312pt x 320.69812pt>
-File: images/sim/depthh.png Graphic file (type png)
-<use images/sim/depthh.png>
-Package pdftex.def Info: images/sim/depthh.png  used on input line 166.
-(pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
- [36 <./images/sim/noise.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-[37 <./images/sim/depthh.png (PNG copy)>]
-<images/sim/withoutransac.png, id=1472, 429.10312pt x 320.69812pt>
-File: images/sim/withoutransac.png Graphic file (type png)
-<use images/sim/withoutransac.png>
-Package pdftex.def Info: images/sim/withoutransac.png  used on input line 195.
-(pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
-
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 196.
+(caption)                particular \caption on input line 100.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 211.
+(caption)                particular \caption on input line 116.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.11998pt too wide) in paragraph at lines 193--214
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 97--119
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--214
+Underfull \hbox (badness 10000) in paragraph at lines 97--119
 
  []
 
-<images/sim/withransac.png, id=1475, 421.575pt x 316.18124pt>
+[35 <./images/sim/45angle.png (PNG copy)>]
+<images/sim/noise.png, id=1505, 429.2838pt x 320.8788pt>
+File: images/sim/noise.png Graphic file (type png)
+<use images/sim/noise.png>
+Package pdftex.def Info: images/sim/noise.png  used on input line 148.
+(pdftex.def)             Requested size: 227.62206pt x 170.13838pt.
+ [36 <./images/sim/noise.png (PNG copy)>]
+<images/sim/depthh.png, id=1516, 429.10312pt x 320.69812pt>
+File: images/sim/depthh.png Graphic file (type png)
+<use images/sim/depthh.png>
+Package pdftex.def Info: images/sim/depthh.png  used on input line 170.
+(pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
+ [37 <./images/sim/depthh.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+<images/sim/withoutransac.png, id=1524, 429.10312pt x 320.69812pt>
+File: images/sim/withoutransac.png Graphic file (type png)
+<use images/sim/withoutransac.png>
+Package pdftex.def Info: images/sim/withoutransac.png  used on input line 199.
+(pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 200.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 215.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 197--218
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--218
+
+ []
+
+<images/sim/withransac.png, id=1527, 421.575pt x 316.18124pt>
 File: images/sim/withransac.png Graphic file (type png)
 <use images/sim/withransac.png>
-Package pdftex.def Info: images/sim/withransac.png  used on input line 219.
+Package pdftex.def Info: images/sim/withransac.png  used on input line 223.
 (pdftex.def)             Requested size: 227.62206pt x 170.72084pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 220.
+(caption)                particular \caption on input line 224.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 235.
+(caption)                particular \caption on input line 239.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.11998pt too wide) in paragraph at lines 216--238
+Overfull \hbox (2.11998pt too wide) in paragraph at lines 220--242
 []$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--238
+Underfull \hbox (badness 10000) in paragraph at lines 220--242
 
  []
 
 [38 <./images/sim/withoutransac.png (PNG copy)> <./images/sim/withransac.png (P
 NG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-<images/sim/r1angle.png, id=1496, 429.10312pt x 320.69812pt>
+<images/sim/r1angle.png, id=1547, 429.10312pt x 320.69812pt>
 File: images/sim/r1angle.png Graphic file (type png)
 <use images/sim/r1angle.png>
-Package pdftex.def Info: images/sim/r1angle.png  used on input line 270.
+Package pdftex.def Info: images/sim/r1angle.png  used on input line 274.
 (pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 271.
+(caption)                particular \caption on input line 275.
 See the caption package documentation for explanation.
 
-<images/sim/r1angleimu.png, id=1497, 429.10312pt x 320.69812pt>
+<images/sim/r1angleimu.png, id=1548, 429.10312pt x 320.69812pt>
 File: images/sim/r1angleimu.png Graphic file (type png)
 <use images/sim/r1angleimu.png>
-Package pdftex.def Info: images/sim/r1angleimu.png  used on input line 276.
+Package pdftex.def Info: images/sim/r1angleimu.png  used on input line 280.
 (pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 277.
+(caption)                particular \caption on input line 281.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.11998pt too wide) in paragraph at lines 268--280
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 272--284
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--280
+Underfull \hbox (badness 10000) in paragraph at lines 272--284
 
  []
 
-<images/sim/imuerrorissue.png, id=1504, 429.2838pt x 320.8788pt>
+[39]
+<images/sim/imuerrorissue.png, id=1558, 429.2838pt x 320.8788pt>
 File: images/sim/imuerrorissue.png Graphic file (type png)
 <use images/sim/imuerrorissue.png>
-Package pdftex.def Info: images/sim/imuerrorissue.png  used on input line 304.
+Package pdftex.def Info: images/sim/imuerrorissue.png  used on input line 308.
 (pdftex.def)             Requested size: 227.62206pt x 170.13838pt.
-[39 <./images/sim/r1angle.png (PNG copy)> <./images/sim/r1angleimu.png (PNG cop
-y)>]
-<images/sim/r2angle.png, id=1515, 429.2838pt x 320.8788pt>
+<images/sim/r2angle.png, id=1566, 429.2838pt x 320.8788pt>
 File: images/sim/r2angle.png Graphic file (type png)
 <use images/sim/r2angle.png>
-Package pdftex.def Info: images/sim/r2angle.png  used on input line 317.
+Package pdftex.def Info: images/sim/r2angle.png  used on input line 321.
 (pdftex.def)             Requested size: 227.62206pt x 170.13838pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 318.
+(caption)                particular \caption on input line 322.
 See the caption package documentation for explanation.
 
-<images/sim/r2angleimu.png, id=1516, 429.2838pt x 320.8788pt>
+<images/sim/r2angleimu.png, id=1567, 429.2838pt x 320.8788pt>
 File: images/sim/r2angleimu.png Graphic file (type png)
 <use images/sim/r2angleimu.png>
-Package pdftex.def Info: images/sim/r2angleimu.png  used on input line 323.
+Package pdftex.def Info: images/sim/r2angleimu.png  used on input line 327.
 (pdftex.def)             Requested size: 227.62206pt x 170.13838pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 324.
+(caption)                particular \caption on input line 328.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.11998pt too wide) in paragraph at lines 315--327
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 319--331
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--327
+Underfull \hbox (badness 10000) in paragraph at lines 319--331
+
+ []
+
+[40 <./images/sim/r1angle.png (PNG copy)> <./images/sim/r1angleimu.png (PNG cop
+y)> <./images/sim/imuerrorissue.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6157) has occurred while \output is active []
 
- [40 <./images/sim/imuerrorissue.png (PNG copy)> <./images/sim/r2angle.png (PNG
- copy)> <./images/sim/r2angleimu.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
-
- []
-
-<images/sim/r1angleransac.png, id=1545, 429.10312pt x 320.69812pt>
+ [41 <./images/sim/r2angle.png (PNG copy)> <./images/sim/r2angleimu.png (PNG co
+py)>]
+<images/sim/r1angleransac.png, id=1601, 429.10312pt x 320.69812pt>
 File: images/sim/r1angleransac.png Graphic file (type png)
 <use images/sim/r1angleransac.png>
-Package pdftex.def Info: images/sim/r1angleransac.png  used on input line 366.
+Package pdftex.def Info: images/sim/r1angleransac.png  used on input line 370.
 (pdftex.def)             Requested size: 227.62206pt x 170.11598pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 367.
+(caption)                particular \caption on input line 371.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 383.
+(caption)                particular \caption on input line 387.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.11998pt too wide) in paragraph at lines 364--386
+Overfull \hbox (17.11998pt too wide) in paragraph at lines 368--390
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--386
+Underfull \hbox (badness 10000) in paragraph at lines 368--390
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41])
-[42 <./images/sim/r1angleransac.png (PNG copy)>]
+[42 <./images/sim/r1angleransac.png (PNG copy)>]) [43]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex
+
+(./chapters/conclusion.tex [44
+
+
+
+]
 Chapter 6.
-) [43
+) [45] [46]) (./main.bbl [47
 
 
-
-]) (./main.bbl [44
-
-
-] [45]) (./appendix/main.tex [46]
+]) (./appendix/main.tex [48]
 \openout2 = `appendix/appendixa.aux'.
 
 
 (./appendix/appendixa.tex
 Appendix A.
-<images/ll.png, id=1581, 1013.7875pt x 487.8225pt>
+<images/ll.png, id=1664, 1013.7875pt x 487.8225pt>
 File: images/ll.png Graphic file (type png)
 <use images/ll.png>
 Package pdftex.def Info: images/ll.png  used on input line 14.
@@ -1773,16 +1771,16 @@ Package pdftex.def Info: images/ll.png  used on input line 14.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 20.
 
-[47
+[49
 
 
 ]
-<images/sift1.png, id=1595, 1320.935pt x 918.43124pt>
+<images/sift1.png, id=1678, 1320.935pt x 918.43124pt>
 File: images/sift1.png Graphic file (type png)
 <use images/sift1.png>
 Package pdftex.def Info: images/sift1.png  used on input line 31.
 (pdftex.def)             Requested size: 295.90588pt x 205.74121pt.
-<images/sift2.png, id=1598, 450.68375pt x 394.47375pt>
+<images/sift2.png, id=1681, 450.68375pt x 394.47375pt>
 File: images/sift2.png Graphic file (type png)
 <use images/sift2.png>
 Package pdftex.def Info: images/sift2.png  used on input line 38.
@@ -1797,8 +1795,8 @@ Underfull \hbox (badness 2460) in paragraph at lines 39--39
 \OT1/phv/m/n/10 max-ima and min-ima of the
  []
 
-[48 <./images/ll.png> <./images/sift1.png> <./images/sift2.png>]
-<images/sift3.png, id=1606, 488.82625pt x 229.85875pt>
+[50 <./images/ll.png> <./images/sift1.png> <./images/sift2.png>]
+<images/sift3.png, id=1689, 488.82625pt x 229.85875pt>
 File: images/sift3.png Graphic file (type png)
 <use images/sift3.png>
 Package pdftex.def Info: images/sift3.png  used on input line 62.
@@ -1808,12 +1806,12 @@ Package pdftex.def Info: images/sift3.png  used on input line 62.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\acrlong' on input line 69.
 
-<images/surf.png, id=1617, 1395.2125pt x 274.02374pt>
+<images/surf.png, id=1700, 1395.2125pt x 274.02374pt>
 File: images/surf.png Graphic file (type png)
 <use images/surf.png>
 Package pdftex.def Info: images/surf.png  used on input line 85.
 (pdftex.def)             Requested size: 295.90588pt x 58.11533pt.
-<images/surf2.jpg, id=1620, 345.54094pt x 207.77625pt>
+<images/surf2.jpg, id=1703, 345.54094pt x 207.77625pt>
 File: images/surf2.jpg Graphic file (type jpg)
 <use images/surf2.jpg>
 Package pdftex.def Info: images/surf2.jpg  used on input line 92.
@@ -1823,106 +1821,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []$
  []
 
-[49 <./images/sift3.png (PNG copy)>]
+[51 <./images/sift3.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50 <./images/surf.png> <./images/surf2.jpg>]
+ [52 <./images/surf.png> <./images/surf2.jpg>]
 Underfull \vbox (badness 3240) has occurred while \output is active []
 
- [51]
+ [53]
 Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
-[52]
+[54]
 Appendix B.
-<images/camview.png, id=1678, 467.7475pt x 551.05875pt>
+<images/camview.png, id=1762, 467.7475pt x 551.05875pt>
 File: images/camview.png Graphic file (type png)
 <use images/camview.png>
 Package pdftex.def Info: images/camview.png  used on input line 190.
 (pdftex.def)             Requested size: 113.81102pt x 134.08144pt.
-<images/camwlens.png, id=1679, 387.4475pt x 415.5525pt>
+<images/camwlens.png, id=1763, 387.4475pt x 415.5525pt>
 File: images/camwlens.png Graphic file (type png)
 <use images/camwlens.png>
 Package pdftex.def Info: images/camwlens.png  used on input line 191.
 (pdftex.def)             Requested size: 113.81102pt x 122.06697pt.
-<images/camfronttview.png, id=1682, 642.4pt x 571.13374pt>
+<images/camfronttview.png, id=1766, 642.4pt x 571.13374pt>
 File: images/camfronttview.png Graphic file (type png)
 <use images/camfronttview.png>
-Package pdftex.def Info: images/camfronttview.png  used on input line 198.
+Package pdftex.def Info: images/camfronttview.png  used on input line 199.
 (pdftex.def)             Requested size: 159.33821pt x 141.65887pt.
-<images/camsideview.png, id=1683, 319.1925pt x 561.09625pt>
+<images/camsideview.png, id=1767, 319.1925pt x 561.09625pt>
 File: images/camsideview.png Graphic file (type png)
 <use images/camsideview.png>
-Package pdftex.def Info: images/camsideview.png  used on input line 199.
+Package pdftex.def Info: images/camsideview.png  used on input line 200.
 (pdftex.def)             Requested size: 113.81102pt x 200.05957pt.
-<images/camwlensfront.png, id=1686, 636.3775pt x 563.10374pt>
+<images/camwlensfront.png, id=1770, 636.3775pt x 563.10374pt>
 File: images/camwlensfront.png Graphic file (type png)
 <use images/camwlensfront.png>
-Package pdftex.def Info: images/camwlensfront.png  used on input line 206.
+Package pdftex.def Info: images/camwlensfront.png  used on input line 207.
 (pdftex.def)             Requested size: 159.33821pt x 140.99039pt.
-<images/camwlensside.png, id=1687, 356.33125pt x 526.96875pt>
+<images/camwlensside.png, id=1771, 356.33125pt x 526.96875pt>
 File: images/camwlensside.png Graphic file (type png)
 <use images/camwlensside.png>
-Package pdftex.def Info: images/camwlensside.png  used on input line 207.
+Package pdftex.def Info: images/camwlensside.png  used on input line 208.
 (pdftex.def)             Requested size: 113.81102pt x 168.3118pt.
-<images/lens.png, id=1688, 812.03375pt x 1025.8325pt>
+<images/lens.png, id=1773, 812.03375pt x 1025.8325pt>
 File: images/lens.png Graphic file (type png)
 <use images/lens.png>
-Package pdftex.def Info: images/lens.png  used on input line 215.
+Package pdftex.def Info: images/lens.png  used on input line 217.
 (pdftex.def)             Requested size: 409.71692pt x 517.57957pt.
+[55
 
-Underfull \vbox (badness 2426) has occurred while \output is active []
+ <./images/camview.png> <./images/camwlens.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
- [53
+ []
 
- <./images/camview.png> <./images/camwlens.png> <./images/camfronttview.png> <.
-/images/camsideview.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\acrlong' on input line 231.
+(hyperref)                removing `\acrlong' on input line 241.
 
-<images/imuspecs.png, id=1700, 1129.21875pt x 1032.85875pt>
+<images/imuspecs.png, id=1789, 1129.21875pt x 1032.85875pt>
 File: images/imuspecs.png Graphic file (type png)
 <use images/imuspecs.png>
-Package pdftex.def Info: images/imuspecs.png  used on input line 237.
+Package pdftex.def Info: images/imuspecs.png  used on input line 247.
 (pdftex.def)             Requested size: 455.24411pt x 416.39853pt.
-) [54 <./images/camwlensfront.png> <./images/camwlensside.png>] [55 <./images/l
-ens.png>] [56 <./images/imuspecs.png>])
+) [56 <./images/camfronttview.png> <./images/camsideview.png> <./images/camwlen
+sfront.png> <./images/camwlensside.png>] [57 <./images/lens.png>] [58 <./images
+/imuspecs.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
- (./main.aux (./cover.aux)
-(./abstract/abstract-en.aux) (./abstract/abstract-pt.aux)
-(./chapters/introduction.aux) (./chapters/backgroundandsota.aux)
-(./chapters/methods.aux) (./chapters/implementation.aux)
-(./chapters/results.aux) (./chapters/conclusion.aux) (./appendix/appendixa.aux)
-)
+ (./main.aux (./cover.aux) (./abstract/abstract-en.aux)
+(./abstract/abstract-pt.aux) (./chapters/introduction.aux)
+(./chapters/backgroundandsota.aux) (./chapters/methods.aux)
+(./chapters/implementation.aux) (./chapters/results.aux)
+(./chapters/conclusion.aux) (./appendix/appendixa.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 744301812618B8EAC512D180E1488C71;6070.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 939D35F258F86DA658D8B06388123BD9;5990
-(rerunfilecheck)             After:  BFBD9854F54E728EFF71A7A3258A7019;6057.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 16230 strings out of 492982
- 264876 string characters out of 6134896
- 524964 words of memory out of 5000000
- 18945 multiletter control sequences out of 15000+600000
+ 16275 strings out of 492982
+ 265540 string characters out of 6134896
+ 525676 words of memory out of 5000000
+ 18984 multiletter control sequences out of 15000+600000
  32751 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,13n,92p,1996b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
+ 53i,13n,92p,1996b,579s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1935,9 +1933,6 @@ t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
 t, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:opencv} has been referenced but does not exist,
- replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
 t, replaced by a fixed one
@@ -2007,10 +2002,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
 /type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
 elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
 o8a.pfb>
-Output written on main.pdf (80 pages, 7104211 bytes).
+Output written on main.pdf (82 pages, 7114345 bytes).
 PDF statistics:
- 1858 PDF objects out of 2073 (max. 8388607)
- 1626 compressed objects within 17 object streams
- 376 named destinations out of 1000 (max. 500000)
- 935 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1951 PDF objects out of 2073 (max. 8388607)
+ 1715 compressed objects within 18 object streams
+ 382 named destinations out of 1000 (max. 500000)
+ 943 words of extra memory for PDF output out of 10000 (max. 10000000)
 

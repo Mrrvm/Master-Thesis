@@ -3,12 +3,15 @@
 \begin{otherlanguage}{portuguese}
 \begin{abstract}
 \abstractPortuguesePageNumber
-O teu resumo aqui...
+O cérebro é um sistema altamente complexo, uma tarefa simples como olhar para um objeto ainda não é totalmente compreendida. O olho tem seis músculos extra-oculares, precisando apenas de dois para orientar a fóvea para qualquer posição. Contudo, como é que o cérebro determina que músculos devem ser utilizados? Bernstein argumentou que tenta encontrar a solução de controlo ótima, mas  não se sabe qual é o custo minimizado, energia, velocidade, exactidão? Construir um olho robótico será valioso na identificação dos mecanismos por  trás destas questões.
 
+Um modelo mecânico funcional de um olho biologicamente inspirado foi construído num projeto anterior. É indispensável neste protótipo determinar a sua orientação com alta precisão, o que é atualmente feito com um \acrshort{imu}, que é significativamente impreciso devido ao seu desvio. Assim, nesta tese estuda-se a adição de uma câmera \acrshort{rgb} para estimar a orientação 3D do olho, que poderá melhorar a exactidão das medidas substancialmente.
+
+A posição da câmera no protótipo é tal que, ao girar o olho, há também uma translação associada ao movimento, que pode ser definida como uma função da rotação. Apesar da longa literatura em estimar a orientação usando uma câmera com pontos de interesse naturais, não há muita informação em relação a haver uma translação conhecida associada. Nesta tese, são comparados dois algoritmos do estado da arte e é apresentado um novo algoritmo que otimiza a estimativa usando essa particularidade. Os algoritmos são validados com um simulador e com o protótipo do olho, apresentando resultados promissores comparativamente com \acrshort{imu}.
 % Keywords
 \begin{flushleft}
 
-\keywords{as tuas palavras chave}
+\keywords{orientação da câmera, estimativa de rotação, geometria epipolar, procrustes, re-projeção de  pontos}
 
 \end{flushleft}
 

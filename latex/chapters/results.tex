@@ -3,6 +3,10 @@
 \chapter{Results and Discussion}
 \label{cha4:results}
 
+This chapter presents the results obtained for various experiments, in which several aspects are put to test. First the three algorithms are tested under the simulator, for rotation estimation error with the saccades ranging between two different amplitudes, for variable pixel noise, for variable distance to the furthest point from the camera and for robust estimation. Afterwards, the algorithms and the \acrshort{imu} are tested on the real eye prototype, for rotation estimation error and robust estimation. After each experiment topic there is a small discussion on the results. In the end of the chapter, there are final remarks summarizing everything.
+
+The coordinate system convention used throughout this chapter is the computer vision one mentioned in section \ref{cha2:represent}. 
+
 \section{Simulator}
 As it was specified on Figure \ref{cha1:sec1:fig:curr_eye_model}, the current eye prototype contains a baseline length of $53.7 \ mm$ on the torsional axis. To make the comparisons easier, this baseline was also used in the simulator.
 \subsection{Rotation estimation error}
@@ -160,7 +164,7 @@ To see how the distance from the furthest object to the camera interferes with t
 	\item Saccade amplitude $\sigma^2 : 4 \degree $
 \end{itemize}
 The further away the points are, the more approximate to a pure rotation the movement becomes as explained in section \ref{fipewnf}.
-Figure \ref{cha5:sec1:depthh} exhibits the error in degrees according to the the distance to the furthest points from the camera. \acrshort{oppr} and \acrshort{mbpe}, improve with distance, probably due to rejecting image sections, which will be studied in more detail on next section. \acrshort{grat} makes use of translation to get a good estimation, doesn't really gain from distance.
+Figure \ref{cha5:sec1:depthh} exhibits the error in degrees according to the the distance to the furthest points from the camera. \acrshort{oppr} and \acrshort{mbpe}, improve with distance, probably due to rejecting image sections, which will be studied in more detail on next section. \acrshort{grat} makes use of translation to get a good estimation, so it doesn't really gain anything from distance, except for a better initialization given by \acrshort{oppr}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/sim/depthh.png}
@@ -416,6 +420,34 @@ When using the created C++ library (see section \ref{diwefneoinfof}), the comput
 \end{table}
 
 Obviously, the \acrshort{imu} takes much less time estimating the orientation than the camera. For the quickest algorithm, \acrshort{oppr}, the total amount of time taken is $567 \ ms$. 
+
+\subsection{Final Remarks}
+
+\begin{itemize}
+	\item \acrshort{oppr} is the fastest and the most light-weight of the camera estimation methods. Because it ignores the translation associated to the eye prototype rotations, it performs better when the movement is closer to pure rotations. If the scenery is very far way, the algorithm improves. Using \acrshort{ransac}+\acrshort{oppr} to filter out point matches also refines the estimation.
+	
+	\item \acrshort{mbpe} seemed to be the best camera algorithm out of all the Experiments. However, because it has to estimate both the three Euler angles and depth, $\lambda$, for each point match, a total of ($2+n$) parameters, it is the one that takes the longest. It improves when \acrshort{oppr} improves, as it highly depends on the initialization.
+	
+	\item \acrshort{grat} did the worst in the Experiments and proved to be very sensitive to pixel noise in the image. It does better when associated to bigger saccade amplitudes, as they have more translation associated. It has a big downside, which is not working for pure rotations, as mentioned on section \ref{fjeopfe}.
+	
+	\item \acrshort{imu} estimation is the fastest method but the error is much higher than in the camera algorithms, most probably due to rotation around the vertical axis.	
+	
+\end{itemize}
+
+Having said that, the most accurate method is \acrshort{mbpe}. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

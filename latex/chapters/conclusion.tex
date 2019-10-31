@@ -2,20 +2,29 @@
 
 \chapter{Conclusion}
 \label{conclusion}
-Conclusion here...
+The objective of this work was to develop an algorithm to determine the orientation of the camera embedded on the existent eye prototype as accurately and as fast as possible. The system had a constraint, which was having a translation associated to the movement, that can be defined through a function of the rotation and the length between the center of rotation to the camera, called baseline. The most accurate method of the three algorithms tested, \acrshort{oppr}, \acrshort{mbpe} and \acrshort{grat}, was the novel algorithm, \acrshort{mbpe}. Hence, there was indeed an accuracy gain from using the translation constraint over classical unconstrained or rotation only approaches. However this method was certainly not the fastest, for that \acrshort{oppr} was found best.
+
+In the real world, the data set is exposed to much more noise, thus the error obtained is greater, as so it is extremely important to have a strong robust estimation to filter out wrongly matched points or other types of noise. \acrshort{grat} performs bad in the real world compared to others.
+
+It's important to say that there was definitely an improvement over the \acrshort{imu} estimation.
 
 \section{Contributions}
+The contributions to science laid by this work were the following.
 \begin{itemize}
-\item Empirical study on the best method to estimate orientation with the current prototype's particular constraints
+\item Empirical study on the best method to estimate orientation with the current prototype's particular constraints.
 
-\item Derivation of the baseline constraint
+\item Derivation of the translation in function of the rotation and the baseline (section \ref{rignreg}).
 
-\item An orientation estimation method with better precision than an \acrshort{imu}
+\item An orientation estimation method with better precision than an \acrshort{imu}.
 
-\item An open-source C++ library for similar contexts within the community
+\item An open-source C++ library for similar contexts within the community.
 
-\item A matlab simulator 
+\item A Matlab simulator for generating virtual images to experiment with.
 
 \end{itemize}
 
 \section{Future Work}
+
+At last, because there is always room for improvement, the subsequent future work is presented.
+
+In order to determine eye's orientation in real-time more quickly, one could eventually study how the use of a \gls{kalman} \footnote{As a starting point: Zarchan P. and Musoff H. Fundamentals of Kalman Filtering: A Practical Approach. American Institute of Aeronautics and Astronautics, Incorporated. 2000. ISBN 978-1-56347-455-2.} on the \acrshort{imu} and the camera could improve the estimation in accuracy and time. The \gls{kalman} would keep track of the estimated state of the system, that would be gathered through the \acrshort{imu}, and the variance or uncertainty of the estimate. At some point, the estimate would be updated, by the camera using \acrshort{mbpe}, to reduce the uncertainty.

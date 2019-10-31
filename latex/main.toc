@@ -53,18 +53,18 @@
 \contentsline {section}{\numberline {5.1}Simulator}{33}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Rotation estimation error}{33}{subsection.5.1.1}
 \contentsline {subsubsection}{Simulation Parameters}{33}{section*.26}
-\contentsline {subsubsection}{Experiment 1 - Saccade amplitudes generated with $\sigma ^2 = 4 \ensuremath {^\circ }$}{33}{section*.27}
-\contentsline {subsubsection}{Experiment 2 - Saccade amplitudes generated with $\sigma ^2 = 15 \ensuremath {^\circ }$}{34}{section*.29}
+\contentsline {subsubsection}{Experiment 1 - Saccade amplitudes generated with $\sigma ^2 = 4 \ensuremath {^\circ }$}{34}{section*.27}
+\contentsline {subsubsection}{Experiment 2 - Saccade amplitudes generated with $\sigma ^2 = 15 \ensuremath {^\circ }$}{35}{section*.29}
 \contentsline {subsubsection}{Overview}{35}{section*.30}
-\contentsline {subsection}{\numberline {5.1.2}Variable noise}{35}{subsection.5.1.2}
-\contentsline {subsubsection}{Simulation Parameters}{35}{section*.31}
+\contentsline {subsection}{\numberline {5.1.2}Variable noise}{36}{subsection.5.1.2}
+\contentsline {subsubsection}{Simulation Parameters}{36}{section*.31}
 \contentsline {subsection}{\numberline {5.1.3}Variable distance}{36}{subsection.5.1.3}
-\contentsline {subsubsection}{Simulation Parameters}{36}{section*.33}
+\contentsline {subsubsection}{Simulation Parameters}{37}{section*.33}
 \contentsline {subsection}{\numberline {5.1.4}Effect of rejecting image sections}{37}{subsection.5.1.4}
 \contentsline {subsubsection}{Simulation Parameters}{37}{section*.35}
 \contentsline {subsubsection}{Experiment 1 - Without robust estimation}{38}{section*.36}
 \contentsline {subsubsection}{Experiment 2 - With robust estimation}{38}{section*.37}
-\contentsline {subsubsection}{Overview}{38}{section*.38}
+\contentsline {subsubsection}{Overview}{39}{section*.38}
 \contentsline {section}{\numberline {5.2}Real System}{39}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Data collection}{39}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Rotation estimation error}{39}{subsection.5.2.2}
@@ -72,21 +72,21 @@
 \contentsline {subsubsection}{Experiment 1}{39}{section*.40}
 \contentsline {subsubsection}{Experiment 2}{40}{section*.43}
 \contentsline {subsubsection}{Overview}{41}{section*.45}
-\contentsline {subsection}{\numberline {5.2.3}Effect of robust estimation}{41}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}Effect of robust estimation}{42}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Computational time}{42}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Final remarks}{42}{subsection.5.2.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Contributions}{43}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{43}{section.6.2}
-\contentsline {chapter}{Bibliography}{44}{section.6.2}
-\contentsline {chapter}{\numberline {A}Background}{47}{appendix.A}
-\contentsline {section}{\numberline {A.1}Donder's and Listing's laws}{47}{section.A.1}
-\contentsline {section}{\numberline {A.2}\acrlong {sift}}{47}{section.A.2}
-\contentsline {section}{\numberline {A.3}\acrlong {surf}}{49}{section.A.3}
-\contentsline {section}{\numberline {A.4}Factorization of the essential matrix}{51}{section.A.4}
-\contentsline {chapter}{\numberline {B}Material specifications}{53}{appendix.B}
-\contentsline {section}{\numberline {B.1}Camera}{53}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Lens}{54}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}Chessboard}{54}{subsection.B.1.2}
-\contentsline {subsection}{\numberline {B.1.3}Calibration}{54}{subsection.B.1.3}
-\contentsline {section}{\numberline {B.2}\acrlong {imu}}{54}{section.B.2}
+\contentsline {subsection}{\numberline {5.2.5}Final Remarks}{42}{subsection.5.2.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contributions}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{45}{section.6.2}
+\contentsline {chapter}{Bibliography}{47}{section.6.2}
+\contentsline {chapter}{\numberline {A}Background}{49}{appendix.A}
+\contentsline {section}{\numberline {A.1}Donder's and Listing's laws}{49}{section.A.1}
+\contentsline {section}{\numberline {A.2}\acrlong {sift}}{49}{section.A.2}
+\contentsline {section}{\numberline {A.3}\acrlong {surf}}{51}{section.A.3}
+\contentsline {section}{\numberline {A.4}Factorization of the essential matrix}{53}{section.A.4}
+\contentsline {chapter}{\numberline {B}Material specifications}{55}{appendix.B}
+\contentsline {section}{\numberline {B.1}Camera}{55}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Lens}{55}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Ground Truth Chessboard}{55}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Calibration}{55}{subsection.B.1.3}
+\contentsline {section}{\numberline {B.2}\acrlong {imu}}{56}{section.B.2}

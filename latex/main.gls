@@ -3,7 +3,7 @@
 \glsgroupheading{G}\relax \glsresetentrylist %
 \glossentry{gauss}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{30}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{37}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{49}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossentry{homo}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
@@ -11,14 +11,17 @@
 		\setentrycounter[]{page}\glsnumberformat{14}}}%
 \glossentry{homography}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{14}}}\glsgroupskip
+\glsgroupheading{K}\relax \glsresetentrylist %
+\glossentry{kalman}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{45}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossentry{saccade}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{xiii}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{25\delimN 26}}}%
+		\setentrycounter[]{page}\glsnumberformat{26\delimN 27}}}%
 \glossentry{svd}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{12}}}%
 \glossentry{skews}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{13\delimN 14}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{41}}}%
+		\setentrycounter[]{page}\glsnumberformat{53}}}%
 \end{theglossary}\glossarypostamble

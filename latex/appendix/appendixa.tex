@@ -184,7 +184,7 @@ that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2
 
 \section{Camera}
 \label{appendix:cha2:camera}
-
+The camera is an uEye LE USB3 from Imaging Development Systems (IDS). Figure \ref{appendix:cha2:camview} shows its \acrshort{pcb} without and with the lens holder. Figures \ref{appendix:cha2:camsides} and \ref{appendix:cha2:camwlens}, show respectively the same but with the measurements used to determine the baseline length used on the Results chapter \ref{cha4:results}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.25\textwidth]{images/camview.png}
@@ -192,6 +192,7 @@ that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2
 	\caption[Camera uEye LE USB3]{On the left, the camera uEye LE's \acrshort{pcb}. On the right, the camera mounted with the lens holder.}
 	\label{appendix:cha2:camview}
 \end{figure}
+
 
 \begin{figure}[ht]
 	\centering
@@ -210,6 +211,7 @@ that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2
 \end{figure}
 
 \subsection{Lens}
+The specifications of the lens utilized can be found on Figure \ref{appendix:cha2:lens}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\textwidth]{images/lens.png}
@@ -217,24 +219,32 @@ that are represented by (a), (b), (c) and (d), respectively, on Figure \ref{sec2
 	\label{appendix:cha2:lens}
 \end{figure}
 
-\subsection{Chessboard}
+\subsection{Ground Truth Chessboard}
 \label{appendix:cha2:chessboard}
 
-\subsection{Calibration}
-intrinsics = [1.1253e+03 0.945541684501329     9.960929796822086e+02;
-0		  1.125630873153923e+03 7.543243830849593e+02;
-0        0                     1                    ];
-tanDist = [4.7003e-04 -3.3083e-04];
-radialDist = [-0.3007 0.1288 -0.0318];
+To obtain the ground truth, a chessboard of $20 \ mm$ square length and 
+$11 \times 8$ squares was used.
 
+\subsection{Calibration}
 \label{appendix:cha2:calibration}
+To calibrate the camera, 100 images of a chessboard with $42 \ mm$ square length and $9 \times 7$ squares, were taken and input on Matlab's camera calibrator App\footnote{\href{https://www.mathworks.com/help/vision/ref/cameracalibrator-app.html}{https://www.mathworks.com/help/vision/ref/cameracalibrator-app.html}} that yielded the following results used throughout the experiments. The intrinsic parameters are
+\begin{equation}
+	K = \begin{bmatrix}
+	1.125e+03 & 0.946  &  9.961e+02\\ 
+	0 & 1.126e+03 & 7.543e+02 \\ 
+	0 & 0 & 1
+	\end{bmatrix},
+\end{equation}
+tangential distortion is $[4.700e-04 \ -3.308e-04]$ and the radial distortion is $[-0.301 \ 0.129 \ -0.032]$.\\
+
+
 \section{\acrlong{imu}}
 \label{appendix:cha2:imu}
-\acrfull{lpmscu} 
-The LpSensor library contains classes that allow a user to integrate LPMS devices into their own applications
+The \acrshort{imu} used is a \acrfull{lpmscu} CAN bus and USB version. 
+The \acrshort{imu} specifications are presented on Figure \ref{appendix:cha2:imuspecs}. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{images/imuspecs.png}
-	\caption[IMU specifications]{IMU specifications.}
-	\label{appendix:cha2:eyescheme}
+	\caption[\acrshort{imu} specifications]{\acrshort{imu} specifications.}
+	\label{appendix:cha2:imuspecs}
 \end{figure}
