@@ -8,7 +8,7 @@ Until now, the image points were assumed as given, yet it is necessary to use st
 In computer vision, it is very common to estimate the parameters of a model from image data. Robust estimation eliminates non-gaussian noise from the data. Points that don’t conform to a model are called outliers and are eliminated.
 
 \subsubsection{\acrlong{ransac}}
-
+\label{fipewnf}
 One technique of robust estimation, is \acrfull{ransac}, first introduced by Martin A. Fischler and Robert C. Bolles in 1981 \cite{ransac}, where a small set of inliers is used to find a model and test all the 
 other points against it. In this manner, it's possible to discover which points fit the model or not, and if they don’t consider them outliers. The final model is the one that has more inliers. 
 

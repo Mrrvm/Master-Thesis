@@ -6,11 +6,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Mean error (in degrees) per method and per axis.\relax }}{34}{table.caption.28}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested\relax }}{34}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested\relax }}{35}{table.5.3}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested\relax }}{37}{table.caption.36}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested\relax }}{38}{table.caption.39}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Mean error (in degrees) per method and per axis for saccade amplitudes with variance $\sigma ^2 = 4 \ensuremath {^\circ }$ under simulation.\relax }}{34}{table.caption.28}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested for saccade amplitudes with variance $\sigma ^2 = 4 \ensuremath {^\circ }$ under simulation.\relax }}{34}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested for saccade amplitudes with variance $\sigma ^2 = 15 \ensuremath {^\circ }$ under simulation.\relax }}{35}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested \textbf {without} robust estimation.\relax }}{38}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on the left per each method tested \textbf {with} robust estimation.\relax }}{38}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on Figure \ref {cha5:sec1:r1angle} and \ref {cha5:sec1:r1angleimu} per each method tested.\relax }}{40}{table.caption.41}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Mean error and standard deviation (in degrees) of the experiment on Figure \ref {cha5:sec1:r2angle} and \ref {cha5:sec1:r2angleimu} per each method tested\relax }}{41}{table.caption.44}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Computational time for each of the necessary processes to estimate the orientation of the eye prototype in C++.\relax }}{42}{table.caption.46}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
