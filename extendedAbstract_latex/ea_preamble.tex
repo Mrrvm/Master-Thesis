@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Builds upon the graphics  package, providing a key-value interface
+%% for optional arguments to the \includegraphics command that go far
+%% beyone what the graphics package offers.
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/graphicx.html
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+\usepackage{graphicx} % Enhanced LaTeX Graphics
+
+% Multiple figures
+%\usepackage{subfigure} % subcaptions for subfigures
+%\usepackage{subfigmat} % matrices of similar subfigures
+
+% Declaring new column types
+% 'dcolumn' package defines D to be a column specifier with
+% three arguments: D{<sep.tex>}{<sep.dvi>}{<decimal places>}
+%                  D{<sep.tex>}{<sep.dvi>}{<left digit places>.<right digit places>}
+\usepackage{dcolumn}           % decimal-aligned tabular math columns
+% d takes a single argument specifying the number of decimal places, e.g., d{2}
+% or the number of digits to the left and right of the seperator, e.g., d{3.2}
+\newcolumntype{.}   {D{.}{.}{-1}} % column alignedd on the point separator '.'
+\newcolumntype{d}[1]{D{.}{.}{#1}} % column centered on the point separator '.'
+\newcolumntype{e}   {D{E}{E}{-1}} % column centered on the exponent 'E'
+\newcolumntype{E}[1]{D{E}{E}{#1}} % column centered on the exponent 'E'
+
+%% American Mathematical Society (AMS) plain Tex macros
+%%
+%% The amsmath package is the principal package in the AMS-LaTeX distribution
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/amsmath.html
+\usepackage{amsmath}
+%%
+%% The amsfonts package provides extended TeX fonts
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/amsfonts.html
+\usepackage{amsfonts}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%%
+%% The amsthm package provides extended theorem environments
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/amsthm.html
+\usepackage{amsthm}
+
+%% Improves the interface for defining floating objects such as figures and tables.
+%% The package also provides the H float modifier option of the obsolete here package.
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/float.html
+\usepackage{float}
+
+%% Control sectional headers. 
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/sectsty.html
+\usepackage{sectsty}
+%%
+%% Redefine the font size of the 'section' and 'subsection' headings
+\newcommand{\myFontSize}{\fontsize{11}{0}\selectfont}
+\newcommand{\sectionFontSize}{\fontsize{12}{0}\selectfont}
+\newcommand{\subsubsectionFontSize}{\fontsize{10}{0}\selectfont}
+\sectionfont{\sectionFontSize}       % 10pt, Bold face (default)
+\subsectionfont{\myFontSize} % 10pt, Plain face
+\subsubsectionfont{\subsubsectionFontSize} % 10pt, Plain face
+
+%\subsubsectionfont{\rm\myFontSize} % 10pt, Plain face
+
+%% Select alternative section titles.
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/titlesec.html
+\usepackage{titlesec}
+%%
+%% Left indent, before and after spacing
+%% (The starred version kills the indentation of the paragraph following the title)
+\titlespacing*{\section}{0pt}{10pt}{0pt}
+\titlespacing*{\subsection}{0pt}{10pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt}
+
+%% Section numbers with trailing dots. 
+%% http://www.ctan.org/tex-archive/help/Catalogue/entries/secdot.html
+\usepackage{secdot}
+%%
+%% Also put a dot after the subsection number
+\sectiondot{subsection}
+%% Set a space between dot and heading text
+\sectionpunct{section}{. }    % By default, \sectiondot places a \quad
+\sectionpunct{subsection}{. } % after the number
+
+% These are exact settings for a A4 page with top margin of
+% 25 mm, bottom margin of 30 mm, left and right margins of 25 mm,
+% printable area 242 X 160 mm.
+
+\setlength{\topmargin}{-10.4mm}
+\setlength{\headheight}{0.0mm}
+\setlength{\headsep}{10.0mm}
+\setlength{\textwidth}{160mm}
+\setlength{\textheight}{242mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+
+% New command to refer to equations as Eq.(1),Eq.(2),...
+\newcommand{\eqnref}[1]{Eq.(\ref{#1})}
+
+%\usepackage{algorithm2e}
+\usepackage[linesnumbered,commentsnumbered,ruled,vlined]{algorithm2e}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{black}{#1}}
+\SetCommentSty{mycommfont}
+
+%lined,boxed
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.callouts}
+\usetikzlibrary{fit}
+\usetikzlibrary{3d}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{comment}
+
+\usepackage{dsfont}
+\usepackage{relsize}
+\long\def\/*#1*/{}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\newcommand{\obs}{\mathbf{X}}
+\newcommand{\obsvalues}{\mathbf{x}}
+\newcommand{\obsallvalues}{\Tilde{\mathbf{x}}}
+
+\newcommand{\hidden}{\mathbf{H}}
+\newcommand{\hiddenvalues}{\mathbf{h}}
+\newcommand{\hiddenallvalues}{\Tilde{\mathbf{h}}}
+
+\newcommand{\ptarget}{P_{\mathrm{target}}}
+\newcommand{\ptheta}{P_\theta}
+
+\newcommand{\etarget}{\mathbb{E}_{\mathrm{target}}}
+\newcommand{\etheta}{\mathbb{E}_\theta}
+
+\newcommand{\dataset}{\mathcal{D}}
+\newcommand{\datasetsize}{D}
+
+\newcommand{\energy}{E_{\theta}}
+
+%\usepackage{algorithm2e}
+\usepackage[linesnumbered,commentsnumbered,ruled,vlined]{algorithm2e}
+%lined,boxed
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+
+\usepackage{times}
+
+\usepackage{enumitem}
+\usepackage{pdflscape}
+
+\definecolor{golden}{rgb}{1.0, 0.84, 0.0}
+
+\usepackage[toc]{glossaries}
+
+\input{glossary}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{notoccite}
+
+
+\usepackage[pdftex]{hyperref} % enhance documents that are to be
+                              % output as HTML and PDF
+\hypersetup{colorlinks,       % color text of links and anchors,
+                              % eliminates borders around links
+%            linkcolor=red,    % color for normal internal links
+            linkcolor=black,  % color for normal internal links
+            anchorcolor=black,% color for anchor text
+%            citecolor=green,  % color for bibliographical citations
+            citecolor=black,  % color for bibliographical citations
+%            filecolor=magenta,% color for URLs which open local files
+            filecolor=black,  % color for URLs which open local files
+%            menucolor=red,    % color for Acrobat menu items
+            menucolor=black,  % color for Acrobat menu items
+%            pagecolor=red,    % color for links to other pages
+            %pagecolor=black,  % color for links to other pages
+%            urlcolor=cyan,    % color for linked URLs
+            urlcolor=black,   % color for linked URLs
+	          %bookmarks=true,         % create PDF bookmarks
+	          bookmarksopen=false,    % don't expand bookmarks
+	          bookmarksnumbered=true, % number bookmarks
+	          pdftitle={model\_based\_methods\_for\_mts\_joao\_rodrigues},
+            pdfauthor={João Rodrigues},
+            pdfsubject={Model based methods for multivariate time series},
+            pdfkeywords={Bayesian networks, Machine learning, Model-based methods, Multivariate time series, Boltzmann machines},
+            pdfstartview=FitV,
+            pdfdisplaydoctitle=true
+            }
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}
+  {\settowidth}
+  {\setlength{\parsep}{0pt}\setlength{\itemsep}{0pt plus 0.1pt}\settowidth}
+  {}{}
+\apptocmd{\thebibliography}
+  {\scriptsize}
+  {}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title, authors and addresses
+
+\title{\textbf{Determining the orientation of a RGB camera embedded on an artificial eye}}
+
+\date{October 2019}
+\author{Mariana Ribeiro dos Reis do Vale Martins \\ mariana.v.martins@tecnico.ulisboa.pt \\ \\ Instituto Superior T\'{e}cnico, Lisboa, Portugal}

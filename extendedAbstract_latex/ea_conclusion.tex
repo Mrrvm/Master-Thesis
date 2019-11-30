@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     File: ExtendedAbstract_concl.tex                               %
+%     Tex Master: ExtendedAbstract.tex                               %
+%                                                                    %
+%     Author: Andre Calado Marta                                     %
+%     Last modified : 27 Dez 2011                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The main conclusions of the study presented in short form.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+The contributions to science laid by this work were the following.
+
+\begin{itemize}
+\item Empirical study on the best method to estimate orientation with the current prototype's particular constraints.
+
+\item Derivation of the translation in function of the rotation and the baseline (section \ref{rignreg}).
+
+\item An orientation estimation method with better precision than an IMU.
+
+\item An open-source C++ library for similar contexts within the community.
+
+\item A Matlab simulator for generating virtual images to experiment with.
+
+\end{itemize}
+
+At last, because there is always room for improvement, the subsequent future work is presented.
+
+In order to determine eye's orientation in real-time more quickly, one could eventually study how using a Kalman filter\footnote{As a starting point: Zarchan P. and Musoff H. Fundamentals of Kalman Filtering: A Practical Approach. American Institute of Aeronautics and Astronautics, Incorporated. 2000. } on the IMU and the camera together could improve the estimation in accuracy and time. The Kalman filter would keep track of the estimated state of the system, that would be gathered through the IMU, and the variance or uncertainty of the estimate. At some point, the estimate would be updated, by the camera using MBPE, to reduce the uncertainty.

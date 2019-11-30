@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%% ExtendedAbstract.tex %%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%  Template for the 10-page extended abstract to be submitted for    %
+%  the MSc degree conferral at Instituto Superior Tecnico.           %
+%                                                                    %
+%  Author:                                                           %
+%                                                                    %
+%       Andre C. Marta                                               %
+%       Area Cientifica de Mecanica Aplicada e Aeroespacial          %
+%       Departamento de Engenharia Mecanica                          %
+%       Instituto Superior Tecnico                                   %
+%       Av. Rovisco Pais                                             %
+%       1049-001 Lisboa                                              %
+%       Portugal                                                     %
+%       Tel: +351 21 841 9466                                        %
+%                        3466 (extension)                            %
+%       Email: andre.marta@ist.utl.pt                                %
+%                                                                    %
+%  Created:       Dec  2, 2011                                       %
+%  Last Modified: Dec 27, 2011                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This document uses the LaTeX class file "article.cls"              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage{cuted}
+\setlength\stripsep{3pt plus 1pt minus 1pt}
+\include{ea_preamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Begin one column section for title and abstract
+%
+% http://www.faqs.org/faqs/de-tex-faq/part5/
+\twocolumn[
+\begin{@twocolumnfalse}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSTRACT & KEYWORDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ea_abstract}
+
+% End one column section (begin default two columns)
+\end{@twocolumnfalse}
+]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTRODUCTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ea_introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BACKGROUND
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ea_background}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPLEMENTATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ea_implementation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESULTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ea_results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONCLUSIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ea_conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFERENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Produces the bibliography section when processed by BibTeX
+%
+% Bibliography style
+% > entries ordered alphabetically
+%\bibliographystyle{plain}
+% > unsorted with entries appearing in the order in which the citations appear.
+%\bibliographystyle{unsrt}
+% > entries ordered alphabetically, with first names and names of journals and months abbreviated
+%\bibliographystyle{abbrv}
+\bibliographystyle{bib_style}
+% > entries ordered alphabetically, with reference markers based on authors' initials and publication year
+%\bibliographystyle{alpha}
+
+% External bibliography database file in the BibTeX format (ExtendedAbstract_ref_db.bib)
+%{\footnotesize
+%\bibliography{ea_ref_db}}
+
+\bibliography{ea_ref_db}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
